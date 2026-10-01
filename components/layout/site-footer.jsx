@@ -35,7 +35,7 @@ const contactIconWrap =
 
 export function SiteFooter() {
   return (
-    <footer className="section-shell-tight relative border-t border-white/60 bg-slate-950 text-white">
+    <footer className="section-shell-tight relative border-t border-white/60 bg-gradient-to-b from-[#070c18] via-[#0b132b] to-[#0e1f38] text-white">
       <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-brand-cyan/60 to-transparent" />
 
       <div className="w-full px-6 lg:px-12">

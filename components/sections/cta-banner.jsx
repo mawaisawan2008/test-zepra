@@ -5,9 +5,9 @@ import { Button } from "@/components/ui/button";
 
 export function CtaBanner() {
   return (
-    <section className="section-shell-tight">
+    <section className="section-shell-tight bg-gradient-to-b from-[#070c18] via-[#0b132b] to-[#0e1f38]">
       <div className="container">
-        <div className="glass-panel relative overflow-hidden px-6 py-10 sm:px-8 lg:px-12 lg:py-12">
+        <div className="glass-panel relative overflow-hidden border border-slate-200/80 bg-white/90 px-6 py-10 backdrop-blur-md sm:px-8 lg:px-12 lg:py-12">
           <div className="absolute inset-y-0 right-0 w-1/3 bg-brand-radial opacity-80" />
           <div className="relative flex flex-col gap-8 lg:flex-row lg:items-center lg:justify-between">
             <div className="max-w-3xl">

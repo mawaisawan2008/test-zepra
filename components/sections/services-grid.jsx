@@ -14,7 +14,7 @@ export function ServicesGrid({
   
 }) {
   return (
-    <section className="section-shell bg-white/50">
+    <section className="section-shell bg-gradient-to-b from-[#070c18] via-[#0b132b] to-[#0e1f38]">
       <div className="container">
         {showHeader ? (
           <div className="flex flex-col gap-6 lg:flex-row lg:items-end lg:justify-between">

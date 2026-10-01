@@ -31,7 +31,7 @@ export function TheShiftSection() {
         <div className="mt-12 grid gap-6 lg:grid-cols-2">
           
           {/* Card 1: Legacy Model */}
-          <div className="relative flex flex-col justify-between rounded-2xl border border-slate-300/80 bg-white/90 p-6 shadow-md backdrop-blur-sm sm:p-8">
+          <div className="relative flex flex-col justify-between rounded-2xl bg-gradient-to-b from-[#0e1f38] via-[#0b132b] to-[#060a17] border border-cyan-500/20 p-6 shadow-md backdrop-blur-sm sm:p-8">
             <div>
               <div className="flex items-center justify-between">
                 <span className="rounded-full bg-slate-100 px-3 py-1 text-xs font-bold tracking-wider text-slate-600 uppercase border border-slate-200">
@@ -68,7 +68,7 @@ export function TheShiftSection() {
           </div>
 
           {/* Card 2: AI-Native Model (Signature Website Dark Gradient) */}
-          <div className="group relative flex flex-col justify-between overflow-hidden rounded-2xl border border-cyan-500/30 bg-gradient-to-b from-[#0e1f38] via-[#0b132b] to-[#060a17] p-6 shadow-2xl backdrop-blur-md transition-all duration-300 hover:border-cyan-400/60 hover:shadow-cyan-500/20 sm:p-8">
+          <div className="group relative flex flex-col justify-between overflow-hidden rounded-2xl bg-gradient-to-b from-[#0e1f38] via-[#0b132b] to-[#060a17] border border-cyan-500/20 p-6 shadow-2xl backdrop-blur-md transition-all duration-300 hover:border-cyan-400/60 hover:shadow-cyan-500/20 sm:p-8">
             {/* Ambient Lighting Corner Glow */}
             <div 
               aria-hidden="true" 

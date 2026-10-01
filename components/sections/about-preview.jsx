@@ -8,7 +8,7 @@ import { aboutPillars } from "@/lib/site";
 
 export function AboutPreview({ showCta = true }) {
   return (
-    <section className="section-shell">
+    <section className="section-shell bg-gradient-to-b from-[#070c18] via-[#0b132b] to-[#0e1f38]">
       <div className="container">
         <div className="grid gap-10 lg:grid-cols-[0.95fr_1.05fr] lg:items-center">
           <div>
@@ -19,7 +19,7 @@ export function AboutPreview({ showCta = true }) {
             />
 
             <div className="mt-8 grid gap-4 sm:grid-cols-2">
-              <div className="surface-panel p-5">
+              <div className="surface-panel border border-slate-200/80 bg-white/90 p-5 backdrop-blur-md">
                 <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-primary/10 text-primary">
                   <Compass className="h-5 w-5" />
                 </div>
@@ -33,7 +33,7 @@ export function AboutPreview({ showCta = true }) {
                 </p>
               </div>
 
-              <div className="surface-panel p-5">
+              <div className="surface-panel border border-slate-200/80 bg-white/90 p-5 backdrop-blur-md">
                 <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-primary/10 text-primary">
                   <ShieldCheck className="h-5 w-5" />
                 </div>
@@ -64,7 +64,7 @@ export function AboutPreview({ showCta = true }) {
             {aboutPillars.map((pillar, index) => (
               <Card
                 key={pillar.title}
-                className={`card-shine border-slate-200/80 bg-white/90 ${index === 1 ? "lg:translate-x-6" : ""}`}
+                className={`card-shine bg-white/90 backdrop-blur-md border border-slate-200/80 ${index === 1 ? "lg:translate-x-6" : ""}`}
               >
                 <CardHeader className="flex-row items-start gap-4">
                   <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl bg-slate-950 text-white shadow-glow">

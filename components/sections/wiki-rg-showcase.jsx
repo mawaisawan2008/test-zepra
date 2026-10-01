@@ -8,7 +8,7 @@ export function WikiRgShowcase() {
   const detailScreens = wikiRgScreens.filter((item) => !item.featured);
 
   return (
-    <section className="section-shell bg-white/45">
+    <section className="section-shell bg-[#E6F2FF]">
       <div className="container">
         <SectionHeading
           eyebrow="Featured Website Case Study"
@@ -18,7 +18,7 @@ export function WikiRgShowcase() {
 
         <div className="mt-10 grid gap-6 xl:grid-cols-[1.05fr_0.95fr]">
           {featuredScreen ? (
-            <Card className="card-shine overflow-hidden border-slate-200/80 bg-white/94">
+            <Card className="card-shine overflow-hidden bg-gradient-to-b from-[#0e1f38] via-[#0b132b] to-[#060a17] border border-cyan-500/20">
               <div className="border-b border-slate-200/70 p-6">
                 <Badge>{featuredScreen.label}</Badge>
                 <CardTitle className="mt-4 text-3xl">
@@ -44,7 +44,7 @@ export function WikiRgShowcase() {
             {detailScreens.map((screen) => (
               <Card
                 key={screen.title}
-                className="card-shine overflow-hidden border-slate-200/80 bg-white/94"
+                className="card-shine overflow-hidden bg-gradient-to-b from-[#0e1f38] via-[#0b132b] to-[#060a17] border border-cyan-500/20"
               >
                 <div className="border-b border-slate-200/70 p-5">
                   <Badge>{screen.label}</Badge>

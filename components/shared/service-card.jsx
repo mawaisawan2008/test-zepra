@@ -33,7 +33,7 @@ export function ServiceCard({ service }) {
   const Icon = iconMap[service.icon] || Globe;
 
   return (
-    <Card className="card-shine group relative h-full overflow-hidden border-slate-200/80 bg-white/90 transition-all duration-300 hover:-translate-y-1.5 hover:border-primary/20 hover:shadow-premium">
+    <Card className="card-shine group relative h-full overflow-hidden bg-white/90 backdrop-blur-md border border-slate-200/80 transition-all duration-300 hover:-translate-y-1.5 hover:border-primary/20 hover:shadow-premium">
       <CardHeader>
         <div className="flex items-start justify-between gap-4">
           <div className="flex h-14 w-14 items-center justify-center rounded-2xl bg-slate-950 text-white shadow-glow">

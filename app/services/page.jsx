@@ -37,7 +37,7 @@ export default function ServicesPage() {
     <>
       <ServicesGrid showCta={false} />
 
-      <section className="section-shell">
+      <section className="section-shell bg-[#E6F2FF]">
         <div className="container">
           <SectionHeading
             eyebrow="Service lanes"
@@ -50,7 +50,7 @@ export default function ServicesPage() {
             {serviceLanes.map((lane, index) => (
               <Card
                 key={lane.title}
-                className={`card-shine border-slate-200/80 bg-white/90 ${index === 1 ? "xl:-translate-y-4" : ""}`}
+                className={`card-shine bg-gradient-to-b from-[#0e1f38] via-[#0b132b] to-[#060a17] border border-cyan-500/20 ${index === 1 ? "xl:-translate-y-4" : ""}`}
               >
                 <CardHeader>
                   <CardTitle className="text-2xl">{lane.title}</CardTitle>

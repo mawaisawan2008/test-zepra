@@ -54,7 +54,7 @@ const pillars = [
 
 export function WhyUs() {
   return (
-    <section className="relative isolate overflow-hidden bg-slate-950 py-20 text-white sm:py-24">
+    <section className="relative isolate overflow-hidden bg-gradient-to-b from-[#070c18] via-[#0b132b] to-[#0e1f38] py-20 text-white sm:py-24">
       <div className="pointer-events-none absolute -left-32 top-0 -z-10 h-96 w-96 rounded-full bg-cyan-500/10 blur-3xl" />
       <div className="pointer-events-none absolute -right-32 top-36 -z-10 h-96 w-96 rounded-full bg-blue-600/10 blur-3xl" />
 
@@ -132,7 +132,7 @@ export function WhyUs() {
             return (
               <article
                 key={pillar.title}
-                className="group min-h-[230px] rounded-3xl border border-slate-800/90 bg-slate-900/65 p-6 shadow-[0_18px_45px_rgba(0,0,0,0.2)] backdrop-blur-xl transition-all duration-300 hover:-translate-y-1 hover:border-cyan-500/50 hover:bg-slate-900/90 hover:shadow-[0_20px_50px_rgba(6,182,212,0.1)] motion-reduce:transition-none"
+                className="group min-h-[230px] rounded-3xl bg-white/90 backdrop-blur-md border border-slate-200/80 p-6 shadow-[0_18px_45px_rgba(0,0,0,0.2)] transition-all duration-300 hover:-translate-y-1 hover:border-cyan-500/50 hover:bg-white/90 hover:shadow-[0_20px_50px_rgba(6,182,212,0.1)] motion-reduce:transition-none"
               >
                 <div className="flex items-center justify-between">
                   <span className="flex h-12 w-12 items-center justify-center rounded-2xl border border-cyan-400/15 bg-cyan-400/[0.09] text-cyan-300 transition-colors duration-300 group-hover:border-cyan-400/30 group-hover:bg-cyan-400/[0.14]">

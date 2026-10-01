@@ -28,7 +28,7 @@ const thumbnailHighlights = [
 
 export function ThumbnailDesignShowcase() {
   return (
-    <section className="section-shell bg-white/50">
+    <section className="section-shell bg-gradient-to-b from-[#070c18] via-[#0b132b] to-[#0e1f38]">
       <div className="container">
         <SectionHeading
           eyebrow="Thumbnail Designing"
@@ -44,7 +44,7 @@ export function ThumbnailDesignShowcase() {
             return (
               <Card
                 key={item.title}
-                className={`card-shine border-slate-200/80 bg-white/92 ${
+                className={`card-shine bg-white/90 backdrop-blur-md border border-slate-200/80 ${
                   index === 1 ? "lg:-translate-y-4" : ""
                 }`}
               >
@@ -65,7 +65,7 @@ export function ThumbnailDesignShowcase() {
         <div className="mt-12 columns-1 gap-6 md:columns-2 xl:columns-3">
           {thumbnailDesignShowcases.map((item) => (
             <div key={item.title} className="mb-6 break-inside-avoid">
-              <Card className="card-shine overflow-hidden border-slate-200/80 bg-white/94">
+              <Card className="card-shine overflow-hidden bg-white/90 backdrop-blur-md border border-slate-200/80">
                 <div className="border-b border-slate-200/70 p-5">
                   <Badge>{item.label}</Badge>
                   <CardTitle className="mt-4 text-xl">{item.title}</CardTitle>

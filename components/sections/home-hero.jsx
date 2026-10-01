@@ -26,8 +26,8 @@ const highlightIcons = [Layers3, Bot, Sparkles];
 
 export function HomeHero() {
   return (
-    <section className="relative isolate overflow-hidden pb-14 pt-12 sm:pb-16 sm:pt-16 lg:pb-20 lg:pt-20">
-      <div className="pointer-events-none absolute inset-0 -z-10 bg-[radial-gradient(ellipse_at_12%_8%,rgba(56,198,255,0.18),transparent_28%),radial-gradient(ellipse_at_88%_20%,rgba(18,119,255,0.14),transparent_30%),linear-gradient(180deg,rgba(239,247,255,0.7),rgba(248,251,255,0)_75%)]" />
+    <section className="relative isolate overflow-hidden bg-gradient-to-b from-[#070c18] via-[#0b132b] to-[#0e1f38] pb-14 pt-12 sm:pb-16 sm:pt-16 lg:pb-20 lg:pt-20">
+      <div className="pointer-events-none absolute inset-0 -z-10 bg-[radial-gradient(ellipse_at_12%_8%,rgba(56,198,255,0.18),transparent_28%),radial-gradient(ellipse_at_88%_20%,rgba(18,119,255,0.14),transparent_30%),linear-gradient(180deg,rgba(7,12,24,0.18),rgba(7,12,24,0)_75%)]" />
 
       <div className="container">
         <div className="grid items-center gap-12 lg:grid-cols-[1.02fr_0.98fr] lg:gap-14">
@@ -80,7 +80,7 @@ export function HomeHero() {
 
           <div className="relative mx-auto w-full max-w-[620px] lg:ml-auto">
             <div className="absolute -inset-8 -z-10 rounded-full bg-sky-300/25 blur-3xl" />
-            <div className="relative overflow-hidden rounded-[28px] border border-slate-700/70 bg-[#0B1220] p-5 text-white shadow-[0_32px_90px_rgba(15,35,65,0.28)] sm:p-7">
+            <div className="relative overflow-hidden rounded-[28px] bg-white/90 backdrop-blur-md border border-slate-200/80 p-5 text-white shadow-[0_32px_90px_rgba(15,35,65,0.28)] sm:p-7">
               <div className="absolute inset-0 -z-0 bg-[radial-gradient(circle_at_86%_0%,rgba(18,119,255,0.28),transparent_38%),radial-gradient(circle_at_0%_100%,rgba(56,198,255,0.12),transparent_42%)]" />
               <div className="relative">
                 <div className="flex items-center justify-between gap-4 border-b border-white/10 pb-5">
@@ -148,7 +148,7 @@ export function HomeHero() {
         </div>
       </div>
 
-      <div className="capability-marquee mt-14 w-full border-y border-slate-200/70 bg-white/60 py-4 sm:mt-16">
+      <div className="capability-marquee mt-14 w-full border-y border-slate-200/70 bg-gradient-to-b from-[#070c18] via-[#0b132b] to-[#0e1f38] py-4 sm:mt-16">
         <div className="w-full overflow-hidden">
           <div className="capability-marquee-track flex w-max items-center">
             {[0, 1, 2].map((copy) => (

@@ -32,7 +32,7 @@ export function ResultsProofSection({
   description = "These visuals have been organized to present campaign work, reporting snapshots, and growth evidence in a more polished agency-style format.",
 }) {
   return (
-    <section id="social-media-marketing" className="section-shell scroll-mt-32 bg-white/50">
+    <section id="social-media-marketing" className="section-shell scroll-mt-32 bg-gradient-to-b from-[#070c18] via-[#0b132b] to-[#0e1f38]">
       <div className="container">
         <SectionHeading
           eyebrow={eyebrow}
@@ -48,7 +48,7 @@ export function ResultsProofSection({
             return (
               <Card
                 key={item.title}
-                className={`card-shine border-slate-200/80 bg-white/92 ${
+                className={`card-shine bg-white/90 backdrop-blur-md border border-slate-200/80 ${
                   index === 1 ? "lg:-translate-y-4" : ""
                 }`}
               >
@@ -69,7 +69,7 @@ export function ResultsProofSection({
         <div className="mt-12 columns-1 gap-6 md:columns-2 xl:columns-3">
           {marketingProofs.map((proof) => (
             <div key={proof.title} className="mb-6 break-inside-avoid">
-              <Card className="card-shine overflow-hidden border-slate-200/80 bg-white/94">
+              <Card className="card-shine overflow-hidden bg-white/90 backdrop-blur-md border border-slate-200/80">
                 <div className="border-b border-slate-200/70 p-5">
                   <Badge>{proof.label}</Badge>
                   <CardTitle className="mt-4 text-xl">{proof.title}</CardTitle>

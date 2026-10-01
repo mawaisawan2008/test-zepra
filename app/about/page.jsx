@@ -14,7 +14,7 @@ export default function AboutPage() {
     <>
       <AboutPreview showCta={false} />
 
-      <section className="section-shell bg-white/50">
+      <section className="section-shell bg-[#E6F2FF]">
         <div className="container">
           <SectionHeading
             eyebrow="Operating Principles"
@@ -24,7 +24,7 @@ export default function AboutPage() {
           />
 
           <div className="mt-12 grid gap-6 lg:grid-cols-3">
-            <Card className="card-shine border-slate-200/80 bg-white/90">
+            <Card className="card-shine bg-gradient-to-b from-[#0e1f38] via-[#0b132b] to-[#060a17] border border-cyan-500/20">
               <CardHeader>
                 <CardTitle>Professional by design</CardTitle>
               </CardHeader>
@@ -33,7 +33,7 @@ export default function AboutPage() {
                 help clients present themselves with more authority and trust.
               </CardContent>
             </Card>
-            <Card className="card-shine border-slate-200/80 bg-white/90 lg:-translate-y-4">
+            <Card className="card-shine bg-gradient-to-b from-[#0e1f38] via-[#0b132b] to-[#060a17] border border-cyan-500/20 lg:-translate-y-4">
               <CardHeader>
                 <CardTitle>Execution with structure</CardTitle>
               </CardHeader>
@@ -42,7 +42,7 @@ export default function AboutPage() {
                 alignment, and a more dependable decision-making process.
               </CardContent>
             </Card>
-            <Card className="card-shine border-slate-200/80 bg-white/90">
+            <Card className="card-shine bg-gradient-to-b from-[#0e1f38] via-[#0b132b] to-[#060a17] border border-cyan-500/20">
               <CardHeader>
                 <CardTitle>Built for ongoing growth</CardTitle>
               </CardHeader>

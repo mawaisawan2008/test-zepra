@@ -12,7 +12,7 @@ export function TeamCard({ member }) {
     .toUpperCase();
 
   return (
-    <Card className="card-shine h-full border-slate-200/80 bg-white/90">
+    <Card className="card-shine h-full bg-white/90 backdrop-blur-md border border-slate-200/80">
       <CardHeader className="gap-5">
         <div className="flex items-center gap-4">
           <div className="flex h-14 w-14 items-center justify-center rounded-2xl bg-gradient-to-br from-slate-950 via-brand-navy to-primary text-lg font-semibold text-white shadow-glow">
