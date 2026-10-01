@@ -2,7 +2,7 @@ import React from 'react';
 
 export function TheShiftSection() {
   return (
-    <section className="relative isolate overflow-hidden bg-[#E6F2FF] py-20 text-slate-900 sm:py-24">
+    <section className="relative isolate overflow-hidden bg-[#E6F2FF] py-8 text-slate-900 sm:py-12">
       {/* Background Ambient Glow */}
       <div
         aria-hidden="true"
@@ -19,7 +19,7 @@ export function TheShiftSection() {
             </span>
             The AI Revolution In Operations
           </div>
-          <h2 className="mt-5 font-display text-3xl font-semibold leading-tight text-slate-900 sm:text-4xl lg:text-5xl">
+          <h2 className="mt-4 font-display text-3xl font-semibold leading-tight text-slate-900 sm:text-4xl lg:text-5xl">
             Transforming Business Operations with AI + Data Science.
           </h2>
           <p className="mx-auto mt-4 max-w-2xl text-sm leading-7 text-slate-700 sm:text-base">
@@ -28,10 +28,10 @@ export function TheShiftSection() {
         </header>
 
         {/* Legacy vs AI-Native Comparison Grid */}
-        <div className="mt-12 grid gap-6 lg:grid-cols-2">
+        <div className="mt-8 grid gap-6 lg:grid-cols-2">
           
           {/* Card 1: Legacy Model */}
-          <div className="relative flex flex-col justify-between rounded-2xl border border-slate-300/80 bg-white/90 p-6 shadow-md backdrop-blur-sm sm:p-8">
+          <div className="relative flex flex-col justify-between rounded-2xl border border-slate-300/80 bg-white/90 p-5 shadow-md backdrop-blur-sm sm:p-6">
             <div>
               <div className="flex items-center justify-between">
                 <span className="rounded-full bg-slate-100 px-3 py-1 text-xs font-bold tracking-wider text-slate-600 uppercase border border-slate-200">
@@ -68,7 +68,7 @@ export function TheShiftSection() {
           </div>
 
           {/* Card 2: AI-Native Model (Signature Website Dark Gradient) */}
-          <div className="group relative flex flex-col justify-between overflow-hidden rounded-2xl border border-cyan-500/30 bg-gradient-to-b from-[#0e1f38] via-[#0b132b] to-[#060a17] p-6 shadow-2xl backdrop-blur-md transition-all duration-300 hover:border-cyan-400/60 hover:shadow-cyan-500/20 sm:p-8">
+          <div className="group relative flex flex-col justify-between overflow-hidden rounded-2xl border border-cyan-500/30 bg-gradient-to-b from-[#0e1f38] via-[#0b132b] to-[#060a17] p-5 shadow-2xl backdrop-blur-md transition-all duration-300 hover:border-cyan-400/60 hover:shadow-cyan-500/20 sm:p-6">
             {/* Ambient Lighting Corner Glow */}
             <div 
               aria-hidden="true" 
@@ -114,7 +114,7 @@ export function TheShiftSection() {
         </div>
 
         {/* 3 Core AI Value Pillars Below */}
-        <div className="mt-10 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+        <div className="mt-8 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
           
           <div className="group relative overflow-hidden rounded-2xl border border-cyan-500/20 bg-gradient-to-b from-[#0e1f38] via-[#0b132b] to-[#060a17] p-6 shadow-xl backdrop-blur-md transition-all duration-300 hover:-translate-y-1.5 hover:border-cyan-400/50 hover:shadow-cyan-500/15">
             <span className="inline-block rounded-lg bg-cyan-500/10 px-3 py-1 text-xs font-semibold text-cyan-300 border border-cyan-500/20">

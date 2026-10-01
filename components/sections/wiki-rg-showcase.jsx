@@ -16,7 +16,7 @@ export function WikiRgShowcase() {
           align="center"
         />
 
-        <div className="mt-10 grid gap-6 xl:grid-cols-[1.05fr_0.95fr]">
+        <div className="mt-8 grid gap-6 xl:grid-cols-[1.05fr_0.95fr]">
           {featuredScreen ? (
             <Card className="card-shine overflow-hidden border-slate-200/80 bg-white/94">
               <div className="border-b border-slate-200/70 p-6">

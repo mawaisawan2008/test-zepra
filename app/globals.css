@@ -76,11 +76,11 @@
 
 @layer components {
   .section-shell {
-    @apply py-20 sm:py-24 lg:py-28;
+    @apply py-8 sm:py-12 lg:py-12;
   }
 
   .section-shell-tight {
-    @apply py-16 sm:py-20;
+    @apply py-8 sm:py-12;
   }
 
   .surface-panel {

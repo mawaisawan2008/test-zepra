@@ -47,7 +47,7 @@ export function TestimonialCard({ testimonial, index }) {
 
 export function TestimonialsSection() {
   return (
-    <section className="relative isolate overflow-hidden bg-[#E6F2FF] py-20 text-slate-900 sm:py-24">
+    <section className="relative isolate overflow-hidden bg-[#E6F2FF] py-8 text-slate-900 sm:py-12">
       {/* Background Ambient Glow */}
       <div
         aria-hidden="true"
@@ -62,7 +62,7 @@ export function TestimonialsSection() {
             </span>
             Client trust &amp; reviews
           </div>
-          <h2 className="mt-5 font-display text-3xl font-semibold leading-tight text-slate-900 sm:text-4xl lg:text-5xl">
+          <h2 className="mt-4 font-display text-3xl font-semibold leading-tight text-slate-900 sm:text-4xl lg:text-5xl">
             What our global clients say about us.
           </h2>
           <p className="mx-auto mt-4 max-w-2xl text-sm leading-7 text-slate-700 sm:text-base">
@@ -72,7 +72,7 @@ export function TestimonialsSection() {
         </header>
 
         {/* 9 Testimonial Cards Grid */}
-        <div className="mt-11 grid gap-5 sm:grid-cols-2 xl:grid-cols-3">
+        <div className="mt-8 grid gap-5 sm:grid-cols-2 xl:grid-cols-3">
           {testimonials && testimonials.map((testimonial, index) => (
             <TestimonialCard
               key={testimonial.service || index}

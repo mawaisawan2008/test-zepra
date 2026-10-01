@@ -7,9 +7,9 @@ export function CtaBanner() {
   return (
     <section className="section-shell-tight">
       <div className="container">
-        <div className="glass-panel relative overflow-hidden px-6 py-10 sm:px-8 lg:px-12 lg:py-12">
+        <div className="glass-panel relative overflow-hidden px-6 py-6 sm:px-6 lg:px-12 lg:py-6">
           <div className="absolute inset-y-0 right-0 w-1/3 bg-brand-radial opacity-80" />
-          <div className="relative flex flex-col gap-8 lg:flex-row lg:items-center lg:justify-between">
+          <div className="relative flex flex-col gap-6 lg:flex-row lg:items-center lg:justify-between">
             <div className="max-w-3xl">
               <div className="eyebrow border-white/10 bg-white/10 text-cyan-300">
                 Start your next project

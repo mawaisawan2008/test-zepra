@@ -54,17 +54,17 @@ const pillars = [
 
 export function WhyUs() {
   return (
-    <section className="relative isolate overflow-hidden bg-slate-950 py-20 text-white sm:py-24">
+    <section className="relative isolate overflow-hidden bg-slate-950 py-8 text-white sm:py-12">
       <div className="pointer-events-none absolute -left-32 top-0 -z-10 h-96 w-96 rounded-full bg-cyan-500/10 blur-3xl" />
       <div className="pointer-events-none absolute -right-32 top-36 -z-10 h-96 w-96 rounded-full bg-blue-600/10 blur-3xl" />
 
       <div className="container relative">
-        <header className="flex flex-col gap-7 border-b border-white/10 pb-9 lg:flex-row lg:items-end lg:justify-between">
+        <header className="flex flex-col gap-6 border-b border-white/10 pb-6 lg:flex-row lg:items-end lg:justify-between">
           <div className="max-w-3xl">
             <div className="inline-flex items-center rounded-full border border-cyan-400/20 bg-cyan-400/[0.08] px-3 py-1.5 text-[10px] font-semibold uppercase tracking-[0.2em] text-cyan-300">
               WHY CHOOSE US
             </div>
-            <h2 className="mt-5 font-display text-3xl font-semibold leading-tight text-white sm:text-4xl lg:text-5xl">
+            <h2 className="mt-4 font-display text-3xl font-semibold leading-tight text-white sm:text-4xl lg:text-5xl">
               Built for trust, speed, and real business outcomes.
             </h2>
             <p className="mt-4 max-w-2xl text-sm leading-7 text-slate-300 sm:text-base">
@@ -102,7 +102,7 @@ export function WhyUs() {
           </Link>
         </header>
 
-        <div className="grid grid-cols-2 gap-x-5 gap-y-6 border-b border-white/10 py-8 md:grid-cols-4 md:gap-0 md:py-9">
+        <div className="grid grid-cols-2 gap-x-5 gap-y-6 border-b border-white/10 py-6 md:grid-cols-4 md:gap-0 md:py-6">
           {metrics.map((metric, index) => {
             const Icon = metric.icon;
 
@@ -125,7 +125,7 @@ export function WhyUs() {
           })}
         </div>
 
-        <div className="grid gap-4 pt-8 sm:grid-cols-2 xl:grid-cols-4">
+        <div className="grid gap-4 pt-6 sm:grid-cols-2 xl:grid-cols-4">
           {pillars.map((pillar, index) => {
             const Icon = pillar.icon;
 
@@ -143,7 +143,7 @@ export function WhyUs() {
                   </span>
                 </div>
 
-                <h3 className="mt-7 font-display text-lg font-semibold leading-snug text-white">
+                <h3 className="mt-5 font-display text-lg font-semibold leading-snug text-white">
                   {pillar.title}
                 </h3>
                 <p className="mt-3 text-sm leading-6 text-slate-400">

@@ -26,22 +26,22 @@ const highlightIcons = [Layers3, Bot, Sparkles];
 
 export function HomeHero() {
   return (
-    <section className="relative isolate overflow-hidden pb-14 pt-12 sm:pb-16 sm:pt-16 lg:pb-20 lg:pt-20">
+    <section className="relative isolate overflow-hidden pb-8 pt-8 sm:pb-12 sm:pt-12 lg:pb-12 lg:pt-12">
       <div className="pointer-events-none absolute inset-0 -z-10 bg-[radial-gradient(ellipse_at_12%_8%,rgba(56,198,255,0.18),transparent_28%),radial-gradient(ellipse_at_88%_20%,rgba(18,119,255,0.14),transparent_30%),linear-gradient(180deg,rgba(239,247,255,0.7),rgba(248,251,255,0)_75%)]" />
 
       <div className="container">
-        <div className="grid items-center gap-12 lg:grid-cols-[1.02fr_0.98fr] lg:gap-14">
+        <div className="grid items-center gap-6 lg:grid-cols-[1.02fr_0.98fr] lg:gap-6">
           <div className="max-w-2xl">
             <div className="eyebrow animate-slide-up">
               <span className="h-1.5 w-1.5 rounded-full bg-brand-cyan" />
               Digital delivery, built around outcomes
             </div>
 
-            <h1 className="mt-6 text-balance font-display text-[2.65rem] font-semibold leading-[1.04] text-slate-950 sm:text-6xl lg:text-[4.35rem]">
+            <h1 className="mt-4 text-balance font-display text-[2.65rem] font-semibold leading-[1.04] text-slate-950 sm:text-6xl lg:text-[4.35rem]">
               Build digital systems that move your business{" "}
               <span className="headline-gradient">forward.</span>
             </h1>
-            <p className="muted-copy mt-6 max-w-xl text-base sm:text-lg">
+            <p className="muted-copy mt-4 max-w-xl text-base sm:text-lg">
               Strategy, engineering, AI, and growth expertise in one accountable
               team, helping ambitious businesses turn digital complexity into
               measurable progress.
@@ -148,7 +148,7 @@ export function HomeHero() {
         </div>
       </div>
 
-      <div className="capability-marquee mt-14 w-full border-y border-slate-200/70 bg-white/60 py-4 sm:mt-16">
+      <div className="capability-marquee mt-8 w-full border-y border-slate-200/70 bg-white/60 py-4 sm:mt-8">
         <div className="w-full overflow-hidden">
           <div className="capability-marquee-track flex w-max items-center">
             {[0, 1, 2].map((copy) => (

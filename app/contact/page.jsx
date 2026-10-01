@@ -47,7 +47,7 @@ export default function ContactPage() {
             align="center"
           />
 
-          <div className="mt-12 grid gap-6 lg:grid-cols-3">
+          <div className="mt-8 grid gap-6 lg:grid-cols-3">
             {nextSteps.map((step, index) => (
               <Card
                 key={step.title}

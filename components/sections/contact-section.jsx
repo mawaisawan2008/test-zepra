@@ -21,7 +21,7 @@ export function ContactSection({ showHeader = true }) {
           />
         ) : null}
 
-        <div className="mt-10 grid gap-6 lg:mt-12 lg:grid-cols-[0.85fr_1.15fr] lg:gap-8">
+        <div className="mt-8 grid gap-6 lg:mt-8 lg:grid-cols-[0.85fr_1.15fr] lg:gap-6">
           <div className="space-y-6">
             <Card className="card-shine border-slate-800 bg-[#0B1220] text-white shadow-[0_24px_64px_rgba(15,35,65,0.18)]">
               <CardHeader>

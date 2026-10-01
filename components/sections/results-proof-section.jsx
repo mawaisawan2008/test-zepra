@@ -41,7 +41,7 @@ export function ResultsProofSection({
           align="center"
         />
 
-        <div className="mt-12 grid gap-6 lg:grid-cols-3">
+        <div className="mt-8 grid gap-6 lg:grid-cols-3">
           {proofHighlights.map((item, index) => {
             const Icon = item.icon;
 
@@ -66,7 +66,7 @@ export function ResultsProofSection({
           })}
         </div>
 
-        <div className="mt-12 columns-1 gap-6 md:columns-2 xl:columns-3">
+        <div className="mt-8 columns-1 gap-6 md:columns-2 xl:columns-3">
           {marketingProofs.map((proof) => (
             <div key={proof.title} className="mb-6 break-inside-avoid">
               <Card className="card-shine overflow-hidden border-slate-200/80 bg-white/94">

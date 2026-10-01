@@ -23,7 +23,7 @@ export default function AboutPage() {
             align="center"
           />
 
-          <div className="mt-12 grid gap-6 lg:grid-cols-3">
+          <div className="mt-8 grid gap-6 lg:grid-cols-3">
             <Card className="card-shine border-slate-200/80 bg-white/90">
               <CardHeader>
                 <CardTitle>Professional by design</CardTitle>

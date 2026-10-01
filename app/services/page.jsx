@@ -46,7 +46,7 @@ export default function ServicesPage() {
             align="center"
           />
 
-          <div className="mt-12 grid gap-6 md:grid-cols-2 xl:grid-cols-4">
+          <div className="mt-8 grid gap-6 md:grid-cols-2 xl:grid-cols-4">
             {serviceLanes.map((lane, index) => (
               <Card
                 key={lane.title}

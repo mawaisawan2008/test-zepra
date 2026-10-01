@@ -10,7 +10,7 @@ export function AboutPreview({ showCta = true }) {
   return (
     <section className="section-shell">
       <div className="container">
-        <div className="grid gap-10 lg:grid-cols-[0.95fr_1.05fr] lg:items-center">
+        <div className="grid gap-6 lg:grid-cols-[0.95fr_1.05fr] lg:items-center">
           <div>
             <SectionHeading
               eyebrow="About Zepra Tech"

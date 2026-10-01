@@ -20,7 +20,7 @@ export function PortfolioPreview({
   return (
     <section id="website-development" className="section-shell scroll-mt-32">
       <div className="container">
-        <div className="grid gap-10 xl:grid-cols-[1.15fr_0.85fr] xl:items-start">
+        <div className="grid gap-6 xl:grid-cols-[1.15fr_0.85fr] xl:items-start">
           <div>
             <SectionHeading
               eyebrow={eyebrow}
@@ -189,7 +189,7 @@ export function PortfolioPreview({
           </div>
         </div>
 
-        <div className="mt-20">
+        <div className="mt-8">
           <SectionHeading
             eyebrow="Interactive Web Products"
             title="Additional product-style web experiences presented with polished visuals and clean project framing."
@@ -197,7 +197,7 @@ export function PortfolioPreview({
             align="center"
           />
 
-          <div className="mt-10 grid gap-6 md:grid-cols-2 xl:grid-cols-4">
+          <div className="mt-8 grid gap-6 md:grid-cols-2 xl:grid-cols-4">
             {webAppShowcases.map((project) => (
               <Card
                 key={project.href}

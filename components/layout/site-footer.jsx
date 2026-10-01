@@ -39,7 +39,7 @@ export function SiteFooter() {
       <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-brand-cyan/60 to-transparent" />
 
       <div className="w-full px-6 lg:px-12">
-        <div className="grid gap-10 lg:grid-cols-[1.3fr_1fr_1fr_1fr]">
+        <div className="grid gap-6 lg:grid-cols-[1.3fr_1fr_1fr_1fr]">
           <div className="max-w-sm">
             <Logo
               className="[&_svg]:shadow-glow"
@@ -136,7 +136,7 @@ export function SiteFooter() {
           </div>
         </div>
 
-        <div className="mt-12 border-t border-white/10 pt-6 text-sm text-slate-400">
+        <div className="mt-8 border-t border-white/10 pt-6 text-sm text-slate-400">
           <nav aria-label="Legal">
             <ul className="flex flex-wrap gap-x-6 gap-y-2">
               {legalLinks.map((link) => (
