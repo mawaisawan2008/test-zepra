@@ -107,11 +107,11 @@ export function SiteHeader() {
   const hidePill = () => setPill((current) => ({ ...current, visible: false }));
 
   return (
-    <header className="sticky top-0 z-50 border-b border-white/40 bg-[linear-gradient(135deg,rgba(249,252,255,0.97),rgba(236,245,255,0.92),rgba(244,249,255,0.96))] px-3 pt-4 backdrop-blur-xl">
-      <div className="container">
+    <header className="sticky top-0 z-50 bg-transparent px-3 pt-4 pointer-events-none">
+      <div className="container pointer-events-none">
         <div
           className={cn(
-            "surface-panel relative flex items-center justify-between gap-4 px-5 transition-all duration-300 lg:px-7",
+            "pointer-events-auto relative mx-auto flex max-w-6xl items-center justify-between gap-4 rounded-full border border-slate-200/50 bg-white/90 px-5 shadow-lg backdrop-blur-md transition-all duration-300 lg:px-7",
             scrolled ? "py-2.5 shadow-premium" : "py-4",
           )}
         >
@@ -248,7 +248,7 @@ export function SiteHeader() {
         </div>
 
         {isOpen ? (
-          <div className="surface-panel mt-3 px-5 py-5 lg:hidden">
+          <div className="surface-panel pointer-events-auto mt-3 px-5 py-5 lg:hidden">
             <nav className="flex flex-col gap-2">
               {navItems.map((item) => {
                 const isActive = isItemActive(item, pathname);
