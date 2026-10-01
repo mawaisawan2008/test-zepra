@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 
-import { Send } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -94,6 +94,7 @@ export function ContactForm() {
         <Field label="Full Name" error={errors.name}>
           <Input
             name="name"
+            className="rounded-xl border-slate-200 bg-slate-50/50 p-3.5 focus:border-cyan-500 focus:bg-white focus:ring-2 focus:ring-cyan-500 focus-visible:border-cyan-500 focus-visible:ring-cyan-500"
             placeholder="Your full name"
             value={formData.name}
             onChange={handleChange}
@@ -103,6 +104,7 @@ export function ContactForm() {
         <Field label="Company Name" error={errors.company}>
           <Input
             name="company"
+            className="rounded-xl border-slate-200 bg-slate-50/50 p-3.5 focus:border-cyan-500 focus:bg-white focus:ring-2 focus:ring-cyan-500 focus-visible:border-cyan-500 focus-visible:ring-cyan-500"
             placeholder="Company or brand"
             value={formData.company}
             onChange={handleChange}
@@ -116,6 +118,7 @@ export function ContactForm() {
           <Input
             type="email"
             name="email"
+            className="rounded-xl border-slate-200 bg-slate-50/50 p-3.5 focus:border-cyan-500 focus:bg-white focus:ring-2 focus:ring-cyan-500 focus-visible:border-cyan-500 focus-visible:ring-cyan-500"
             placeholder="name@company.com"
             value={formData.email}
             onChange={handleChange}
@@ -125,6 +128,7 @@ export function ContactForm() {
         <Field label="Phone / WhatsApp" error={errors.phone}>
           <Input
             name="phone"
+            className="rounded-xl border-slate-200 bg-slate-50/50 p-3.5 focus:border-cyan-500 focus:bg-white focus:ring-2 focus:ring-cyan-500 focus-visible:border-cyan-500 focus-visible:ring-cyan-500"
             placeholder="+92..."
             value={formData.phone}
             onChange={handleChange}
@@ -184,6 +188,7 @@ export function ContactForm() {
       <Field label="Project Goals" error={errors.message}>
         <Textarea
           name="message"
+          className="rounded-xl border-slate-200 bg-slate-50/50 p-3.5 focus:border-cyan-500 focus:bg-white focus:ring-2 focus:ring-cyan-500 focus-visible:border-cyan-500 focus-visible:ring-cyan-500"
           placeholder="Tell us what you want to build, improve, or automate."
           value={formData.message}
           onChange={handleChange}
@@ -203,9 +208,13 @@ export function ContactForm() {
         </div>
       ) : null}
 
-      <Button type="submit" size="xl" className="w-full sm:w-auto">
+      <Button
+        type="submit"
+        size="xl"
+        className="w-full bg-gradient-to-r from-cyan-600 to-blue-600 text-white shadow-lg shadow-cyan-900/10 hover:from-cyan-500 hover:to-blue-500"
+      >
         <>
-          <Send className="h-4 w-4" />
+          <ArrowRight className="h-4 w-4" />
           Open email draft
         </>
       </Button>
@@ -226,7 +235,7 @@ function Field({ label, error, children }) {
 function SelectField({ className = "", children, ...props }) {
   return (
     <select
-      className={`flex h-12 w-full rounded-2xl border border-slate-200/80 bg-white px-4 py-3 text-sm text-slate-950 shadow-sm transition-all duration-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary/30 focus-visible:border-primary/30 ${className}`}
+      className={`flex h-12 w-full rounded-xl border border-slate-200 bg-slate-50/50 p-3.5 text-sm text-slate-950 shadow-sm transition-colors focus:border-cyan-500 focus:bg-white focus:outline-none focus:ring-2 focus:ring-cyan-500 focus-visible:ring-cyan-500 ${className}`}
       {...props}
     >
       {children}

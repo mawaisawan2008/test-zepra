@@ -1,17 +1,21 @@
 import Link from "next/link";
-import { Globe, Mail, PhoneCall, Users2 } from "lucide-react";
+import { ArrowUpRight, Mail, MessageCircle } from "lucide-react";
 
 import { ContactForm } from "@/components/shared/contact-form";
 import { SectionHeading } from "@/components/shared/section-heading";
-import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { siteMeta, socialLinks } from "@/lib/site";
 
 export function ContactSection({ showHeader = true }) {
   return (
-    <section id="contact" className="section-shell relative isolate overflow-hidden">
-      <div className="pointer-events-none absolute inset-x-0 top-0 -z-10 h-96 bg-[radial-gradient(ellipse_at_16%_12%,rgba(56,198,255,0.12),transparent_58%)]" />
+    <section
+      id="contact"
+      className="section-shell relative isolate overflow-hidden bg-[#E6F2FF]"
+    >
+      <div
+        aria-hidden="true"
+        className="pointer-events-none absolute inset-x-0 top-0 -z-10 h-96 bg-[radial-gradient(ellipse_at_16%_12%,rgba(56,198,255,0.12),transparent_58%)]"
+      />
       <div className="container">
         {showHeader ? (
           <SectionHeading
@@ -21,97 +25,115 @@ export function ContactSection({ showHeader = true }) {
           />
         ) : null}
 
-        <div className="mt-8 grid gap-6 lg:mt-8 lg:grid-cols-[0.85fr_1.15fr] lg:gap-6">
-          <div className="space-y-6">
-            <Card className="card-shine border-slate-800 bg-[#0B1220] text-white shadow-[0_24px_64px_rgba(15,35,65,0.18)]">
-              <CardHeader>
-                <Badge className="border-cyan-200/20 bg-cyan-200/10 text-cyan-100">Business inquiry</Badge>
-                <CardTitle className="pt-2 text-2xl text-white">
-                  Clear contact options for local and international clients.
-                </CardTitle>
-              </CardHeader>
-              <CardContent className="space-y-3 text-sm leading-7 text-slate-300">
+        <div className="mt-8 grid items-start gap-8 lg:grid-cols-12">
+          <div className="lg:col-span-4">
+            <div className="rounded-2xl border border-slate-200/80 bg-white/80 p-6 shadow-sm backdrop-blur-md sm:p-8">
+              <div className="flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.16em] text-cyan-800">
+                <span className="h-2 w-2 rounded-full bg-emerald-400" />
+                Business inquiry
+              </div>
+              <h2 className="mt-4 font-display text-2xl font-semibold leading-tight text-slate-950">
+                Clear contact options for local and international clients.
+              </h2>
+
+              <div className="mt-6 space-y-3">
                 <InfoRow
                   icon={<Mail className="h-5 w-5" />}
                   label="Email"
+                  href={`mailto:${siteMeta.email}`}
                   value={siteMeta.email}
                 />
                 <InfoRow
-                  icon={<PhoneCall className="h-5 w-5" />}
+                  icon={<MessageCircle className="h-5 w-5" />}
                   label="WhatsApp"
+                  href={siteMeta.whatsappLink}
                   value={siteMeta.whatsappNumber}
+                  external
                 />
-                <InfoRow
-                  icon={<Globe className="h-5 w-5" />}
-                  label="Markets"
-                  value="Pakistan and international businesses"
-                />
-                <InfoRow
-                  icon={<Users2 className="h-5 w-5" />}
-                  label="Best for"
-                  value="Web, AI, growth, ecommerce, and support projects"
-                />
-              </CardContent>
-            </Card>
+              </div>
 
-            <div className="grid gap-4 sm:grid-cols-2">
-              <Button asChild size="lg">
-                <Link href={siteMeta.whatsappLink} target="_blank" rel="noreferrer">
-                  Chat on WhatsApp
-                </Link>
-              </Button>
-              <Button asChild size="lg" variant="outline">
-                <Link href={`mailto:${siteMeta.email}`}>Send an Email</Link>
-              </Button>
-            </div>
-
-            <Card className="border-slate-200/80 bg-white/90">
-              <CardHeader>
-                <CardTitle className="text-xl">Social presence</CardTitle>
-              </CardHeader>
-              <CardContent className="flex flex-wrap gap-3">
-                {socialLinks.map((social) => (
+              <div className="mt-5 grid gap-3 sm:grid-cols-2 lg:grid-cols-1 xl:grid-cols-2">
+                <Button asChild size="lg" className="w-full">
                   <Link
-                    key={social.label}
-                    href={social.href}
-                    className="rounded-full border border-slate-200 bg-slate-50 px-4 py-2 text-sm font-medium text-slate-700 hover:border-primary/20 hover:text-primary"
+                    href={siteMeta.whatsappLink}
+                    target="_blank"
+                    rel="noreferrer"
                   >
-                    {social.label}
+                    <MessageCircle className="h-4 w-4" />
+                    Chat on WhatsApp
                   </Link>
-                ))}
-              </CardContent>
-            </Card>
+                </Button>
+                <Button asChild size="lg" variant="outline" className="w-full">
+                  <Link href={`mailto:${siteMeta.email}`}>
+                    <Mail className="h-4 w-4" />
+                    Send an Email
+                  </Link>
+                </Button>
+              </div>
+
+              <div className="mt-6 border-t border-slate-200 pt-5">
+                <h3 className="text-sm font-semibold text-slate-900">
+                  Social presence
+                </h3>
+                <div className="mt-3 flex flex-wrap gap-2">
+                  {socialLinks.map((social) => (
+                    <Link
+                      key={social.label}
+                      href={social.href}
+                      className="inline-flex items-center gap-1 rounded-full border border-slate-200 bg-slate-50 px-3 py-2 text-xs font-medium text-slate-700 transition-colors hover:border-cyan-300 hover:bg-white hover:text-cyan-800 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-cyan-500"
+                    >
+                      {social.label}
+                      <ArrowUpRight className="h-3 w-3" />
+                    </Link>
+                  ))}
+                </div>
+              </div>
+            </div>
           </div>
 
-          <Card className="border-slate-200/80 bg-white/95 shadow-[0_24px_64px_rgba(15,35,65,0.08)]">
-            <CardHeader>
-              <CardTitle className="text-2xl">Request a consultation</CardTitle>
-              <p className="text-sm leading-7 text-brand-slate">
-                Share your business goals, timeline, and service needs. The
-                form now works as a frontend-only inquiry draft that opens your
-                email app with the details filled in.
-              </p>
-            </CardHeader>
-            <CardContent>
+          <div className="relative lg:col-span-8">
+            <div
+              aria-hidden="true"
+              className="pointer-events-none absolute -inset-4 -z-10 rounded-3xl bg-cyan-500/10 blur-3xl"
+            />
+            <div className="rounded-2xl border border-slate-100 bg-white p-6 shadow-xl sm:p-8">
+              <div className="mb-6">
+                <h2 className="font-display text-2xl font-semibold text-slate-950">
+                  Request a consultation
+                </h2>
+                <p className="mt-2 text-sm leading-6 text-brand-slate">
+                  Share your business goals, timeline, and service needs. The
+                  form now works as a frontend-only inquiry draft that opens your
+                  email app with the details filled in.
+                </p>
+              </div>
               <ContactForm />
-            </CardContent>
-          </Card>
+            </div>
+          </div>
         </div>
       </div>
     </section>
   );
 }
 
-function InfoRow({ icon, label, value }) {
+function InfoRow({ icon, label, href, value, external = false }) {
   return (
-    <div className="flex items-start gap-4 rounded-2xl border border-white/10 bg-white/[0.045] p-4">
-      <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-cyan-200/10 text-cyan-100">
+    <a
+      href={href}
+      {...(external ? { target: "_blank", rel: "noreferrer" } : {})}
+      className="flex min-w-0 items-center gap-3 rounded-xl border border-slate-200/80 bg-slate-50/70 p-3.5 transition-colors hover:border-cyan-200 hover:bg-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-cyan-500"
+    >
+      <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl border border-cyan-100 bg-cyan-50 text-cyan-800">
         {icon}
-      </div>
-      <div>
-        <div className="text-sm font-semibold text-white">{label}</div>
-        <div className="mt-1 text-sm leading-6 text-slate-300">{value}</div>
-      </div>
-    </div>
+      </span>
+      <span className="min-w-0">
+        <span className="block text-xs font-semibold text-slate-900">
+          {label}
+        </span>
+        <span className="mt-0.5 block break-words text-sm text-slate-600">
+          {value}
+        </span>
+      </span>
+    </a>
   );
 }
