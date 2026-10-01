@@ -3,6 +3,10 @@ import { TestimonialCard } from "@/components/shared/testimonial-card";
 import { testimonials } from "@/lib/site";
 
 export function TestimonialsSection() {
+  const clientTestimonials = testimonials.filter(
+    (testimonial) => testimonial.role !== "Verified testimonial slot",
+  );
+
   return (
     <section className="section-shell bg-white/50">
       <div className="container">
@@ -13,8 +17,8 @@ export function TestimonialsSection() {
           align="center"
         />
 
-        <div className="mt-12 grid gap-6 lg:grid-cols-3">
-          {testimonials.map((testimonial) => (
+        <div className="mx-auto mt-12 max-w-5xl">
+          {clientTestimonials.map((testimonial) => (
             <TestimonialCard key={testimonial.name} testimonial={testimonial} />
           ))}
         </div>

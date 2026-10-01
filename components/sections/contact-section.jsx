@@ -10,7 +10,8 @@ import { siteMeta, socialLinks } from "@/lib/site";
 
 export function ContactSection({ showHeader = true }) {
   return (
-    <section className="section-shell">
+    <section id="contact" className="section-shell relative isolate overflow-hidden">
+      <div className="pointer-events-none absolute inset-x-0 top-0 -z-10 h-96 bg-[radial-gradient(ellipse_at_16%_12%,rgba(56,198,255,0.12),transparent_58%)]" />
       <div className="container">
         {showHeader ? (
           <SectionHeading
@@ -20,16 +21,16 @@ export function ContactSection({ showHeader = true }) {
           />
         ) : null}
 
-        <div className="mt-12 grid gap-8 lg:grid-cols-[0.85fr_1.15fr]">
+        <div className="mt-10 grid gap-6 lg:mt-12 lg:grid-cols-[0.85fr_1.15fr] lg:gap-8">
           <div className="space-y-6">
-            <Card className="card-shine border-slate-200/80 bg-white/90">
+            <Card className="card-shine border-slate-800 bg-[#0B1220] text-white shadow-[0_24px_64px_rgba(15,35,65,0.18)]">
               <CardHeader>
-                <Badge>Business inquiry</Badge>
-                <CardTitle className="pt-2 text-2xl">
+                <Badge className="border-cyan-200/20 bg-cyan-200/10 text-cyan-100">Business inquiry</Badge>
+                <CardTitle className="pt-2 text-2xl text-white">
                   Clear contact options for local and international clients.
                 </CardTitle>
               </CardHeader>
-              <CardContent className="space-y-4 text-sm leading-7 text-brand-slate">
+              <CardContent className="space-y-3 text-sm leading-7 text-slate-300">
                 <InfoRow
                   icon={<Mail className="h-5 w-5" />}
                   label="Email"
@@ -64,7 +65,7 @@ export function ContactSection({ showHeader = true }) {
               </Button>
             </div>
 
-            <Card className="card-shine border-slate-200/80 bg-white/90">
+            <Card className="border-slate-200/80 bg-white/90">
               <CardHeader>
                 <CardTitle className="text-xl">Social presence</CardTitle>
               </CardHeader>
@@ -82,7 +83,7 @@ export function ContactSection({ showHeader = true }) {
             </Card>
           </div>
 
-          <Card className="card-shine border-slate-200/80 bg-white/95">
+          <Card className="border-slate-200/80 bg-white/95 shadow-[0_24px_64px_rgba(15,35,65,0.08)]">
             <CardHeader>
               <CardTitle className="text-2xl">Request a consultation</CardTitle>
               <p className="text-sm leading-7 text-brand-slate">
@@ -103,13 +104,13 @@ export function ContactSection({ showHeader = true }) {
 
 function InfoRow({ icon, label, value }) {
   return (
-    <div className="flex items-start gap-4 rounded-[22px] border border-slate-200/70 bg-slate-50/80 p-4">
-      <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-2xl bg-slate-950 text-white">
+    <div className="flex items-start gap-4 rounded-2xl border border-white/10 bg-white/[0.045] p-4">
+      <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-cyan-200/10 text-cyan-100">
         {icon}
       </div>
       <div>
-        <div className="text-sm font-semibold text-slate-950">{label}</div>
-        <div className="mt-1 text-sm leading-7 text-brand-slate">{value}</div>
+        <div className="text-sm font-semibold text-white">{label}</div>
+        <div className="mt-1 text-sm leading-6 text-slate-300">{value}</div>
       </div>
     </div>
   );
