@@ -168,13 +168,13 @@ export function SiteHeader() {
                       )}
                     />
                     <div className="invisible absolute left-0 top-full z-30 w-[340px] translate-y-2 pt-3 opacity-0 transition-all duration-200 group-hover:visible group-hover:translate-y-0 group-hover:opacity-100 group-focus-within:visible group-focus-within:translate-y-0 group-focus-within:opacity-100">
-                      <div className="rounded-[28px] border border-slate-200/80 bg-white/96 p-3 shadow-premium backdrop-blur-xl">
+                      <div className="rounded-[28px] border border-slate-200 bg-white p-3 shadow-premium">
                         <div className="space-y-1">
                           {item.children.map((child) => (
                             <Link
                               key={child.href}
                               href={child.href}
-                              className="group/item flex items-start gap-3 rounded-[22px] px-4 py-3 transition-colors duration-200 hover:bg-slate-100"
+                              className="group/item flex items-start gap-3 rounded-[22px] border border-transparent bg-white px-4 py-3 transition-colors duration-200 hover:border-primary/10 hover:bg-sky-50"
                             >
                               <ProjectIconBadge href={child.href} />
                               <span className="block">
