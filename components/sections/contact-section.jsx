@@ -25,6 +25,8 @@ export function ContactSection({ showHeader = true }) {
             eyebrow="Contact"
             title="Start a business conversation with Zepra Tech."
             description="Use the inquiry form for web development, AI automation, digital marketing, ecommerce, design, SEO, or technical support needs."
+            eyebrowClassName="px-5 py-2 text-xs sm:text-sm font-semibold"
+            descriptionClassName="text-sm sm:text-base font-medium leading-relaxed text-slate-700"
           />
         ) : null}
 

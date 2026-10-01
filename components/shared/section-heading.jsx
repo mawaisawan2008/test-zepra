@@ -6,6 +6,8 @@ export function SectionHeading({
   description,
   align = "left",
   className,
+  eyebrowClassName,
+  descriptionClassName,
 }) {
   return (
     <div
@@ -15,11 +17,17 @@ export function SectionHeading({
         className,
       )}
     >
-      {eyebrow ? <div className="eyebrow">{eyebrow}</div> : null}
+      {eyebrow ? (
+        <div className={cn("eyebrow", eyebrowClassName)}>{eyebrow}</div>
+      ) : null}
       <h2 className="mt-4 font-display text-3xl font-semibold leading-tight text-slate-950 sm:text-4xl lg:text-[2.8rem]">
         {title}
       </h2>
-      {description ? <p className="muted-copy mt-5">{description}</p> : null}
+      {description ? (
+        <p className={cn("muted-copy mt-5", descriptionClassName)}>
+          {description}
+        </p>
+      ) : null}
     </div>
   );
 }
