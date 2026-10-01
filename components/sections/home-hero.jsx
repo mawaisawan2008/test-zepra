@@ -148,24 +148,26 @@ export function HomeHero() {
         </div>
       </div>
 
-      <div className="capability-marquee mt-14 border-y border-slate-200/70 bg-white/60 py-4 sm:mt-16">
-        <div className="container">
-          <div className="flex flex-col gap-3 sm:flex-row sm:items-center sm:gap-7">
-            <span className="shrink-0 text-[11px] font-bold uppercase tracking-[0.16em] text-slate-500">
-              Connected capabilities
-            </span>
-            <div className="capability-marquee-track flex min-w-0 items-center gap-3 overflow-hidden">
-              {[...capabilities, ...capabilities].map((capability, index) => (
-                <span
-                  key={`${capability}-${index}`}
-                  aria-hidden={index >= capabilities.length ? "true" : undefined}
-                  className="inline-flex shrink-0 items-center gap-3 rounded-full border border-slate-200 bg-white px-4 py-2 text-xs font-semibold text-slate-700 shadow-sm"
-                >
-                  <span className="h-1.5 w-1.5 rounded-full bg-brand-cyan" />
-                  {capability}
-                </span>
-              ))}
-            </div>
+      <div className="capability-marquee mt-14 w-full border-y border-slate-200/70 bg-white/60 py-4 sm:mt-16">
+        <div className="w-full overflow-hidden">
+          <div className="capability-marquee-track flex w-max items-center">
+            {[0, 1, 2].map((copy) => (
+              <div
+                key={copy}
+                aria-hidden={copy > 0 ? "true" : undefined}
+                className="flex shrink-0 items-center gap-3 pr-3"
+              >
+                {capabilities.map((capability) => (
+                  <span
+                    key={`${copy}-${capability}`}
+                    className="inline-flex shrink-0 items-center gap-3 rounded-full border border-slate-200 bg-white px-4 py-2 text-xs font-semibold text-slate-700 shadow-sm"
+                  >
+                    <span className="h-1.5 w-1.5 rounded-full bg-brand-cyan" />
+                    {capability}
+                  </span>
+                ))}
+              </div>
+            ))}
           </div>
         </div>
       </div>
