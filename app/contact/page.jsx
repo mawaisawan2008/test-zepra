@@ -38,7 +38,7 @@ export default function ContactPage() {
         secondaryAction={{ href: "/services", label: "Review Services" }}
       />
 
-      <section className="section-shell bg-[#E6F2FF]">
+      <section className="section-shell bg-white/50">
         <div className="container">
           <SectionHeading
             eyebrow="What happens next"
@@ -51,7 +51,7 @@ export default function ContactPage() {
             {nextSteps.map((step, index) => (
               <Card
                 key={step.title}
-                className={`card-shine bg-gradient-to-b from-[#0e1f38] via-[#0b132b] to-[#060a17] border border-cyan-500/20 ${index === 1 ? "lg:-translate-y-4" : ""}`}
+                className={`card-shine border-slate-200/80 bg-white/90 ${index === 1 ? "lg:-translate-y-4" : ""}`}
               >
                 <CardHeader>
                   <CardTitle>{step.title}</CardTitle>

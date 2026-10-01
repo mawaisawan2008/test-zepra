@@ -5,7 +5,7 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 
 export function ProjectCard({ project }) {
   return (
-    <Card className="card-shine group h-full overflow-hidden bg-white/90 backdrop-blur-md border border-slate-200/80 transition-all duration-300 hover:-translate-y-1.5 hover:border-primary/20 hover:shadow-premium">
+    <Card className="card-shine group h-full overflow-hidden border-slate-200/80 bg-white/90 transition-all duration-300 hover:-translate-y-1.5 hover:border-primary/20 hover:shadow-premium">
       <CardHeader className="gap-4">
         <div className="flex items-start justify-between gap-4">
           <Badge variant="secondary" className="bg-primary/[0.08] text-primary">

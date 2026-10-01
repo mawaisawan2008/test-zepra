@@ -18,7 +18,7 @@ export function PortfolioPreview({
   description = "This page combines live project links, launch-ready website work, and visual development previews so Zepra Tech can present website delivery in a cleaner and more credible format.",
 }) {
   return (
-    <section id="website-development" className="section-shell scroll-mt-32 bg-gradient-to-b from-[#070c18] via-[#0b132b] to-[#0e1f38]">
+    <section id="website-development" className="section-shell scroll-mt-32">
       <div className="container">
         <div className="grid gap-10 xl:grid-cols-[1.15fr_0.85fr] xl:items-start">
           <div>
@@ -32,7 +32,7 @@ export function PortfolioPreview({
               {livePortfolioLinks.map((project, index) => (
                 <Card
                   key={project.href}
-                  className={`card-shine h-full bg-white/90 backdrop-blur-md border border-slate-200/80 transition-all duration-300 hover:-translate-y-1 hover:shadow-premium ${
+                  className={`card-shine h-full border-slate-200/80 bg-white/90 transition-all duration-300 hover:-translate-y-1 hover:shadow-premium ${
                     index === 1 || index === 3 ? "md:translate-y-6" : ""
                   }`}
                 >
@@ -97,7 +97,7 @@ export function PortfolioPreview({
             {developmentShowcases.map((showcase, index) => (
               <Card
                 key={showcase.title}
-                className={`card-shine overflow-hidden bg-white/90 backdrop-blur-md border border-slate-200/80 ${
+                className={`card-shine overflow-hidden border-slate-200/80 bg-white/92 ${
                   index === 1 ? "xl:-translate-x-4" : ""
                 }`}
               >
@@ -201,7 +201,7 @@ export function PortfolioPreview({
             {webAppShowcases.map((project) => (
               <Card
                 key={project.href}
-                className="card-shine overflow-hidden bg-white/90 backdrop-blur-md border border-slate-200/80 transition-all duration-300 hover:-translate-y-1 hover:shadow-premium"
+                className="card-shine overflow-hidden border-slate-200/80 bg-white/92 transition-all duration-300 hover:-translate-y-1 hover:shadow-premium"
               >
                 <CardContent className="p-0">
                   <Link

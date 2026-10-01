@@ -8,7 +8,7 @@ import { teamMembers } from "@/lib/site";
 
 export function TeamSection({ showHeader = true, showCta = false }) {
   return (
-    <section className="section-shell bg-gradient-to-b from-[#070c18] via-[#0b132b] to-[#0e1f38]">
+    <section className="section-shell">
       <div className="container">
         {showHeader ? (
           <div className="flex flex-col gap-6 lg:flex-row lg:items-end lg:justify-between">

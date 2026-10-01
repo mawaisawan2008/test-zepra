@@ -10,7 +10,7 @@ import { siteMeta, socialLinks } from "@/lib/site";
 
 export function ContactSection({ showHeader = true }) {
   return (
-    <section id="contact" className="section-shell relative isolate overflow-hidden bg-gradient-to-b from-[#070c18] via-[#0b132b] to-[#0e1f38]">
+    <section id="contact" className="section-shell relative isolate overflow-hidden">
       <div className="pointer-events-none absolute inset-x-0 top-0 -z-10 h-96 bg-[radial-gradient(ellipse_at_16%_12%,rgba(56,198,255,0.12),transparent_58%)]" />
       <div className="container">
         {showHeader ? (
@@ -23,7 +23,7 @@ export function ContactSection({ showHeader = true }) {
 
         <div className="mt-10 grid gap-6 lg:mt-12 lg:grid-cols-[0.85fr_1.15fr] lg:gap-8">
           <div className="space-y-6">
-            <Card className="card-shine bg-white/90 backdrop-blur-md border border-slate-200/80 text-white shadow-[0_24px_64px_rgba(15,35,65,0.18)]">
+            <Card className="card-shine border-slate-800 bg-[#0B1220] text-white shadow-[0_24px_64px_rgba(15,35,65,0.18)]">
               <CardHeader>
                 <Badge className="border-cyan-200/20 bg-cyan-200/10 text-cyan-100">Business inquiry</Badge>
                 <CardTitle className="pt-2 text-2xl text-white">
@@ -83,7 +83,7 @@ export function ContactSection({ showHeader = true }) {
             </Card>
           </div>
 
-          <Card className="bg-white/90 backdrop-blur-md border border-slate-200/80 shadow-[0_24px_64px_rgba(15,35,65,0.08)]">
+          <Card className="border-slate-200/80 bg-white/95 shadow-[0_24px_64px_rgba(15,35,65,0.08)]">
             <CardHeader>
               <CardTitle className="text-2xl">Request a consultation</CardTitle>
               <p className="text-sm leading-7 text-brand-slate">
