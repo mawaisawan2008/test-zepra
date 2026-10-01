@@ -1,5 +1,13 @@
 import Link from "next/link";
-import { ArrowUpRight, Mail, MessageCircle } from "lucide-react";
+import {
+  ArrowUpRight,
+  CalendarDays,
+  Clock3,
+  Globe2,
+  LockKeyhole,
+  Mail,
+  MessageCircle,
+} from "lucide-react";
 
 import { ContactForm } from "@/components/shared/contact-form";
 import { SectionHeading } from "@/components/shared/section-heading";
@@ -25,8 +33,8 @@ export function ContactSection({ showHeader = true }) {
           />
         ) : null}
 
-        <div className="mt-8 grid items-start gap-8 lg:grid-cols-12">
-          <div className="lg:col-span-4">
+        <div className="mt-8 grid items-stretch gap-8 lg:grid-cols-12">
+          <div className="flex flex-col lg:col-span-4">
             <div className="rounded-2xl border border-slate-200/80 bg-white/80 p-6 shadow-sm backdrop-blur-md sm:p-8">
               <div className="flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.16em] text-cyan-800">
                 <span className="h-2 w-2 rounded-full bg-emerald-400" />
@@ -89,6 +97,52 @@ export function ContactSection({ showHeader = true }) {
                 </div>
               </div>
             </div>
+
+            <div className="mt-4 rounded-2xl border border-slate-200/80 bg-white/80 p-5 shadow-sm backdrop-blur-md lg:flex-1">
+              <div className="flex h-full flex-col justify-between gap-6">
+                <div>
+                  <h3 className="font-display text-base font-semibold text-slate-950">
+                    Built around your peace of mind
+                  </h3>
+                  <ul className="mt-4 space-y-3">
+                    <TrustPoint
+                      icon={<LockKeyhole className="h-4 w-4" />}
+                      title="Strict NDA Signed"
+                      detail="100% Data Privacy"
+                    />
+                    <TrustPoint
+                      icon={<Clock3 className="h-4 w-4" />}
+                      title="24-Hour Response Guarantee"
+                    />
+                    <TrustPoint
+                      icon={<Globe2 className="h-4 w-4" />}
+                      title="Global Support"
+                      detail="US & PK Timings"
+                    />
+                  </ul>
+                </div>
+
+                <div className="border-t border-slate-200 pt-5">
+                  <h3 className="font-display text-base font-semibold text-slate-950">
+                    Prefer a direct call?
+                  </h3>
+                  <p className="mt-2 text-sm leading-6 text-slate-600">
+                    Skip the form and book a quick 15-minute intro meeting with
+                    our tech strategy team.
+                  </p>
+                  <Button asChild size="lg" className="mt-4 w-full">
+                    <Link
+                      href={`${siteMeta.whatsappLink}?text=${encodeURIComponent("Hi, I would like to book a 15-minute intro meeting with your tech strategy team.")}`}
+                      target="_blank"
+                      rel="noreferrer"
+                    >
+                      <CalendarDays className="h-4 w-4" />
+                      Book a 15-Min Call
+                    </Link>
+                  </Button>
+                </div>
+              </div>
+            </div>
           </div>
 
           <div className="relative lg:col-span-8">
@@ -135,5 +189,23 @@ function InfoRow({ icon, label, href, value, external = false }) {
         </span>
       </span>
     </a>
+  );
+}
+
+function TrustPoint({ icon, title, detail }) {
+  return (
+    <li className="flex items-center gap-3">
+      <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-xl border border-cyan-100 bg-cyan-50 text-cyan-800">
+        {icon}
+      </span>
+      <span>
+        <span className="block text-sm font-semibold text-slate-900">
+          {title}
+        </span>
+        {detail ? (
+          <span className="mt-0.5 block text-xs text-slate-500">{detail}</span>
+        ) : null}
+      </span>
+    </li>
   );
 }
