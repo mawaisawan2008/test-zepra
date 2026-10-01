@@ -38,7 +38,7 @@ export function SiteFooter() {
     <footer className="section-shell-tight relative border-t border-white/60 bg-slate-950 text-white">
       <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-brand-cyan/60 to-transparent" />
 
-      <div className="container">
+      <div className="w-full px-6 lg:px-12">
         <div className="grid gap-10 lg:grid-cols-[1.3fr_1fr_1fr_1fr]">
           <div className="max-w-sm">
             <Logo
