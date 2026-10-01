@@ -189,7 +189,8 @@ export function ContactForm() {
         <Field label="Project Goals" error={errors.message}>
         <Textarea
           name="message"
-          className="rounded-xl border-slate-200 bg-slate-50/50 p-3.5 focus:border-cyan-500 focus:bg-white focus:ring-2 focus:ring-cyan-500 focus-visible:border-cyan-500 focus-visible:ring-cyan-500"
+          rows={3}
+          className="min-h-0 rounded-xl border-slate-200 bg-slate-50/50 p-3.5 focus:border-cyan-500 focus:bg-white focus:ring-2 focus:ring-cyan-500 focus-visible:border-cyan-500 focus-visible:ring-cyan-500"
           placeholder="Tell us what you want to build, improve, or automate."
           value={formData.message}
           onChange={handleChange}
