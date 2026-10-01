@@ -4,7 +4,6 @@ import {
   Award,
   Building2,
   Globe2,
-  HeartHandshake,
   Landmark,
   Layers3,
   LockKeyhole,
@@ -21,9 +20,9 @@ const accreditations = [
 
 const metrics = [
   { value: "50+", label: "Projects Delivered", icon: Layers3 },
-  { value: "30+", label: "High-Converting Websites Launched", icon: Globe2 },
+  { value: "30+", label: "Websites Launched", icon: Globe2 },
   { value: "20+", label: "E-Commerce Stores Scaled", icon: ShoppingBag },
-  { value: "99.8%", label: "Client Retention & Satisfaction Rate", icon: HeartHandshake },
+  { value: "PK + Global", label: "Built for Pakistan & International Clients", icon: Globe2 },
 ];
 
 const pillars = [
