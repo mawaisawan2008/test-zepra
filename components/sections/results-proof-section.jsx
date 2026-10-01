@@ -66,7 +66,7 @@ export function ResultsProofSection({
           })}
         </div>
 
-        <div className="mt-8 columns-1 gap-6 md:columns-2 xl:columns-3">
+        <div className="mt-8 columns-1 gap-6 md:columns-2 xl:columns-3 2xl:columns-4">
           {marketingProofs.map((proof) => (
             <div key={proof.title} className="mb-6 break-inside-avoid">
               <Card className="card-shine overflow-hidden border-slate-200/80 bg-white/94">

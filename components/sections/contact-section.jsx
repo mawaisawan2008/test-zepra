@@ -19,7 +19,7 @@ export function ContactSection({ showHeader = true }) {
       id="contact"
       className="section-shell relative isolate overflow-hidden bg-gradient-to-b from-[#E8F2FF] via-[#0F172A] to-[#090D16]"
     >
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8 2xl:max-w-[1600px] 3xl:max-w-[1800px]">
         {showHeader ? (
           <SectionHeading
             eyebrow="Contact"

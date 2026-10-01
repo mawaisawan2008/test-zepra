@@ -34,7 +34,7 @@ export function ServicesGrid({
           </div>
         ) : null}
 
-        <div className="mt-8 grid gap-6 md:grid-cols-2 xl:grid-cols-3">
+        <div className="mt-8 grid gap-6 md:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-4">
           {services.map((service) => (
             <div key={service.title} id={slugify(service.title)}>
               <ServiceCard service={service} />
