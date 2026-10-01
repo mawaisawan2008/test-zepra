@@ -1,6 +1,6 @@
 import React from 'react';
 
-export function AiNativeSection() {
+export function TheShiftSection() {
   return (
     <section className="relative isolate overflow-hidden bg-[#E6F2FF] py-20 text-slate-900 sm:py-24">
       {/* Background Ambient Glow */}
@@ -152,3 +152,6 @@ export function AiNativeSection() {
     </section>
   );
 }
+
+// Default export included to prevent default import mismatch errors
+export default TheShiftSection;
