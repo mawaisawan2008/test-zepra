@@ -1,6 +1,7 @@
 import Link from "next/link";
 import {
   ArrowUpRight,
+  CalendarDays,
   Clock3,
   Globe2,
   LockKeyhole,
@@ -96,28 +97,32 @@ export function ContactSection({ showHeader = true }) {
 
               <div className="mt-4">
                 <h3 className="mb-2 text-xs font-semibold uppercase tracking-wider text-slate-500">
-                  Global headquarters &amp; presence
+                  Schedule a direct call
                 </h3>
-                <div className="grid gap-3 sm:grid-cols-2">
-                  <div className="rounded-xl border border-slate-200/60 bg-slate-50/80 p-3 text-xs">
-                    <div className="flex items-center gap-2 font-semibold text-slate-900">
-                      <span aria-hidden="true">🇵🇰</span>
-                      Lahore HQ
-                    </div>
-                    <p className="mt-1.5 leading-5 text-slate-600">
-                      D Tower, Plot B, Ghazi Rd, Lahore
-                    </p>
-                  </div>
-                  <div className="rounded-xl border border-slate-200/60 bg-slate-50/80 p-3 text-xs">
-                    <div className="flex items-center gap-2 font-semibold text-slate-900">
-                      <span aria-hidden="true">🇺🇸</span>
-                      US Agency Status
-                    </div>
-                    <p className="mt-1.5 leading-5 text-slate-600">
-                      San Jose, CA / Delaware Presence
-                    </p>
-                  </div>
-                </div>
+                <Link
+                  href={`${siteMeta.whatsappLink}?text=${encodeURIComponent("Hi, I would like to book a 15-minute discovery call.")}`}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="group flex cursor-pointer items-center justify-between gap-4 rounded-2xl border border-slate-200/80 bg-slate-50/90 p-4 shadow-sm transition-all duration-300 hover:bg-white hover:shadow-md focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-cyan-500"
+                >
+                  <span className="flex min-w-0 items-center gap-3">
+                    <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-cyan-50 text-cyan-800">
+                      <CalendarDays className="h-5 w-5" />
+                    </span>
+                    <span className="min-w-0">
+                      <span className="block text-sm font-semibold text-slate-900">
+                        Book a 15-min Discovery Call
+                      </span>
+                      <span className="mt-1 block text-xs leading-5 text-slate-600">
+                        Pick a convenient time with our team
+                      </span>
+                    </span>
+                  </span>
+                  <span className="inline-flex shrink-0 items-center gap-1 text-xs font-semibold text-cyan-800 transition-colors group-hover:text-cyan-950">
+                    Schedule Now
+                    <ArrowUpRight className="h-3.5 w-3.5" />
+                  </span>
+                </Link>
               </div>
             </div>
 
