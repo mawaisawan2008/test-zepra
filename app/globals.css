@@ -215,3 +215,9 @@
 body{
   user-select: none;
 }
+
+@media (max-width: 767px) {
+  .relative.min-h-screen:has(.mobile-home-layout) > footer {
+    display: none;
+  }
+}

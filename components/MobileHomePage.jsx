@@ -46,7 +46,7 @@ const legalLinks = [
 
 export default function MobileHomePage() {
   return (
-    <div className="md:hidden">
+    <div className="mobile-home-layout md:hidden">
       <HomeHero />
       <MobileAISection />
       <WhyUs />
