@@ -193,18 +193,19 @@ export function SiteFooter() {
               {partners.map((partner) => (
                 <div
                   key={partner.mark}
-                  className="flex items-center justify-center gap-2.5 rounded-xl border border-slate-200/80 bg-slate-100 px-4 py-2.5 text-slate-800 shadow-sm transition-all duration-300 hover:bg-white hover:shadow-md"
+                  className="flex h-10 items-center justify-center gap-2 rounded-xl border border-slate-200 bg-white px-4 py-2 text-slate-900 shadow-sm transition-all duration-300 hover:shadow-md"
                 >
                   <PartnerMark mark={partner.mark} />
                   {partner.mark === "shopify" ? (
-                    <span className="flex flex-col leading-none">
-                      <span className="text-sm font-semibold">shopify</span>
-                      <span className="mt-1 text-[9px] font-medium uppercase tracking-wide text-slate-500">
-                        Plus Partner
-                      </span>
+                    <span className="whitespace-nowrap text-xs font-semibold">
+                      Shopify Plus Partner
                     </span>
+                  ) : partner.mark === "salesforce" ? (
+                    <span className="text-sm font-semibold">salesforce</span>
                   ) : (
-                    <span className="text-sm font-semibold">{partner.name}</span>
+                    <span className="text-sm font-semibold">
+                      {partner.mark === "aws" ? "aws" : partner.name}
+                    </span>
                   )}
                 </div>
               ))}
@@ -305,30 +306,70 @@ export function SiteFooter() {
 function PartnerMark({ mark }) {
   if (mark === "microsoft") {
     return (
-      <span
-        aria-hidden="true"
-        className="grid h-5 w-5 grid-cols-2 grid-rows-2 gap-[2px]"
-      >
-        <span className="bg-[#F25022]" />
-        <span className="bg-[#7FBA00]" />
-        <span className="bg-[#00A4EF]" />
-        <span className="bg-[#FFB900]" />
-      </span>
+      <svg aria-hidden="true" viewBox="0 0 20 20" className="h-5 w-5 shrink-0">
+        <path fill="#F25022" d="M0 1.1 8.7 0v8.4H0z" />
+        <path fill="#7FBA00" d="M10 0h10v8.4H10z" />
+        <path fill="#00A4EF" d="M0 10h8.7v8.5L0 17.3z" />
+        <path fill="#FFB900" d="M10 10h10v10l-10-1.2z" />
+      </svg>
     );
   }
 
-  const brand = {
-    aws: { color: "232F3E", alt: "Amazon Web Services" },
-    shopify: { color: "95BF47", alt: "Shopify" },
-    salesforce: { color: "00A1E0", alt: "Salesforce" },
-  }[mark];
+  if (mark === "aws") {
+    return (
+      <svg aria-hidden="true" viewBox="0 0 28 20" className="h-5 w-7 shrink-0">
+        <path
+          d="M3 5.5c6.4 5.1 15.3 6.2 22 1.4"
+          fill="none"
+          stroke="#FF9900"
+          strokeLinecap="round"
+          strokeWidth="2"
+        />
+        <path
+          d="m21.1 5.5 4.2 1.1-1.1 4"
+          fill="none"
+          stroke="#FF9900"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          strokeWidth="2"
+        />
+      </svg>
+    );
+  }
+
+  if (mark === "shopify") {
+    return (
+      <svg aria-hidden="true" viewBox="0 0 24 24" className="h-6 w-6 shrink-0">
+        <path fill="#95BF47" d="m5 7 2-2h10l2 2 1 15H4z" />
+        <path
+          d="M8 8V6a4 4 0 0 1 8 0v2"
+          fill="none"
+          stroke="#5E8E3E"
+          strokeLinecap="round"
+          strokeWidth="1.5"
+        />
+        <text
+          x="12"
+          y="18"
+          fill="white"
+          fontFamily="Georgia, serif"
+          fontSize="11"
+          fontStyle="italic"
+          fontWeight="700"
+          textAnchor="middle"
+        >
+          S
+        </text>
+      </svg>
+    );
+  }
 
   return (
-    <img
-      src={`https://cdn.simpleicons.org/${mark === "aws" ? "amazonaws" : mark}/${brand.color}`}
-      alt={brand.alt}
-      className="h-5 w-auto object-contain"
-      loading="lazy"
-    />
+    <svg aria-hidden="true" viewBox="0 0 28 22" className="h-5 w-7 shrink-0">
+      <path
+        fill="#00A1E0"
+        d="M9 20.5C4.6 20.5 1 17.4 1 13.5c0-3.5 2.9-6.3 6.5-6.3.8-3 3.5-5.2 6.7-5.2 3.1 0 5.8 2 6.7 5 .5-.2 1.1-.3 1.7-.3 3.1 0 5.5 2.5 5.5 5.6 0 .5-.1 1-.2 1.4 1.2 1 2 2.4 2 4 0 1.6-1 2.8-2.6 2.8z"
+      />
+    </svg>
   );
 }
