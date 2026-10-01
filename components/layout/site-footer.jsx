@@ -77,7 +77,12 @@ const navigationGroups = [
   },
 ];
 
-const partnerNames = ["Microsoft", "AWS", "Shopify", "Salesforce"];
+const partners = [
+  { name: "Microsoft", mark: "microsoft" },
+  { name: "AWS", mark: "aws" },
+  { name: "Shopify", mark: "shopify" },
+  { name: "Salesforce", mark: "salesforce" },
+];
 
 const locations = [
   {
@@ -184,14 +189,24 @@ export function SiteFooter() {
             <h3 className="text-xs font-semibold uppercase tracking-[0.16em] text-slate-400">
               Technology ecosystem
             </h3>
-            <div className="mt-4 flex flex-wrap items-center gap-x-6 gap-y-3">
-              {partnerNames.map((partner) => (
-                <span
-                  key={partner}
-                  className="text-sm font-semibold text-slate-300 opacity-70 grayscale transition-opacity duration-200 hover:opacity-100"
+            <div className="mt-3 flex flex-wrap items-center gap-3 sm:gap-4">
+              {partners.map((partner) => (
+                <div
+                  key={partner.mark}
+                  className="flex items-center justify-center gap-2.5 rounded-xl border border-slate-200/80 bg-slate-100 px-4 py-2.5 text-slate-800 shadow-sm transition-all duration-300 hover:bg-white hover:shadow-md"
                 >
-                  {partner}
-                </span>
+                  <PartnerMark mark={partner.mark} />
+                  {partner.mark === "shopify" ? (
+                    <span className="flex flex-col leading-none">
+                      <span className="text-sm font-semibold">shopify</span>
+                      <span className="mt-1 text-[9px] font-medium uppercase tracking-wide text-slate-500">
+                        Plus Partner
+                      </span>
+                    </span>
+                  ) : (
+                    <span className="text-sm font-semibold">{partner.name}</span>
+                  )}
+                </div>
               ))}
             </div>
           </div>
@@ -284,5 +299,36 @@ export function SiteFooter() {
         </div>
       </div>
     </footer>
+  );
+}
+
+function PartnerMark({ mark }) {
+  if (mark === "microsoft") {
+    return (
+      <span
+        aria-hidden="true"
+        className="grid h-5 w-5 grid-cols-2 grid-rows-2 gap-[2px]"
+      >
+        <span className="bg-[#F25022]" />
+        <span className="bg-[#7FBA00]" />
+        <span className="bg-[#00A4EF]" />
+        <span className="bg-[#FFB900]" />
+      </span>
+    );
+  }
+
+  const brand = {
+    aws: { color: "232F3E", alt: "Amazon Web Services" },
+    shopify: { color: "95BF47", alt: "Shopify" },
+    salesforce: { color: "00A1E0", alt: "Salesforce" },
+  }[mark];
+
+  return (
+    <img
+      src={`https://cdn.simpleicons.org/${mark === "aws" ? "amazonaws" : mark}/${brand.color}`}
+      alt={brand.alt}
+      className="h-5 w-auto object-contain"
+      loading="lazy"
+    />
   );
 }
