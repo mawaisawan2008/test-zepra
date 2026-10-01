@@ -89,8 +89,9 @@ export function ContactForm() {
   }
 
   return (
-    <form className="space-y-5" onSubmit={handleSubmit}>
-      <div className="grid gap-5 md:grid-cols-2">
+    <form className="flex flex-1 flex-col" onSubmit={handleSubmit}>
+      <div className="space-y-5">
+        <div className="grid gap-5 md:grid-cols-2">
         <Field label="Full Name" error={errors.name}>
           <Input
             name="name"
@@ -111,9 +112,9 @@ export function ContactForm() {
             aria-invalid={Boolean(errors.company)}
           />
         </Field>
-      </div>
+        </div>
 
-      <div className="grid gap-5 md:grid-cols-2">
+        <div className="grid gap-5 md:grid-cols-2">
         <Field label="Work Email" error={errors.email}>
           <Input
             type="email"
@@ -135,9 +136,9 @@ export function ContactForm() {
             aria-invalid={Boolean(errors.phone)}
           />
         </Field>
-      </div>
+        </div>
 
-      <div className="grid gap-5 md:grid-cols-3">
+        <div className="grid gap-5 md:grid-cols-3">
         <Field label="Service Needed" error={errors.service}>
           <SelectField
             name="service"
@@ -183,9 +184,9 @@ export function ContactForm() {
             ))}
           </SelectField>
         </Field>
-      </div>
+        </div>
 
-      <Field label="Project Goals" error={errors.message}>
+        <Field label="Project Goals" error={errors.message}>
         <Textarea
           name="message"
           className="rounded-xl border-slate-200 bg-slate-50/50 p-3.5 focus:border-cyan-500 focus:bg-white focus:ring-2 focus:ring-cyan-500 focus-visible:border-cyan-500 focus-visible:ring-cyan-500"
@@ -194,24 +195,25 @@ export function ContactForm() {
           onChange={handleChange}
           aria-invalid={Boolean(errors.message)}
         />
-      </Field>
+        </Field>
 
-      {status.message ? (
-        <div
-          className={`rounded-2xl border px-4 py-3 text-sm ${
-            status.type === "success"
-              ? "border-emerald-200 bg-emerald-50 text-emerald-700"
-              : "border-rose-200 bg-rose-50 text-rose-700"
-          }`}
-        >
-          {status.message}
-        </div>
-      ) : null}
+        {status.message ? (
+          <div
+            className={`rounded-2xl border px-4 py-3 text-sm ${
+              status.type === "success"
+                ? "border-emerald-200 bg-emerald-50 text-emerald-700"
+                : "border-rose-200 bg-rose-50 text-rose-700"
+            }`}
+          >
+            {status.message}
+          </div>
+        ) : null}
+      </div>
 
       <Button
         type="submit"
         size="xl"
-        className="w-full bg-gradient-to-r from-cyan-600 to-blue-600 text-white shadow-lg shadow-cyan-900/10 hover:from-cyan-500 hover:to-blue-500"
+        className="mt-auto w-full bg-gradient-to-r from-cyan-600 to-blue-600 text-white shadow-lg shadow-cyan-900/10 hover:from-cyan-500 hover:to-blue-500"
       >
         <>
           <ArrowRight className="h-4 w-4" />

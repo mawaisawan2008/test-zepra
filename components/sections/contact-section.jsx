@@ -33,9 +33,9 @@ export function ContactSection({ showHeader = true }) {
           />
         ) : null}
 
-        <div className="mt-8 grid items-stretch gap-8 lg:grid-cols-12">
-          <div className="flex flex-col lg:col-span-4">
-            <div className="rounded-2xl border border-slate-200/80 bg-white/80 p-6 shadow-sm backdrop-blur-md sm:p-8">
+        <div className="mt-8 grid grid-cols-1 items-stretch gap-8 lg:grid-cols-12">
+          <div className="flex h-full flex-col justify-between lg:col-span-4">
+            <div className="rounded-2xl border border-slate-200/80 bg-white/80 p-6 shadow-sm backdrop-blur-md">
               <div className="flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.16em] text-cyan-800">
                 <span className="h-2 w-2 rounded-full bg-emerald-400" />
                 Business inquiry
@@ -145,12 +145,12 @@ export function ContactSection({ showHeader = true }) {
             </div>
           </div>
 
-          <div className="relative lg:col-span-8">
+          <div className="relative flex h-full flex-col justify-between lg:col-span-8">
             <div
               aria-hidden="true"
               className="pointer-events-none absolute -inset-4 -z-10 rounded-3xl bg-cyan-500/10 blur-3xl"
             />
-            <div className="rounded-2xl border border-slate-100 bg-white p-6 shadow-xl sm:p-8">
+            <div className="flex h-full flex-col justify-between rounded-2xl border border-slate-100 bg-white p-6 shadow-xl sm:p-8">
               <div className="mb-6">
                 <h2 className="font-display text-2xl font-semibold text-slate-950">
                   Request a consultation
