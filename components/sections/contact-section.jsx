@@ -91,6 +91,32 @@ export function ContactSection({ showHeader = true }) {
                   ))}
                 </div>
               </div>
+
+              <div className="mt-4">
+                <h3 className="mb-2 text-xs font-semibold uppercase tracking-wider text-slate-500">
+                  Global headquarters &amp; presence
+                </h3>
+                <div className="grid gap-3 sm:grid-cols-2">
+                  <div className="rounded-xl border border-slate-200/60 bg-slate-50/80 p-3 text-xs">
+                    <div className="flex items-center gap-2 font-semibold text-slate-900">
+                      <span aria-hidden="true">🇵🇰</span>
+                      Lahore HQ
+                    </div>
+                    <p className="mt-1.5 leading-5 text-slate-600">
+                      D Tower, Plot B, Ghazi Rd, Lahore
+                    </p>
+                  </div>
+                  <div className="rounded-xl border border-slate-200/60 bg-slate-50/80 p-3 text-xs">
+                    <div className="flex items-center gap-2 font-semibold text-slate-900">
+                      <span aria-hidden="true">🇺🇸</span>
+                      US Agency Status
+                    </div>
+                    <p className="mt-1.5 leading-5 text-slate-600">
+                      San Jose, CA / Delaware Presence
+                    </p>
+                  </div>
+                </div>
+              </div>
             </div>
 
             <div className="mt-6 border-t border-slate-200 pt-5">
