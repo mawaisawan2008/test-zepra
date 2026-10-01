@@ -1,5 +1,4 @@
 import { ContactSection } from "@/components/sections/contact-section";
-import { FeaturedServices } from "@/components/sections/featured-services";
 import { HomeHero } from "@/components/sections/home-hero";
 import { MetricsStrip } from "@/components/sections/metrics-strip";
 import { TestimonialsSection } from "@/components/sections/testimonials-section";
@@ -33,7 +32,6 @@ export default function HomePage() {
       />
       <HomeHero />
       <MetricsStrip />
-      <FeaturedServices />
       <TheShiftSection />
       <WhyUs />
       <TestimonialsSection />
