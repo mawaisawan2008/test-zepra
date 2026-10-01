@@ -78,11 +78,6 @@ const navigationGroups = [
 ];
 
 const partnerNames = ["Microsoft", "AWS", "Shopify", "Salesforce"];
-const recognitionNames = [
-  "Clutch Top Developer",
-  "ISO Certified",
-  "Recognized Agency",
-];
 
 const locations = [
   {
@@ -185,37 +180,19 @@ export function SiteFooter() {
         </nav>
 
         <div className="border-t border-b border-slate-800 py-6">
-          <div className="grid gap-6 lg:grid-cols-[1fr_1.2fr] lg:items-center">
-            <div>
-              <h3 className="text-xs font-semibold uppercase tracking-[0.16em] text-slate-400">
-                Technology ecosystem
-              </h3>
-              <div className="mt-4 flex flex-wrap items-center gap-x-6 gap-y-3">
-                {partnerNames.map((partner) => (
-                  <span
-                    key={partner}
-                    className="text-sm font-semibold text-slate-300 opacity-70 grayscale transition-opacity duration-200 hover:opacity-100"
-                  >
-                    {partner}
-                  </span>
-                ))}
-              </div>
-            </div>
-
-            <div>
-              <h3 className="text-xs font-semibold uppercase tracking-[0.16em] text-slate-400">
-                Recognitions &amp; certifications
-              </h3>
-              <div className="mt-4 flex flex-wrap gap-2">
-                {recognitionNames.map((recognition) => (
-                  <span
-                    key={recognition}
-                    className="rounded-full border border-slate-800 px-3 py-1.5 text-xs font-medium text-slate-300"
-                  >
-                    {recognition}
-                  </span>
-                ))}
-              </div>
+          <div>
+            <h3 className="text-xs font-semibold uppercase tracking-[0.16em] text-slate-400">
+              Technology ecosystem
+            </h3>
+            <div className="mt-4 flex flex-wrap items-center gap-x-6 gap-y-3">
+              {partnerNames.map((partner) => (
+                <span
+                  key={partner}
+                  className="text-sm font-semibold text-slate-300 opacity-70 grayscale transition-opacity duration-200 hover:opacity-100"
+                >
+                  {partner}
+                </span>
+              ))}
             </div>
           </div>
         </div>
