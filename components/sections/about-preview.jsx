@@ -17,11 +17,11 @@ export function AboutPreview({ showCta = true }) {
   );
 
   return (
-    <section className="relative overflow-hidden bg-gradient-to-b from-[#E6F2FF] via-[#0e1f38] to-[#0b132b] py-16 lg:py-24 text-slate-900 transition-all duration-500">
-      {/* Background Soft Glowing Ambient Orbs */}
+    <section className="relative overflow-hidden bg-[#E6F2FF] pt-16 pb-24 text-slate-900">
+      {/* Subtle top ambient light */}
       <div
         aria-hidden="true"
-        className="pointer-events-none absolute left-1/2 top-0 -z-10 h-96 w-[min(90vw,1000px)] -translate-x-1/2 rounded-full bg-[radial-gradient(ellipse_at_top,rgba(6,182,212,0.25),transparent_70%)] blur-[120px] animate-pulse"
+        className="pointer-events-none absolute left-1/2 top-0 -z-10 h-72 w-[min(90vw,1000px)] -translate-x-1/2 rounded-full bg-[radial-gradient(ellipse_at_top,rgba(6,182,212,0.15),transparent_70%)] blur-[100px]"
       />
 
       <div className="container relative z-10 mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl">
@@ -31,12 +31,12 @@ export function AboutPreview({ showCta = true }) {
               eyebrow={t("about.eyebrow")}
               title={t("about.title")}
               description={t("about.description")}
-              className="[&_h2]:text-slate-900 lg:[&_h2]:text-slate-900"
+              className="[&_h2]:text-slate-900 [&_p]:text-slate-700"
             />
 
             <div className="mt-8 grid gap-5 sm:grid-cols-2">
-              <div className="group relative overflow-hidden rounded-2xl border border-cyan-500/20 bg-white/80 p-6 shadow-lg backdrop-blur-md transition-all duration-300 hover:-translate-y-1.5 hover:border-cyan-400 hover:bg-white hover:shadow-cyan-500/10">
-                <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-cyan-500/10 text-cyan-600 shadow-inner transition-colors duration-300 group-hover:bg-cyan-500 group-hover:text-white">
+              <div className="group relative overflow-hidden rounded-2xl border border-cyan-500/20 bg-white/90 p-6 shadow-md backdrop-blur-md transition-all duration-300 hover:-translate-y-1.5 hover:border-cyan-400 hover:bg-white hover:shadow-cyan-500/10">
+                <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-cyan-500/10 text-cyan-700 shadow-inner transition-colors duration-300 group-hover:bg-cyan-600 group-hover:text-white">
                   <Compass className="h-6 w-6" />
                 </div>
                 <h3 className="mt-4 font-display text-xl font-semibold text-slate-900">
@@ -47,8 +47,8 @@ export function AboutPreview({ showCta = true }) {
                 </p>
               </div>
 
-              <div className="group relative overflow-hidden rounded-2xl border border-cyan-500/20 bg-white/80 p-6 shadow-lg backdrop-blur-md transition-all duration-300 hover:-translate-y-1.5 hover:border-cyan-400 hover:bg-white hover:shadow-cyan-500/10">
-                <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-cyan-500/10 text-cyan-600 shadow-inner transition-colors duration-300 group-hover:bg-cyan-500 group-hover:text-white">
+              <div className="group relative overflow-hidden rounded-2xl border border-cyan-500/20 bg-white/90 p-6 shadow-md backdrop-blur-md transition-all duration-300 hover:-translate-y-1.5 hover:border-cyan-400 hover:bg-white hover:shadow-cyan-500/10">
+                <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-cyan-500/10 text-cyan-700 shadow-inner transition-colors duration-300 group-hover:bg-cyan-600 group-hover:text-white">
                   <ShieldCheck className="h-6 w-6" />
                 </div>
                 <h3 className="mt-4 font-display text-xl font-semibold text-slate-900">
@@ -62,7 +62,7 @@ export function AboutPreview({ showCta = true }) {
 
             {showCta ? (
               <div className="mt-8">
-                <Button asChild variant="outline" size="lg" className="border-cyan-500/30 bg-white/90 text-cyan-900 hover:bg-cyan-50 hover:text-cyan-950 shadow-md transition-all duration-300">
+                <Button asChild variant="outline" size="lg" className="border-cyan-500/30 bg-white text-cyan-900 hover:bg-cyan-50 hover:text-cyan-950 shadow-sm transition-all duration-300">
                   <Link href="/about" className="inline-flex items-center gap-2 font-medium">
                     {t("about.learnMore")}
                     <ArrowRight className="h-4 w-4 text-cyan-600" />
@@ -76,7 +76,7 @@ export function AboutPreview({ showCta = true }) {
             {displayedPillars.map((pillar, index) => (
               <Card
                 key={pillar.title}
-                className={`group relative overflow-hidden rounded-2xl border border-cyan-500/20 bg-gradient-to-br from-[#0f172a]/90 via-[#0b132b]/95 to-[#060a17]/90 p-1 text-white shadow-xl backdrop-blur-lg transition-all duration-300 hover:-translate-y-1 hover:border-cyan-400/60 hover:shadow-2xl hover:shadow-cyan-500/15 ${
+                className={`group relative overflow-hidden rounded-2xl border border-slate-800 bg-[#0e172a] p-1 text-white shadow-xl transition-all duration-300 hover:-translate-y-1 hover:border-cyan-400/60 hover:shadow-cyan-500/10 ${
                   index === 1 ? "lg:translate-x-4" : ""
                 }`}
               >
@@ -106,6 +106,12 @@ export function AboutPreview({ showCta = true }) {
           </div>
         </div>
       </div>
+
+      {/* Bottom Fade Transition Layer - Starts exactly under the section */}
+      <div 
+        aria-hidden="true" 
+        className="absolute bottom-0 left-0 right-0 h-28 bg-gradient-to-b from-transparent via-[#0b132b]/60 to-[#0b132b] pointer-events-none"
+      />
     </section>
   );
 }
