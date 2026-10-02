@@ -1,3 +1,5 @@
+"use client";
+
 import Link from "next/link";
 import {
   ArrowRight,
@@ -11,6 +13,7 @@ import {
   ShoppingBag,
   TrendingUp,
 } from "lucide-react";
+import { useLanguage } from "@/components/providers/language-provider";
 
 const accreditations = [
   { label: "ISO Certified (Quality Standards)", icon: Award },
@@ -53,6 +56,9 @@ const pillars = [
 ];
 
 export function WhyUs() {
+  const { t } = useLanguage();
+  const content = t("home.whyUs");
+
   return (
     <section className="relative isolate overflow-hidden bg-slate-950 py-8 text-white sm:py-12">
       <div className="pointer-events-none absolute -left-32 top-0 -z-10 h-96 w-96 rounded-full bg-cyan-500/10 blur-3xl" />
@@ -62,18 +68,17 @@ export function WhyUs() {
         <header className="flex flex-col gap-6 border-b border-white/10 pb-6 lg:flex-row lg:items-end lg:justify-between">
           <div className="max-w-3xl">
             <div className="inline-flex items-center rounded-full border border-cyan-400/20 bg-cyan-400/[0.08] px-3 py-1.5 text-[10px] font-semibold uppercase tracking-[0.2em] text-cyan-300">
-              WHY CHOOSE US
+              {content.eyebrow}
             </div>
             <h2 className="mt-4 font-display text-3xl font-semibold leading-tight text-white sm:text-4xl lg:text-5xl">
-              Built for trust, speed, and real business outcomes.
+              {content.title}
             </h2>
             <p className="mt-4 max-w-2xl text-sm leading-7 text-slate-300 sm:text-base">
-              Proven engineering and digital execution designed to scale your
-              revenue worldwide.
+              {content.description}
             </p>
 
             <div className="mt-6 flex flex-wrap gap-2.5">
-              {accreditations.map((accreditation) => {
+              {accreditations.map((accreditation, index) => {
                 const Icon = accreditation.icon;
 
                 return (
@@ -82,7 +87,7 @@ export function WhyUs() {
                     className="inline-flex items-center gap-2 rounded-full border border-slate-800 bg-slate-900/80 px-3 py-1.5 text-xs font-medium text-slate-300 backdrop-blur-md"
                   >
                     <Icon className="h-3.5 w-3.5 text-cyan-300" />
-                    {accreditation.label}
+                    {content.accreditations[index] ?? accreditation.label}
                   </span>
                 );
               })}
@@ -97,7 +102,7 @@ export function WhyUs() {
               <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-emerald-400 opacity-60 motion-reduce:animate-none" />
               <span className="relative inline-flex h-2 w-2 rounded-full bg-emerald-400" />
             </span>
-            Let&apos;s chat
+            {content.chat}
             <ArrowRight className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-0.5 motion-reduce:transition-none" />
           </Link>
         </header>
@@ -117,7 +122,7 @@ export function WhyUs() {
                     {metric.value}
                   </div>
                   <p className="mt-2 max-w-[14rem] text-xs leading-5 text-slate-400 sm:text-sm">
-                    {metric.label}
+                    {content.metrics[index] ?? metric.label}
                   </p>
                 </div>
               </div>
@@ -128,6 +133,7 @@ export function WhyUs() {
         <div className="grid gap-4 pt-6 sm:grid-cols-2 xl:grid-cols-4">
           {pillars.map((pillar, index) => {
             const Icon = pillar.icon;
+            const translatedPillar = content.pillars[index] ?? pillar;
 
             return (
               <article
@@ -144,10 +150,10 @@ export function WhyUs() {
                 </div>
 
                 <h3 className="mt-5 font-display text-lg font-semibold leading-snug text-white">
-                  {pillar.title}
+                  {translatedPillar.title}
                 </h3>
                 <p className="mt-3 text-sm leading-6 text-slate-400">
-                  {pillar.description}
+                  {translatedPillar.description}
                 </p>
               </article>
             );

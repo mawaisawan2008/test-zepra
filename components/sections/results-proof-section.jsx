@@ -1,9 +1,12 @@
+"use client";
+
 import { BarChart3, Megaphone, TrendingUp } from "lucide-react";
 
 import { SectionHeading } from "@/components/shared/section-heading";
 import { Badge } from "@/components/ui/badge";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { marketingProofs } from "@/lib/site";
+import { useLanguage } from "@/components/providers/language-provider";
 
 const proofHighlights = [
   {
@@ -27,23 +30,29 @@ const proofHighlights = [
 ];
 
 export function ResultsProofSection({
-  eyebrow = "Social Media Marketing",
-  title = "Social media marketing proof arranged as a clean professional review gallery.",
-  description = "These visuals have been organized to present campaign work, reporting snapshots, and growth evidence in a more polished agency-style format.",
+  eyebrow,
+  title,
+  description,
 }) {
+  const { t } = useLanguage();
+  const content = t("marketingPage");
+  const highlights = content.highlights;
+  const translatedProofs = content.proofs;
+
   return (
     <section id="social-media-marketing" className="section-shell scroll-mt-32 bg-white/50">
       <div className="container">
         <SectionHeading
-          eyebrow={eyebrow}
-          title={title}
-          description={description}
+          eyebrow={eyebrow ?? content.eyebrow}
+          title={title ?? content.title}
+          description={description ?? content.description}
           align="center"
         />
 
         <div className="mt-8 grid gap-6 lg:grid-cols-3">
           {proofHighlights.map((item, index) => {
             const Icon = item.icon;
+            const translatedItem = highlights?.[index] ?? item;
 
             return (
               <Card
@@ -56,10 +65,10 @@ export function ResultsProofSection({
                   <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-slate-950 text-white shadow-glow">
                     <Icon className="h-5 w-5" />
                   </div>
-                  <CardTitle>{item.title}</CardTitle>
+                  <CardTitle>{translatedItem.title}</CardTitle>
                 </CardHeader>
                 <CardContent className="text-sm leading-7 text-brand-slate">
-                  {item.description}
+                  {translatedItem.description}
                 </CardContent>
               </Card>
             );
@@ -67,14 +76,16 @@ export function ResultsProofSection({
         </div>
 
         <div className="mt-8 columns-1 gap-6 md:columns-2 xl:columns-3 2xl:columns-4">
-          {marketingProofs.map((proof) => (
+          {marketingProofs.map((proof, index) => {
+            const translatedProof = translatedProofs?.[index] ?? proof;
+            return (
             <div key={proof.title} className="mb-6 break-inside-avoid">
               <Card className="card-shine overflow-hidden border-slate-200/80 bg-white/94">
                 <div className="border-b border-slate-200/70 p-5">
-                  <Badge>{proof.label}</Badge>
-                  <CardTitle className="mt-4 text-xl">{proof.title}</CardTitle>
+                  <Badge>{translatedProof.label}</Badge>
+                  <CardTitle className="mt-4 text-xl">{translatedProof.title}</CardTitle>
                   <p className="mt-3 text-sm leading-7 text-brand-slate">
-                    {proof.summary}
+                    {translatedProof.summary}
                   </p>
                 </div>
                 <div className="bg-slate-50 p-4">
@@ -89,7 +100,8 @@ export function ResultsProofSection({
                 </div>
               </Card>
             </div>
-          ))}
+            );
+          })}
         </div>
       </div>
     </section>

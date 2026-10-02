@@ -1,7 +1,11 @@
 import React from 'react';
 import { testimonials } from "@/lib/site";
+import { useLanguage } from "@/components/providers/language-provider";
 
 export function TestimonialCard({ testimonial, index }) {
+  const { t } = useLanguage();
+  const translated = t("home.testimonials.items")?.[index];
+
   return (
     <div className="group relative flex flex-col justify-between overflow-hidden rounded-2xl border border-cyan-500/20 bg-gradient-to-b from-[#0e1f38] via-[#0b132b] to-[#060a17] p-6 shadow-xl backdrop-blur-md transition-all duration-300 hover:-translate-y-2 hover:border-cyan-400/50 hover:shadow-2xl hover:shadow-cyan-500/15">
       {/* Top Left Subtle Ambient Glow Effect (Matches Hero Card Lighting) */}
@@ -14,7 +18,7 @@ export function TestimonialCard({ testimonial, index }) {
         {/* Header: Service Tag & Star Rating */}
         <div className="flex items-center justify-between gap-3">
           <span className="inline-flex items-center rounded-full border border-cyan-500/30 bg-cyan-500/10 px-3 py-1 text-xs font-medium text-cyan-300 shadow-inner">
-            {testimonial?.service || testimonial?.tag || "Service"}
+            {translated?.service || testimonial?.service || testimonial?.tag || "Service"}
           </span>
           <div className="flex text-amber-400 text-sm tracking-widest">
             ★★★★★
@@ -23,7 +27,7 @@ export function TestimonialCard({ testimonial, index }) {
 
         {/* Feedback Quote */}
         <p className="mt-4 text-sm leading-relaxed text-slate-200 font-normal">
-          "{testimonial?.quote || testimonial?.content || testimonial?.text}"
+          “{translated?.quote || testimonial?.quote || testimonial?.content || testimonial?.text}”
         </p>
       </div>
 
@@ -37,7 +41,7 @@ export function TestimonialCard({ testimonial, index }) {
             {testimonial?.name || "Confidential client"}
           </h4>
           <p className="text-[11px] text-slate-400">
-            {testimonial?.role || testimonial?.project || testimonial?.service}
+            {translated?.role || testimonial?.role || testimonial?.project || testimonial?.service}
           </p>
         </div>
       </div>
@@ -46,6 +50,8 @@ export function TestimonialCard({ testimonial, index }) {
 }
 
 export function TestimonialsSection() {
+  const { t } = useLanguage();
+
   return (
     <section className="relative isolate overflow-hidden bg-[#E6F2FF] py-8 text-slate-900 sm:py-12">
       {/* Background Ambient Glow */}
@@ -60,14 +66,13 @@ export function TestimonialsSection() {
               <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-emerald-400 opacity-70 motion-reduce:animate-none" />
               <span className="relative inline-flex h-2 w-2 rounded-full bg-emerald-400" />
             </span>
-            Client trust &amp; reviews
+            {t("home.testimonials.eyebrow")}
           </div>
           <h2 className="mt-4 font-display text-3xl font-semibold leading-tight text-slate-900 sm:text-4xl lg:text-5xl">
-            What our global clients say about us.
+            {t("home.testimonials.title")}
           </h2>
           <p className="mx-auto mt-4 max-w-2xl text-sm leading-7 text-slate-700 sm:text-base">
-            Real testimonials from enterprises, startups, and brands across web,
-            AI, e-commerce, and growth marketing.
+            {t("home.testimonials.description")}
           </p>
         </header>
 

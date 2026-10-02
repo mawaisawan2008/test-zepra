@@ -1,9 +1,12 @@
+"use client";
+
 import { Layers3, Sparkles, Target } from "lucide-react";
 
 import { SectionHeading } from "@/components/shared/section-heading";
 import { Badge } from "@/components/ui/badge";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { thumbnailDesignShowcases } from "@/lib/site";
+import { useLanguage } from "@/components/providers/language-provider";
 
 const thumbnailHighlights = [
   {
@@ -27,19 +30,23 @@ const thumbnailHighlights = [
 ];
 
 export function ThumbnailDesignShowcase() {
+  const { t } = useLanguage();
+  const content = t("thumbnailPage");
+
   return (
     <section className="section-shell bg-white/50">
       <div className="container">
         <SectionHeading
-          eyebrow="Thumbnail Designing"
-          title="A focused showcase for bold, attention-first thumbnail design work."
-          description="This page now highlights a selected group of thumbnail concepts so Zepra Tech can present cleaner visual quality, stronger contrast work, and more focused YouTube design execution."
+          eyebrow={content.eyebrow}
+          title={content.title}
+          description={content.description}
           align="center"
         />
 
         <div className="mt-8 grid gap-6 lg:grid-cols-3">
           {thumbnailHighlights.map((item, index) => {
             const Icon = item.icon;
+            const translatedItem = content.highlights?.[index] ?? item;
 
             return (
               <Card
@@ -52,10 +59,10 @@ export function ThumbnailDesignShowcase() {
                   <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-slate-950 text-white shadow-glow">
                     <Icon className="h-5 w-5" />
                   </div>
-                  <CardTitle>{item.title}</CardTitle>
+                  <CardTitle>{translatedItem.title}</CardTitle>
                 </CardHeader>
                 <CardContent className="text-sm leading-7 text-brand-slate">
-                  {item.description}
+                  {translatedItem.description}
                 </CardContent>
               </Card>
             );
@@ -63,12 +70,14 @@ export function ThumbnailDesignShowcase() {
         </div>
 
         <div className="mt-8 columns-1 gap-6 md:columns-2 xl:columns-3 2xl:columns-4">
-          {thumbnailDesignShowcases.map((item) => (
+          {thumbnailDesignShowcases.map((item, index) => {
+            const translatedItem = content.items?.[index] ?? item;
+            return (
             <div key={item.title} className="mb-6 break-inside-avoid">
               <Card className="card-shine overflow-hidden border-slate-200/80 bg-white/94">
                 <div className="border-b border-slate-200/70 p-5">
-                  <Badge>{item.label}</Badge>
-                  <CardTitle className="mt-4 text-xl">{item.title}</CardTitle>
+                  <Badge>{translatedItem.label}</Badge>
+                  <CardTitle className="mt-4 text-xl">{translatedItem.title}</CardTitle>
                 </div>
                 <div className="bg-slate-50 p-4">
                   <div className="overflow-hidden rounded-[22px] border border-slate-200/70 bg-white shadow-soft">
@@ -82,7 +91,8 @@ export function ThumbnailDesignShowcase() {
                 </div>
               </Card>
             </div>
-          ))}
+            );
+          })}
         </div>
       </div>
     </section>

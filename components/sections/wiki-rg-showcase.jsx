@@ -1,9 +1,14 @@
+"use client";
+
 import { SectionHeading } from "@/components/shared/section-heading";
 import { Badge } from "@/components/ui/badge";
 import { Card, CardTitle } from "@/components/ui/card";
 import { wikiRgScreens } from "@/lib/site";
+import { useLanguage } from "@/components/providers/language-provider";
 
 export function WikiRgShowcase() {
+  const { t } = useLanguage();
+  const content = t("websitePage.wiki");
   const featuredScreen = wikiRgScreens.find((item) => item.featured);
   const detailScreens = wikiRgScreens.filter((item) => !item.featured);
 
@@ -11,8 +16,8 @@ export function WikiRgShowcase() {
     <section className="section-shell bg-white/45">
       <div className="container">
         <SectionHeading
-          eyebrow="Featured Website Case Study"
-          title="Wiki RG arranged as a complete research collaboration platform with clearer product storytelling."
+          eyebrow={content.eyebrow}
+          title={content.title}
           align="center"
         />
 
@@ -20,12 +25,12 @@ export function WikiRgShowcase() {
           {featuredScreen ? (
             <Card className="card-shine overflow-hidden border-slate-200/80 bg-white/94">
               <div className="border-b border-slate-200/70 p-6">
-                <Badge>{featuredScreen.label}</Badge>
+                <Badge>{content.screens[wikiRgScreens.indexOf(featuredScreen)]?.label ?? featuredScreen.label}</Badge>
                 <CardTitle className="mt-4 text-3xl">
-                  {featuredScreen.title}
+                  {content.screens[wikiRgScreens.indexOf(featuredScreen)]?.title ?? featuredScreen.title}
                 </CardTitle>
                 <p className="mt-4 max-w-2xl text-sm leading-7 text-brand-slate">
-                  {featuredScreen.summary}
+                  {content.screens[wikiRgScreens.indexOf(featuredScreen)]?.summary ?? featuredScreen.summary}
                 </p>
               </div>
               <div className="bg-slate-50 p-4">
@@ -42,18 +47,20 @@ export function WikiRgShowcase() {
           ) : null}
 
           <div className="grid gap-6 sm:grid-cols-2">
-            {detailScreens.map((screen) => (
+            {detailScreens.map((screen) => {
+              const translatedScreen = content.screens[wikiRgScreens.indexOf(screen)] ?? screen;
+              return (
               <Card
                 key={screen.title}
                 className="card-shine overflow-hidden border-slate-200/80 bg-white/94"
               >
                 <div className="border-b border-slate-200/70 p-5">
-                  <Badge>{screen.label}</Badge>
+                  <Badge>{translatedScreen.label}</Badge>
                   <CardTitle className="mt-4 text-xl leading-tight">
-                    {screen.title}
+                    {translatedScreen.title}
                   </CardTitle>
                   <p className="mt-3 text-sm leading-7 text-brand-slate">
-                    {screen.summary}
+                    {translatedScreen.summary}
                   </p>
                 </div>
                 <div className="bg-slate-50 p-4">
@@ -67,7 +74,8 @@ export function WikiRgShowcase() {
                   </div>
                 </div>
               </Card>
-            ))}
+              );
+            })}
           </div>
         </div>
       </div>

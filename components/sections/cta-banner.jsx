@@ -1,9 +1,14 @@
+"use client";
+
 import Link from "next/link";
 import { ArrowRight, PhoneCall } from "lucide-react";
 
+import { useLanguage } from "@/components/providers/language-provider";
 import { Button } from "@/components/ui/button";
 
 export function CtaBanner() {
+  const { t } = useLanguage();
+
   return (
     <section className="section-shell-tight">
       <div className="container">
@@ -12,30 +17,26 @@ export function CtaBanner() {
           <div className="relative flex flex-col gap-6 lg:flex-row lg:items-center lg:justify-between">
             <div className="max-w-3xl">
               <div className="eyebrow border-white/10 bg-white/10 text-cyan-300">
-                Start your next project
+                {t("cta.eyebrow")}
               </div>
               <h2 className="mt-5 font-display text-3xl font-semibold leading-tight text-white sm:text-4xl">
-                Ready to build a stronger website, smarter AI workflow, or
-                better digital growth engine?
+                {t("cta.title")}
               </h2>
               <p className="mt-4 max-w-2xl text-sm leading-7 text-slate-300 sm:text-base">
-                Talk to Zepra Tech about web development, AI automation,
-                ecommerce, SEO, marketing, design, and long-term support. We
-                structure projects for credibility, performance, and scalable
-                business growth.
+                {t("cta.description")}
               </p>
             </div>
             <div className="flex flex-col gap-3 sm:flex-row">
               <Button asChild size="xl">
                 <Link href="/contact">
-                  Book a Consultation
+                  {t("nav.bookConsultation")}
                   <ArrowRight className="h-4 w-4" />
                 </Link>
               </Button>
               <Button asChild size="xl" variant="light">
                 <Link href="/services">
                   <PhoneCall className="h-4 w-4" />
-                  View Services
+                  {t("nav.viewServices")}
                 </Link>
               </Button>
             </div>

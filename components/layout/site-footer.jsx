@@ -1,3 +1,5 @@
+"use client";
+
 import Link from "next/link";
 import {
   Facebook,
@@ -8,6 +10,7 @@ import {
 } from "lucide-react";
 
 import { Logo } from "@/components/shared/logo";
+import { useLanguage } from "@/components/providers/language-provider";
 import { siteMeta, socialLinks } from "@/lib/site";
 
 function XIcon({ className }) {
@@ -121,7 +124,44 @@ const footerSocialLinks = [
 const contactIconWrap =
   "flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-white/5 text-brand-cyan ring-1 ring-white/10 transition-colors duration-300 group-hover:bg-primary group-hover:text-white";
 
+const footerGroupKeys = {
+  Services: "services",
+  Solutions: "solutions",
+  "Products / Tech Stack": "products",
+  Resources: "resources",
+  Company: "company",
+};
+
+const footerLinkKeys = {
+  "Web Development": "webDevelopment",
+  "AI Automation": "aiAutomation",
+  "Mobile Apps": "mobileApps",
+  Cloud: "cloud",
+  "UI/UX": "uiux",
+  Ecommerce: "ecommerce",
+  "Custom Software": "customSoftware",
+  "Workflow Automation": "workflowAutomation",
+  "AI Ops": "aiOps",
+  "Enterprise Systems": "enterpriseSystems",
+  "Web Platforms": "webPlatforms",
+  "Mobile Platforms": "mobilePlatforms",
+  APIs: "apis",
+  "Cloud Infrastructure": "cloudInfrastructure",
+  Blogs: "blogs",
+  "Case Studies": "caseStudies",
+  Portfolio: "portfolio",
+  Guides: "guides",
+  News: "news",
+  "About Us": "aboutUs",
+  Careers: "careers",
+  "Contact Us": "contactUs",
+  "Partner Program": "partnerProgram",
+};
+
 export function SiteFooter() {
+  const { t } = useLanguage();
+  const translatedLocations = t("footer.locations");
+
   return (
     <footer className="section-shell-tight relative border-t border-white/60 bg-slate-950 text-white">
       <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-brand-cyan/60 to-transparent" />
@@ -133,7 +173,7 @@ export function SiteFooter() {
               className="[&_svg]:shadow-glow"
               textClassName="[&_div:first-child]:text-white [&_div:last-child]:text-slate-400"
             />
-            <p className="mt-4 text-sm leading-7 text-slate-300">{siteMeta.tagline}</p>
+            <p className="mt-4 text-sm leading-7 text-slate-300">{t("footer.tagline")}</p>
           </div>
 
           <div className="flex flex-col gap-3 text-sm text-slate-300 sm:flex-row sm:gap-6">
@@ -165,7 +205,7 @@ export function SiteFooter() {
             {navigationGroups.map((group) => (
               <div key={group.title}>
                 <h3 className="font-display text-base font-semibold text-white">
-                  {group.title}
+                  {t(`footer.${footerGroupKeys[group.title]}`)}
                 </h3>
                 <ul className="mt-4 space-y-3 text-sm text-slate-300">
                   {group.links.map((link) => (
@@ -174,7 +214,7 @@ export function SiteFooter() {
                         href={link.href}
                         className="transition-colors duration-200 hover:text-cyan-400"
                       >
-                        {link.label}
+                        {t(`footer.links.${footerLinkKeys[link.label]}`)}
                       </Link>
                     </li>
                   ))}
@@ -187,7 +227,7 @@ export function SiteFooter() {
         <div className="border-t border-b border-slate-800 py-6">
           <div>
             <h3 className="text-xs font-semibold uppercase tracking-[0.16em] text-slate-400">
-              Technology ecosystem
+              {t("footer.technology")}
             </h3>
             <div className="mt-3 flex flex-wrap items-center gap-3 sm:gap-4">
               {partners.map((partner) => (
@@ -218,29 +258,32 @@ export function SiteFooter() {
             id="global-presence-heading"
             className="font-display text-lg font-semibold text-white"
           >
-            Global locations &amp; presence
+            {t("footer.globalPresence")}
           </h3>
           <div className="mt-5 grid gap-6 sm:grid-cols-2 xl:grid-cols-4">
-            {locations.map((location) => (
+            {locations.map((location, index) => {
+              const translatedLocation = translatedLocations?.[index] ?? location;
+              return (
               <div key={location.name} className="min-w-0">
                 <div className="flex items-center gap-2.5">
                   <span className="text-xl" aria-hidden="true">
                     {location.flag}
                   </span>
                   <h4 className="text-sm font-semibold text-white">
-                    {location.name}
+                    {translatedLocation.name}
                   </h4>
                 </div>
                 <p className="mt-3 break-words text-sm leading-6 text-slate-400">
-                  {location.detail}
+                  {translatedLocation.detail}
                 </p>
-                {location.note ? (
+                {translatedLocation.note ? (
                   <p className="mt-1 text-xs leading-5 text-slate-500">
-                    {location.note}
+                    {translatedLocation.note}
                   </p>
                 ) : null}
               </div>
-            ))}
+              );
+            })}
           </div>
         </section>
 
@@ -248,31 +291,31 @@ export function SiteFooter() {
           <div className="flex flex-wrap items-center gap-x-2 gap-y-1">
             <span>© 2026 Zepra Tech</span>
             <span aria-hidden="true">|</span>
-            <span>All Rights Reserved.</span>
+            <span>{t("footer.allRightsReserved")}</span>
             <span aria-hidden="true">|</span>
             <Link
               href="/privacy-policy"
               className="transition-colors duration-200 hover:text-cyan-400"
             >
-              Privacy Policy
+              {t("footer.privacy")}
             </Link>
             <span aria-hidden="true">|</span>
             <Link
               href="/terms-of-use"
               className="transition-colors duration-200 hover:text-cyan-400"
             >
-              Terms of Service
+              {t("footer.terms")}
             </Link>
             <span aria-hidden="true">|</span>
             <Link
               href="/privacy-policy"
               className="transition-colors duration-200 hover:text-cyan-400"
             >
-              Security
+              {t("footer.security")}
             </Link>
           </div>
 
-          <ul className="flex flex-wrap items-center gap-x-5 gap-y-3" aria-label="Social media">
+          <ul className="flex flex-wrap items-center gap-x-5 gap-y-3" aria-label={t("footer.social")}>
             {footerSocialLinks.map((social) => {
               const Icon = social.label.startsWith("X")
                 ? XIcon

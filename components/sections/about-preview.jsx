@@ -1,3 +1,5 @@
+"use client";
+
 import Link from "next/link";
 import { ArrowRight, Building2, Compass, Lightbulb, ShieldCheck } from "lucide-react";
 
@@ -5,17 +7,24 @@ import { SectionHeading } from "@/components/shared/section-heading";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { aboutPillars } from "@/lib/site";
+import { useLanguage } from "@/components/providers/language-provider";
 
 export function AboutPreview({ showCta = true }) {
+  const { t } = useLanguage();
+  const pillars = t("about.pillars");
+  const displayedPillars = aboutPillars.map(
+    (pillar, index) => pillars?.[index] ?? pillar,
+  );
+
   return (
     <section className="section-shell">
       <div className="container">
         <div className="grid gap-6 lg:grid-cols-[0.95fr_1.05fr] lg:items-center">
           <div>
             <SectionHeading
-              eyebrow="About Zepra Tech"
-              title="A forward-thinking digital agency built around business results."
-              description="Zepra Tech helps businesses grow through technology, automation, online presence, and creative digital execution. Our goal is simple: make brands look more credible, move faster, and perform better in the digital space."
+              eyebrow={t("about.eyebrow")}
+              title={t("about.title")}
+              description={t("about.description")}
             />
 
             <div className="mt-8 grid gap-4 sm:grid-cols-2">
@@ -24,12 +33,10 @@ export function AboutPreview({ showCta = true }) {
                   <Compass className="h-5 w-5" />
                 </div>
                 <h3 className="mt-4 font-display text-xl font-semibold text-slate-950">
-                  Brand story
+                  {t("about.brandStory")}
                 </h3>
                 <p className="mt-3 text-sm leading-7 text-brand-slate">
-                  We are building Zepra Tech as a dependable growth partner for
-                  companies that need stronger digital systems, better market
-                  positioning, and execution they can trust.
+                  {t("about.brandStoryText")}
                 </p>
               </div>
 
@@ -38,12 +45,10 @@ export function AboutPreview({ showCta = true }) {
                   <ShieldCheck className="h-5 w-5" />
                 </div>
                 <h3 className="mt-4 font-display text-xl font-semibold text-slate-950">
-                  Mission-driven
+                  {t("about.missionDriven")}
                 </h3>
                 <p className="mt-3 text-sm leading-7 text-brand-slate">
-                  Every project is shaped to balance professionalism,
-                  innovation, reliability, and client-focused execution from
-                  planning to post-launch support.
+                  {t("about.missionText")}
                 </p>
               </div>
             </div>
@@ -52,7 +57,7 @@ export function AboutPreview({ showCta = true }) {
               <div className="mt-8">
                 <Button asChild variant="outline" size="lg">
                   <Link href="/about">
-                    Learn more about Zepra Tech
+                    {t("about.learnMore")}
                     <ArrowRight className="h-4 w-4" />
                   </Link>
                 </Button>
@@ -61,7 +66,7 @@ export function AboutPreview({ showCta = true }) {
           </div>
 
           <div className="grid gap-5">
-            {aboutPillars.map((pillar, index) => (
+            {displayedPillars.map((pillar, index) => (
               <Card
                 key={pillar.title}
                 className={`card-shine border-slate-200/80 bg-white/90 ${index === 1 ? "lg:translate-x-6" : ""}`}
