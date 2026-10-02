@@ -21,6 +21,10 @@ export function LanguageProvider({ children }) {
     if (savedLanguage && savedLanguage in dictionaries) setLanguage(savedLanguage);
   }, []);
 
+  useEffect(() => {
+    document.documentElement.lang = language;
+  }, [language]);
+
   function changeLanguage(nextLanguage) {
     if (!(nextLanguage in dictionaries)) return;
     window.localStorage.setItem("zepra-language", nextLanguage);

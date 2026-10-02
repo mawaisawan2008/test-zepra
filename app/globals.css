@@ -78,6 +78,33 @@
   footer {
     width: 100%;
   }
+
+  section,
+  footer {
+    overflow-x: clip;
+  }
+
+  :where(.flex, .grid) > * {
+    min-width: 0;
+  }
+
+  :where(h1, h2, h3, h4, h5, h6, p, li) {
+    min-width: 0;
+    overflow-wrap: break-word;
+    hyphens: auto;
+  }
+
+  :where(button, [role="button"], .eyebrow, .metric-chip, [class*="rounded-full"]) {
+    white-space: nowrap;
+  }
+
+  nav > a {
+    white-space: nowrap;
+  }
+
+  svg {
+    flex-shrink: 0;
+  }
 }
 
 @layer components {
