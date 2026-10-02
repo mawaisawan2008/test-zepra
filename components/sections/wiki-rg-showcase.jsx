@@ -33,6 +33,7 @@ export function WikiRgShowcase() {
                   <img
                     src={featuredScreen.image}
                     alt={featuredScreen.title}
+                    decoding="async"
                     className="h-auto w-full object-contain"
                   />
                 </div>
@@ -60,6 +61,7 @@ export function WikiRgShowcase() {
                     <img
                       src={screen.image}
                       alt={screen.title}
+                      decoding="async"
                       className="h-auto w-full object-contain"
                     />
                   </div>

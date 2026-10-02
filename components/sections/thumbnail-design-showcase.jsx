@@ -75,6 +75,7 @@ export function ThumbnailDesignShowcase() {
                     <img
                       src={item.image}
                       alt={item.title}
+                      decoding="async"
                       className="h-auto w-full object-contain"
                     />
                   </div>

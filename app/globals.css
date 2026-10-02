@@ -91,6 +91,7 @@
 
   .surface-panel {
     @apply rounded-[28px] border border-slate-200/70 shadow-soft backdrop-blur-md;
+    backface-visibility: hidden;
     background: linear-gradient(
       135deg,
       rgba(255, 255, 255, 0.94) 0%,
@@ -101,6 +102,13 @@
 
   .glass-panel {
     @apply rounded-[28px] border border-white/20 bg-slate-950/70 shadow-glow backdrop-blur-xl;
+    backface-visibility: hidden;
+  }
+
+  .backdrop-blur-sm,
+  .backdrop-blur-md,
+  .backdrop-blur-xl {
+    backface-visibility: hidden;
   }
 
   .eyebrow {
@@ -151,6 +159,7 @@
   }
 
   .capability-marquee-track {
+    @apply transform-gpu will-change-transform;
     animation: capability-scroll 32s linear infinite;
   }
 
@@ -159,6 +168,7 @@
   }
 
   .hero-highlight {
+    @apply transform-gpu will-change-transform;
     animation: hero-card-enter 650ms ease-out both;
   }
 
@@ -171,6 +181,7 @@
   }
 
   .testimonial-reveal {
+    @apply transform-gpu will-change-transform;
     animation: testimonial-rise 650ms cubic-bezier(0.2, 0.7, 0.2, 1) both;
   }
 

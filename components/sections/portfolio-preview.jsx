@@ -119,6 +119,7 @@ export function PortfolioPreview({
                       <img
                         src={showcase.image}
                         alt={showcase.title}
+                        decoding="async"
                         className="h-[440px] w-full object-cover object-top transition-transform duration-500 group-hover:scale-[1.02]"
                       />
                     ) : (
@@ -214,6 +215,7 @@ export function PortfolioPreview({
                       <img
                         src={project.image}
                         alt={project.title}
+                        decoding="async"
                         className="h-[240px] w-full object-cover object-top transition-transform duration-500 group-hover:scale-[1.03]"
                       />
                     </div>

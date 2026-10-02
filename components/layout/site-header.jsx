@@ -51,8 +51,9 @@ export function SiteHeader() {
   const pathname = usePathname();
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
-  const [progress, setProgress] = useState(0);
   const navRef = useRef(null);
+  const progressRef = useRef(null);
+  const scrolledRef = useRef(false);
   const [pill, setPill] = useState({ left: 0, width: 0, visible: false, snap: true });
 
   useEffect(() => {
@@ -61,30 +62,40 @@ export function SiteHeader() {
 
   // Shrinks the header a little after scrolling and tracks how far down the page you are.
   useEffect(() => {
-    let ticking = false;
+    let frame = 0;
 
     const update = () => {
       const y = window.scrollY;
       const max = document.documentElement.scrollHeight - window.innerHeight;
-      setScrolled(y > 12);
-      setProgress(max > 0 ? Math.min(1, y / max) : 0);
-      ticking = false;
+      const nextScrolled = y > 12;
+      const progress = max > 0 ? Math.min(1, y / max) : 0;
+
+      if (scrolledRef.current !== nextScrolled) {
+        scrolledRef.current = nextScrolled;
+        setScrolled(nextScrolled);
+      }
+
+      progressRef.current?.style.setProperty(
+        "transform",
+        `translate3d(0, 0, 0) scaleX(${progress})`,
+      );
+      frame = 0;
     };
 
-    const onScroll = () => {
-      if (!ticking) {
-        ticking = true;
-        window.requestAnimationFrame(update);
+    const scheduleUpdate = () => {
+      if (frame === 0) {
+        frame = window.requestAnimationFrame(update);
       }
     };
 
     update();
-    window.addEventListener("scroll", onScroll, { passive: true });
-    window.addEventListener("resize", onScroll);
+    window.addEventListener("scroll", scheduleUpdate, { passive: true });
+    window.addEventListener("resize", scheduleUpdate, { passive: true });
 
     return () => {
-      window.removeEventListener("scroll", onScroll);
-      window.removeEventListener("resize", onScroll);
+      window.removeEventListener("scroll", scheduleUpdate);
+      window.removeEventListener("resize", scheduleUpdate);
+      if (frame !== 0) window.cancelAnimationFrame(frame);
     };
   }, [pathname]);
 
@@ -111,7 +122,7 @@ export function SiteHeader() {
       <div className="container pointer-events-none">
         <div
           className={cn(
-            "pointer-events-auto relative mx-auto flex max-w-6xl items-center justify-between gap-4 rounded-full border border-slate-200/50 bg-white/90 px-5 shadow-lg backdrop-blur-md transition-all duration-300 lg:px-7",
+            "pointer-events-auto relative mx-auto flex max-w-6xl items-center justify-between gap-4 rounded-full border border-slate-200/50 bg-white/90 px-5 shadow-lg backdrop-blur-md [backface-visibility:hidden] transition-all duration-300 lg:px-7",
             scrolled ? "py-2.5 shadow-premium" : "py-4",
           )}
         >
@@ -241,8 +252,9 @@ export function SiteHeader() {
             )}
           >
             <div
-              className="h-full origin-left bg-gradient-to-r from-brand-blue to-brand-cyan"
-              style={{ transform: `scaleX(${progress})` }}
+              ref={progressRef}
+              className="h-full origin-left transform-gpu will-change-transform bg-gradient-to-r from-brand-blue to-brand-cyan"
+              style={{ transform: "translate3d(0, 0, 0) scaleX(0)" }}
             />
           </div>
         </div>

@@ -82,6 +82,7 @@ export function ResultsProofSection({
                     <img
                       src={proof.image}
                       alt={proof.title}
+                      decoding="async"
                       className="h-auto w-full object-contain"
                     />
                   </div>
