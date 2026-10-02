@@ -7,10 +7,9 @@ import { ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
+import { useLanguage } from "@/components/providers/language-provider";
 import {
-  budgetOptions,
   contactSchema,
-  timelineOptions,
 } from "@/lib/contact-schema";
 import { services, siteMeta } from "@/lib/site";
 
@@ -26,6 +25,7 @@ const initialState = {
 };
 
 export function ContactForm() {
+  const { t } = useLanguage();
   const [formData, setFormData] = useState(initialState);
   const [errors, setErrors] = useState({});
   const [status, setStatus] = useState({
@@ -48,12 +48,19 @@ export function ContactForm() {
     if (!parsed.success) {
       const nextErrors = {};
       parsed.error.issues.forEach((issue) => {
-        nextErrors[issue.path[0]] = issue.message;
+        const field = issue.path[0];
+        const messageKey =
+          field === "message"
+            ? issue.code === "too_big"
+              ? "messageMax"
+              : "messageMin"
+            : field;
+        nextErrors[field] = t(`contact.validation.${messageKey}`);
       });
       setErrors(nextErrors);
       setStatus({
         type: "error",
-        message: "Please review the highlighted fields and try again.",
+        message: t("contact.validationSummary"),
       });
       return;
     }
@@ -80,7 +87,7 @@ export function ContactForm() {
     setStatus({
       type: "success",
       message:
-        "Your email app is opening with the inquiry details. You can also use the WhatsApp button if you prefer a faster response.",
+        t("contact.emailOpening"),
     });
 
     if (typeof window !== "undefined") {
@@ -88,25 +95,29 @@ export function ContactForm() {
     }
   }
 
+  const translatedServices = t("services.items");
+  const budgetOptions = t("contact.budgetOptions");
+  const timelineOptions = t("contact.timelineOptions");
+
   return (
     <form className="flex flex-1 flex-col" onSubmit={handleSubmit}>
       <div className="space-y-5">
         <div className="grid gap-5 md:grid-cols-2">
-        <Field label="Full Name" error={errors.name}>
+        <Field label={t("contact.fullName")} error={errors.name}>
           <Input
             name="name"
             className="rounded-xl border-slate-200 bg-slate-50/50 p-3.5 focus:border-cyan-500 focus:bg-white focus:ring-2 focus:ring-cyan-500 focus-visible:border-cyan-500 focus-visible:ring-cyan-500"
-            placeholder="Your full name"
+            placeholder={t("contact.namePlaceholder")}
             value={formData.name}
             onChange={handleChange}
             aria-invalid={Boolean(errors.name)}
           />
         </Field>
-        <Field label="Company Name" error={errors.company}>
+        <Field label={t("contact.companyName")} error={errors.company}>
           <Input
             name="company"
             className="rounded-xl border-slate-200 bg-slate-50/50 p-3.5 focus:border-cyan-500 focus:bg-white focus:ring-2 focus:ring-cyan-500 focus-visible:border-cyan-500 focus-visible:ring-cyan-500"
-            placeholder="Company or brand"
+            placeholder={t("contact.companyPlaceholder")}
             value={formData.company}
             onChange={handleChange}
             aria-invalid={Boolean(errors.company)}
@@ -115,22 +126,22 @@ export function ContactForm() {
         </div>
 
         <div className="grid gap-5 md:grid-cols-2">
-        <Field label="Work Email" error={errors.email}>
+        <Field label={t("contact.workEmail")} error={errors.email}>
           <Input
             type="email"
             name="email"
             className="rounded-xl border-slate-200 bg-slate-50/50 p-3.5 focus:border-cyan-500 focus:bg-white focus:ring-2 focus:ring-cyan-500 focus-visible:border-cyan-500 focus-visible:ring-cyan-500"
-            placeholder="name@company.com"
+            placeholder={t("contact.emailPlaceholder")}
             value={formData.email}
             onChange={handleChange}
             aria-invalid={Boolean(errors.email)}
           />
         </Field>
-        <Field label="Phone / WhatsApp" error={errors.phone}>
+        <Field label={t("contact.phoneWhatsapp")} error={errors.phone}>
           <Input
             name="phone"
             className="rounded-xl border-slate-200 bg-slate-50/50 p-3.5 focus:border-cyan-500 focus:bg-white focus:ring-2 focus:ring-cyan-500 focus-visible:border-cyan-500 focus-visible:ring-cyan-500"
-            placeholder="+92..."
+            placeholder={t("contact.phonePlaceholder")}
             value={formData.phone}
             onChange={handleChange}
             aria-invalid={Boolean(errors.phone)}
@@ -139,29 +150,29 @@ export function ContactForm() {
         </div>
 
         <div className="grid gap-5 md:grid-cols-3">
-        <Field label="Service Needed" error={errors.service}>
+        <Field label={t("contact.serviceNeeded")} error={errors.service}>
           <SelectField
             name="service"
             value={formData.service}
             onChange={handleChange}
             aria-invalid={Boolean(errors.service)}
           >
-            <option value="">Select a service</option>
-            {services.map((service) => (
+            <option value="">{t("contact.selectService")}</option>
+            {services.map((service, index) => (
               <option key={service.title} value={service.title}>
-                {service.title}
+                {translatedServices?.[index]?.title ?? service.title}
               </option>
             ))}
           </SelectField>
         </Field>
-        <Field label="Estimated Budget" error={errors.budget}>
+        <Field label={t("contact.estimatedBudget")} error={errors.budget}>
           <SelectField
             name="budget"
             value={formData.budget}
             onChange={handleChange}
             aria-invalid={Boolean(errors.budget)}
           >
-            <option value="">Select a range</option>
+            <option value="">{t("contact.selectBudget")}</option>
             {budgetOptions.map((budget) => (
               <option key={budget} value={budget}>
                 {budget}
@@ -169,14 +180,14 @@ export function ContactForm() {
             ))}
           </SelectField>
         </Field>
-        <Field label="Preferred Timeline" error={errors.timeline}>
+        <Field label={t("contact.preferredTimeline")} error={errors.timeline}>
           <SelectField
             name="timeline"
             value={formData.timeline}
             onChange={handleChange}
             aria-invalid={Boolean(errors.timeline)}
           >
-            <option value="">Choose a timeline</option>
+            <option value="">{t("contact.selectTimeline")}</option>
             {timelineOptions.map((timeline) => (
               <option key={timeline} value={timeline}>
                 {timeline}
@@ -186,12 +197,12 @@ export function ContactForm() {
         </Field>
         </div>
 
-        <Field label="Project Goals" error={errors.message}>
+        <Field label={t("contact.projectGoals")} error={errors.message}>
         <Textarea
           name="message"
           rows={3}
           className="min-h-0 rounded-xl border-slate-200 bg-slate-50/50 p-3.5 focus:border-cyan-500 focus:bg-white focus:ring-2 focus:ring-cyan-500 focus-visible:border-cyan-500 focus-visible:ring-cyan-500"
-          placeholder="Tell us what you want to build, improve, or automate."
+          placeholder={t("contact.messagePlaceholder")}
           value={formData.message}
           onChange={handleChange}
           aria-invalid={Boolean(errors.message)}
@@ -218,7 +229,7 @@ export function ContactForm() {
       >
         <>
           <ArrowRight className="h-4 w-4" />
-          Open email draft
+          {t("contact.submit")}
         </>
       </Button>
     </form>

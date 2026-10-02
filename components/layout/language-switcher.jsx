@@ -2,6 +2,7 @@
 
 import { useEffect, useRef, useState } from "react";
 import { ChevronDown, Globe2 } from "lucide-react";
+import { useLanguage } from "@/components/providers/language-provider";
 
 const languages = [
   { code: "EN", value: "en", label: "English" },
@@ -12,38 +13,8 @@ const languages = [
 export function LanguageSwitcher() {
   const rootRef = useRef(null);
   const [isOpen, setIsOpen] = useState(false);
-  const [activeLanguage, setActiveLanguage] = useState(languages[0]);
-
-  useEffect(() => {
-    const savedCode = window.localStorage.getItem("zepra-language");
-    const savedLanguage = languages.find((language) => language.code === savedCode);
-
-    if (!savedLanguage) return;
-    setActiveLanguage(savedLanguage);
-
-  }, []);
-
-  useEffect(() => {
-    const observer = new MutationObserver(() => {
-      if (document.body.style.top && document.body.style.top !== "0px") {
-        document.body.style.top = "0px";
-      }
-
-      const banners = document.querySelectorAll(
-        '.goog-te-banner-frame, iframe[class*="goog-te-banner-frame"]',
-      );
-      banners.forEach((banner) => banner.remove());
-    });
-
-    observer.observe(document.body, {
-      attributes: true,
-      attributeFilter: ["style"],
-      childList: true,
-      subtree: true,
-    });
-
-    return () => observer.disconnect();
-  }, []);
+  const { language, changeLanguage } = useLanguage();
+  const activeLanguage = languages.find((item) => item.value === language) ?? languages[0];
 
   useEffect(() => {
     const handlePointerDown = (event) => {
@@ -63,14 +34,7 @@ export function LanguageSwitcher() {
 
   function handleLanguageChange(language) {
     setIsOpen(false);
-    setActiveLanguage(language);
-    window.localStorage.setItem("zepra-language", language.code);
-
-    const translateCookie = `/en/${language.value}`;
-    const domain = window.location.hostname;
-    document.cookie = `googtrans=${translateCookie}; path=/; domain=${domain}`;
-    document.cookie = `googtrans=${translateCookie}; path=/;`;
-    window.location.reload();
+    changeLanguage(language.value);
   }
 
   return (

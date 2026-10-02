@@ -1,3 +1,7 @@
+"use client";
+
+"use client";
+
 import Link from "next/link";
 import {
   ArrowUpRight,
@@ -12,9 +16,12 @@ import {
 import { ContactForm } from "@/components/shared/contact-form";
 import { SectionHeading } from "@/components/shared/section-heading";
 import { Button } from "@/components/ui/button";
+import { useLanguage } from "@/components/providers/language-provider";
 import { siteMeta, socialLinks } from "@/lib/site";
 
 export function ContactSection({ showHeader = true }) {
+  const { t } = useLanguage();
+
   return (
     <section
       id="contact"
@@ -23,9 +30,9 @@ export function ContactSection({ showHeader = true }) {
       <div className="mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8 2xl:max-w-[1600px] 3xl:max-w-[1800px]">
         {showHeader ? (
           <SectionHeading
-            eyebrow="Contact"
-            title="Start a business conversation with Zepra Tech."
-            description="Use the inquiry form for web development, AI automation, digital marketing, ecommerce, design, SEO, or technical support needs."
+            eyebrow={t("contact.eyebrow")}
+            title={t("contact.title")}
+            description={t("contact.description")}
             eyebrowClassName="px-5 py-2 text-xs sm:text-sm font-semibold"
             descriptionClassName="text-sm sm:text-base font-medium leading-relaxed text-slate-700"
           />
@@ -36,22 +43,22 @@ export function ContactSection({ showHeader = true }) {
             <div>
               <div className="flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.16em] text-cyan-800">
                 <span className="h-2 w-2 rounded-full bg-emerald-400" />
-                Business inquiry
+                {t("contact.businessInquiry")}
               </div>
               <h2 className="mt-4 font-display text-2xl font-semibold leading-tight text-slate-950">
-                Clear contact options for local and international clients.
+                {t("contact.optionsTitle")}
               </h2>
 
               <div className="mt-6 space-y-4">
                 <InfoRow
                   icon={<Mail className="h-5 w-5" />}
-                  label="Email"
+                  label={t("contact.email")}
                   href={`mailto:${siteMeta.email}`}
                   value={siteMeta.email}
                 />
                 <InfoRow
                   icon={<MessageCircle className="h-5 w-5" />}
-                  label="WhatsApp"
+                  label={t("contact.whatsapp")}
                   href={siteMeta.whatsappLink}
                   value={siteMeta.whatsappNumber}
                   external
@@ -66,20 +73,20 @@ export function ContactSection({ showHeader = true }) {
                     rel="noreferrer"
                   >
                     <MessageCircle className="h-4 w-4" />
-                    Chat on WhatsApp
+                    {t("contact.chatWhatsapp")}
                   </Link>
                 </Button>
                 <Button asChild size="lg" variant="outline" className="w-full">
                   <Link href={`mailto:${siteMeta.email}`}>
                     <Mail className="h-4 w-4" />
-                    Send an Email
+                    {t("contact.sendEmail")}
                   </Link>
                 </Button>
               </div>
 
               <div className="mt-6 border-t border-slate-200 pt-5">
                 <h3 className="text-sm font-semibold text-slate-900">
-                  Social presence
+                  {t("contact.socialPresence")}
                 </h3>
                 <div className="mt-3 flex flex-wrap gap-2">
                   {socialLinks.map((social) => (
@@ -97,10 +104,10 @@ export function ContactSection({ showHeader = true }) {
 
               <div className="mt-4">
                 <h3 className="mb-2 text-xs font-semibold uppercase tracking-wider text-slate-500">
-                  Schedule a direct call
+                  {t("contact.scheduleCall")}
                 </h3>
                 <Link
-                  href={`${siteMeta.whatsappLink}?text=${encodeURIComponent("Hi, I would like to book a 15-minute discovery call.")}`}
+                  href={`${siteMeta.whatsappLink}?text=${encodeURIComponent(t("contact.bookingMessage"))}`}
                   target="_blank"
                   rel="noreferrer"
                   className="group flex cursor-pointer items-center justify-between gap-4 rounded-2xl border border-slate-200/80 bg-slate-50/90 p-4 shadow-sm transition-all duration-300 hover:bg-white hover:shadow-md focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-cyan-500"
@@ -111,15 +118,15 @@ export function ContactSection({ showHeader = true }) {
                     </span>
                     <span className="min-w-0">
                       <span className="block text-sm font-semibold text-slate-900">
-                        Book a 15-min Discovery Call
+                        {t("contact.bookCall")}
                       </span>
                       <span className="mt-1 block text-xs leading-5 text-slate-600">
-                        Pick a convenient time with our team
+                        {t("contact.bookCallDescription")}
                       </span>
                     </span>
                   </span>
                   <span className="inline-flex shrink-0 items-center gap-1 text-xs font-semibold text-cyan-800 transition-colors group-hover:text-cyan-950">
-                    Schedule Now
+                    {t("contact.scheduleNow")}
                     <ArrowUpRight className="h-3.5 w-3.5" />
                   </span>
                 </Link>
@@ -130,17 +137,17 @@ export function ContactSection({ showHeader = true }) {
               <ul className="grid gap-3 sm:grid-cols-3">
                 <TrustPoint
                   icon={<LockKeyhole className="h-4 w-4" />}
-                  title="Strict NDA"
-                  detail="100% Data Privacy"
+                  title={t("contact.strictNda")}
+                  detail={t("contact.dataPrivacy")}
                 />
                 <TrustPoint
                   icon={<Clock3 className="h-4 w-4" />}
-                  title="24h Response"
+                  title={t("contact.responseGuarantee")}
                 />
                 <TrustPoint
                   icon={<Globe2 className="h-4 w-4" />}
-                  title="Global Support"
-                  detail="US & PK Timings"
+                  title={t("contact.globalSupport")}
+                  detail={t("contact.supportHours")}
                 />
               </ul>
             </div>
@@ -154,12 +161,10 @@ export function ContactSection({ showHeader = true }) {
             <div className="flex h-full flex-col justify-between rounded-2xl border border-slate-200/80 bg-white p-7 shadow-xl">
               <div className="mb-6">
                 <h2 className="font-display text-2xl font-semibold text-slate-950">
-                  Request a consultation
+                  {t("contact.requestConsultation")}
                 </h2>
                 <p className="mt-2 text-sm leading-6 text-brand-slate">
-                  Share your business goals, timeline, and service needs. The
-                  form now works as a frontend-only inquiry draft that opens your
-                  email app with the details filled in.
+                  {t("contact.formIntro")}
                 </p>
               </div>
               <ContactForm />

@@ -29,7 +29,7 @@ const iconMap = {
   Headphones,
 };
 
-export function ServiceCard({ service }) {
+export function ServiceCard({ service, agencyLabel = "Agency service" }) {
   const Icon = iconMap[service.icon] || Globe;
 
   return (
@@ -40,7 +40,7 @@ export function ServiceCard({ service }) {
             <Icon className="h-6 w-6" />
           </div>
           <Badge variant="secondary" className="bg-slate-100/90">
-            Agency service
+            {agencyLabel}
           </Badge>
         </div>
         <CardTitle className="pt-4 text-2xl">{service.title}</CardTitle>

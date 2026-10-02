@@ -1,3 +1,5 @@
+"use client";
+
 import Link from "next/link";
 import {
   ArrowRight,
@@ -11,6 +13,7 @@ import {
 } from "lucide-react";
 
 import { Button } from "@/components/ui/button";
+import { useLanguage } from "@/components/providers/language-provider";
 import { heroHighlights } from "@/lib/site";
 
 const capabilities = [
@@ -25,6 +28,10 @@ const capabilities = [
 const highlightIcons = [Layers3, Bot, Sparkles];
 
 export function HomeHero() {
+  const { t } = useLanguage();
+  const translatedHighlights = t("hero.highlights");
+  const translatedCapabilities = t("hero.capabilities");
+
   return (
     <section className="relative isolate overflow-hidden pb-8 pt-8 sm:pb-12 sm:pt-12 lg:pb-12 lg:pt-12">
       <div className="pointer-events-none absolute inset-0 -z-10 bg-[radial-gradient(ellipse_at_12%_8%,rgba(56,198,255,0.18),transparent_28%),radial-gradient(ellipse_at_88%_20%,rgba(18,119,255,0.14),transparent_30%),linear-gradient(180deg,rgba(239,247,255,0.7),rgba(248,251,255,0)_75%)]" />
@@ -34,29 +41,27 @@ export function HomeHero() {
           <div className="max-w-2xl">
             <div className="eyebrow animate-slide-up">
               <span className="h-1.5 w-1.5 rounded-full bg-brand-cyan" />
-              Digital delivery, built around outcomes
+              {t("hero.eyebrow")}
             </div>
 
             <h1 className="mt-4 text-balance font-display text-[2.65rem] font-semibold leading-[1.04] text-slate-950 sm:text-6xl lg:text-[4.35rem]">
-              Build digital systems that move your business{" "}
-              <span className="headline-gradient">forward.</span>
+              {t("hero.titleLead")} {" "}
+              <span className="headline-gradient">{t("hero.titleAccent")}</span>
             </h1>
             <p className="muted-copy mt-4 max-w-xl text-base sm:text-lg">
-              Strategy, engineering, AI, and growth expertise in one accountable
-              team, helping ambitious businesses turn digital complexity into
-              measurable progress.
+              {t("hero.description")}
             </p>
 
             <div className="mt-8 flex flex-col gap-3 sm:flex-row">
               <Button asChild size="xl">
                 <Link href="/contact">
-                  Talk through your project
+                  {t("hero.projectCta")}
                   <ArrowRight className="h-4 w-4" />
                 </Link>
               </Button>
               <Button asChild size="xl" variant="outline">
                 <Link href="/services">
-                  Explore capabilities
+                  {t("hero.capabilitiesCta")}
                   <ArrowUpRight className="h-4 w-4" />
                 </Link>
               </Button>
@@ -65,15 +70,15 @@ export function HomeHero() {
             <div className="mt-8 flex flex-wrap items-center gap-x-5 gap-y-3 text-sm font-medium text-slate-600">
               <span className="inline-flex items-center gap-2">
                 <Check className="h-4 w-4 text-emerald-600" />
-                Clear ownership
+                {t("hero.ownership")}
               </span>
               <span className="inline-flex items-center gap-2">
                 <Check className="h-4 w-4 text-emerald-600" />
-                Built to scale
+                {t("hero.scale")}
               </span>
               <span className="inline-flex items-center gap-2">
                 <Check className="h-4 w-4 text-emerald-600" />
-                One delivery partner
+                {t("hero.partner")}
               </span>
             </div>
           </div>
@@ -86,10 +91,10 @@ export function HomeHero() {
                 <div className="flex items-center justify-between gap-4 border-b border-white/10 pb-5">
                   <div>
                     <div className="text-[11px] font-semibold uppercase tracking-[0.2em] text-slate-400">
-                      Zepra delivery system
+                      {t("hero.systemLabel")}
                     </div>
                     <h2 className="mt-2 font-display text-lg font-semibold sm:text-xl">
-                      From first brief to lasting growth
+                      {t("hero.systemTitle")}
                     </h2>
                   </div>
                   <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl border border-cyan-300/20 bg-cyan-300/10 text-cyan-200">
@@ -98,14 +103,15 @@ export function HomeHero() {
                 </div>
 
                 <div className="mt-5 grid grid-cols-3 gap-2 rounded-2xl border border-white/10 bg-white/[0.04] p-2 text-center text-[11px] font-semibold text-slate-400 sm:gap-3 sm:p-3 sm:text-xs">
-                  <span className="rounded-xl bg-blue-500/15 px-2 py-2.5 text-blue-200">Plan</span>
-                  <span className="rounded-xl bg-white/[0.04] px-2 py-2.5">Build</span>
-                  <span className="rounded-xl bg-white/[0.04] px-2 py-2.5">Improve</span>
+                  <span className="rounded-xl bg-blue-500/15 px-2 py-2.5 text-blue-200">{t("hero.plan")}</span>
+                  <span className="rounded-xl bg-white/[0.04] px-2 py-2.5">{t("hero.build")}</span>
+                  <span className="rounded-xl bg-white/[0.04] px-2 py-2.5">{t("hero.improve")}</span>
                 </div>
 
                 <div className="mt-4 grid gap-3">
                   {heroHighlights.map((item, index) => {
                     const Icon = highlightIcons[index] || Globe2;
+                    const translatedItem = translatedHighlights?.[index] ?? item;
 
                     return (
                       <article
@@ -118,10 +124,10 @@ export function HomeHero() {
                           </span>
                           <div>
                             <h3 className="text-sm font-semibold text-white sm:text-base">
-                              {item.title}
+                              {translatedItem.title}
                             </h3>
                             <p className="mt-1.5 text-xs leading-5 text-slate-300 sm:text-sm sm:leading-6">
-                              {item.description}
+                              {translatedItem.description}
                             </p>
                           </div>
                         </div>
@@ -137,7 +143,7 @@ export function HomeHero() {
                       <span className="relative inline-flex h-2.5 w-2.5 rounded-full bg-emerald-400" />
                     </span>
                     <span className="text-xs font-medium text-slate-300 sm:text-sm">
-                      A connected team, accountable delivery
+                      {t("hero.connectedTeam")}
                     </span>
                   </div>
                   <Sparkles className="h-4 w-4 shrink-0 text-cyan-200" />
@@ -157,13 +163,13 @@ export function HomeHero() {
                 aria-hidden={copy > 0 ? "true" : undefined}
                 className="flex shrink-0 items-center gap-3 pr-3"
               >
-                {capabilities.map((capability) => (
+                {capabilities.map((capability, index) => (
                   <span
                     key={`${copy}-${capability}`}
                     className="inline-flex shrink-0 items-center gap-3 rounded-full border border-slate-200 bg-white px-4 py-2 text-xs font-semibold text-slate-700 shadow-sm"
                   >
                     <span className="h-1.5 w-1.5 rounded-full bg-brand-cyan" />
-                    {capability}
+                    {translatedCapabilities?.[index] ?? capability}
                   </span>
                 ))}
               </div>

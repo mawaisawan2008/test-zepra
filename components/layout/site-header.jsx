@@ -15,6 +15,7 @@ import { usePathname } from "next/navigation";
 
 import { Logo } from "@/components/shared/logo";
 import { LanguageSwitcher } from "@/components/layout/language-switcher";
+import { useLanguage } from "@/components/providers/language-provider";
 import { Button } from "@/components/ui/button";
 import { navItems } from "@/lib/site";
 import { cn } from "@/lib/utils";
@@ -23,6 +24,19 @@ const projectIcons = {
   "/website-development": Globe,
   "/social-media-marketing": Megaphone,
   "/thumbnail-designing": ImageIcon,
+};
+
+const navTranslationKeys = {
+  "/": "nav.home",
+  "/about": "nav.about",
+  "/services": "nav.services",
+  "/contact": "nav.contact",
+};
+
+const projectTranslationKeys = {
+  "/website-development": "nav.websiteDevelopment",
+  "/social-media-marketing": "nav.socialMediaMarketing",
+  "/thumbnail-designing": "nav.thumbnailDesigning",
 };
 
 function isPathActive(pathname, href) {
@@ -50,6 +64,7 @@ function ProjectIconBadge({ href }) {
 
 export function SiteHeader() {
   const pathname = usePathname();
+  const { t } = useLanguage();
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const navRef = useRef(null);
@@ -171,7 +186,7 @@ export function SiteHeader() {
                       aria-haspopup="menu"
                       aria-expanded={isActive ? "true" : "false"}
                     >
-                      {item.label}
+                      {t("nav.projects")}
                     </button>
                     <ChevronDown
                       className={cn(
@@ -191,10 +206,10 @@ export function SiteHeader() {
                               <ProjectIconBadge href={child.href} />
                               <span className="block">
                                 <span className="block text-sm font-semibold text-slate-950">
-                                  {child.label}
+                                  {t(projectTranslationKeys[child.href] ?? "nav.projects")}
                                 </span>
                                 <span className="mt-1 block text-xs leading-5 text-brand-slate">
-                                  {child.description}
+                                  {t(`${projectTranslationKeys[child.href]}Description`)}
                                 </span>
                               </span>
                             </Link>
@@ -217,7 +232,7 @@ export function SiteHeader() {
                     isActive && "bg-slate-950 text-white shadow-soft hover:bg-slate-900 hover:text-white",
                   )}
                 >
-                  {item.label}
+                  {t(navTranslationKeys[item.href] ?? "nav.contact")}
                 </Link>
               );
             })}
@@ -225,11 +240,11 @@ export function SiteHeader() {
 
           <div className="hidden items-center gap-3 lg:flex">
             <Button asChild variant="outline">
-              <Link href="/services">View Services</Link>
+              <Link href="/services">{t("nav.viewServices")}</Link>
             </Button>
             <Button asChild className="group">
               <Link href="/contact">
-                Book a Consultation
+                {t("nav.bookConsultation")}
                 <ChevronRight className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" />
               </Link>
             </Button>
@@ -280,7 +295,7 @@ export function SiteHeader() {
                         aria-haspopup="menu"
                         aria-expanded={isActive ? "true" : "false"}
                       >
-                        <span>{item.label}</span>
+                        <span>{t("nav.projects")}</span>
                         <ChevronDown className="h-4 w-4" />
                       </button>
                       <div className="mt-2 grid gap-2 pl-4">
@@ -292,11 +307,11 @@ export function SiteHeader() {
                           >
                             <ProjectIconBadge href={child.href} />
                             <span className="block">
-                              <span className="block text-sm font-semibold text-slate-950">
-                                {child.label}
+                                <span className="block text-sm font-semibold text-slate-950">
+                                  {t(projectTranslationKeys[child.href] ?? "nav.projects")}
                               </span>
                               <span className="mt-1 block text-xs leading-5 text-brand-slate">
-                                {child.description}
+                                  {t(`${projectTranslationKeys[child.href]}Description`)}
                               </span>
                             </span>
                           </Link>
@@ -315,17 +330,17 @@ export function SiteHeader() {
                       isActive && "bg-slate-950 text-white shadow-soft hover:bg-slate-900 hover:text-white",
                     )}
                   >
-                    <span>{item.label}</span>
+                    <span>{t(navTranslationKeys[item.href] ?? "nav.contact")}</span>
                   </Link>
                 );
               })}
             </nav>
             <div className="mt-5 grid gap-3 sm:grid-cols-2">
               <Button asChild variant="outline" className="w-full">
-                <Link href="/services">View Services</Link>
+                <Link href="/services">{t("nav.viewServices")}</Link>
               </Button>
               <Button asChild className="w-full">
-                <Link href="/contact">Book a Consultation</Link>
+                <Link href="/contact">{t("nav.bookConsultation")}</Link>
               </Button>
             </div>
           </div>

@@ -4,16 +4,15 @@ import {
   Facebook,
   Instagram,
   Linkedin,
-  Mail,
   MessageCircle,
   ShieldCheck,
   Workflow,
   X,
 } from "lucide-react";
 
-import { ContactForm } from "@/components/shared/contact-form";
 import { Logo } from "@/components/shared/logo";
 import { HomeHero } from "@/components/sections/home-hero";
+import { MobileContact } from "@/components/sections/mobile-contact";
 import { TestimonialCard } from "@/components/sections/testimonials-section";
 import { WhyUs } from "@/components/sections/why-us";
 import { siteMeta, socialLinks, testimonials } from "@/lib/site";
@@ -149,37 +148,6 @@ function MobileTestimonials() {
               index={index}
             />
           ))}
-        </div>
-      </div>
-    </section>
-  );
-}
-
-function MobileContact() {
-  return (
-    <section id="contact" className="bg-[#E6F2FF] py-8">
-      <div className="container px-4">
-        <div className="rounded-2xl border border-slate-200/80 bg-white p-5 shadow-lg">
-          <div className="mb-5">
-            <span className="text-xs font-semibold uppercase tracking-[0.16em] text-cyan-800">
-              Contact
-            </span>
-            <h2 className="mt-2 font-display text-2xl font-semibold leading-tight text-slate-950">
-              Request a consultation
-            </h2>
-            <p className="mt-2 text-sm leading-6 text-slate-600">
-              Share your business goals, timeline, and service needs. We’ll help
-              you identify a practical next step.
-            </p>
-          </div>
-          <ContactForm />
-          <a
-            href={`mailto:${siteMeta.email}`}
-            className="mt-5 inline-flex min-h-11 items-center gap-2 text-sm font-semibold text-slate-700"
-          >
-            <Mail className="h-4 w-4 text-cyan-700" />
-            {siteMeta.email}
-          </a>
         </div>
       </div>
     </section>
