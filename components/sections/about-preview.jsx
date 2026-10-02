@@ -17,37 +17,44 @@ export function AboutPreview({ showCta = true }) {
   );
 
   return (
-    <section className="section-shell">
-      <div className="container">
-        <div className="grid gap-6 lg:grid-cols-[0.95fr_1.05fr] lg:items-center">
+    <section className="relative overflow-hidden bg-gradient-to-b from-[#E6F2FF] via-[#0e1f38] to-[#0b132b] py-16 lg:py-24 text-slate-900 transition-all duration-500">
+      {/* Background Soft Glowing Ambient Orbs */}
+      <div
+        aria-hidden="true"
+        className="pointer-events-none absolute left-1/2 top-0 -z-10 h-96 w-[min(90vw,1000px)] -translate-x-1/2 rounded-full bg-[radial-gradient(ellipse_at_top,rgba(6,182,212,0.25),transparent_70%)] blur-[120px] animate-pulse"
+      />
+
+      <div className="container relative z-10 mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl">
+        <div className="grid gap-10 lg:grid-cols-[0.95fr_1.05fr] lg:items-center">
           <div>
             <SectionHeading
               eyebrow={t("about.eyebrow")}
               title={t("about.title")}
               description={t("about.description")}
+              className="[&_h2]:text-slate-900 lg:[&_h2]:text-slate-900"
             />
 
-            <div className="mt-8 grid gap-4 sm:grid-cols-2">
-              <div className="surface-panel p-5">
-                <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-primary/10 text-primary">
-                  <Compass className="h-5 w-5" />
+            <div className="mt-8 grid gap-5 sm:grid-cols-2">
+              <div className="group relative overflow-hidden rounded-2xl border border-cyan-500/20 bg-white/80 p-6 shadow-lg backdrop-blur-md transition-all duration-300 hover:-translate-y-1.5 hover:border-cyan-400 hover:bg-white hover:shadow-cyan-500/10">
+                <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-cyan-500/10 text-cyan-600 shadow-inner transition-colors duration-300 group-hover:bg-cyan-500 group-hover:text-white">
+                  <Compass className="h-6 w-6" />
                 </div>
-                <h3 className="mt-4 font-display text-xl font-semibold text-slate-950">
+                <h3 className="mt-4 font-display text-xl font-semibold text-slate-900">
                   {t("about.brandStory")}
                 </h3>
-                <p className="mt-3 text-sm leading-7 text-brand-slate">
+                <p className="mt-2.5 text-sm leading-relaxed text-slate-600">
                   {t("about.brandStoryText")}
                 </p>
               </div>
 
-              <div className="surface-panel p-5">
-                <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-primary/10 text-primary">
-                  <ShieldCheck className="h-5 w-5" />
+              <div className="group relative overflow-hidden rounded-2xl border border-cyan-500/20 bg-white/80 p-6 shadow-lg backdrop-blur-md transition-all duration-300 hover:-translate-y-1.5 hover:border-cyan-400 hover:bg-white hover:shadow-cyan-500/10">
+                <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-cyan-500/10 text-cyan-600 shadow-inner transition-colors duration-300 group-hover:bg-cyan-500 group-hover:text-white">
+                  <ShieldCheck className="h-6 w-6" />
                 </div>
-                <h3 className="mt-4 font-display text-xl font-semibold text-slate-950">
+                <h3 className="mt-4 font-display text-xl font-semibold text-slate-900">
                   {t("about.missionDriven")}
                 </h3>
-                <p className="mt-3 text-sm leading-7 text-brand-slate">
+                <p className="mt-2.5 text-sm leading-relaxed text-slate-600">
                   {t("about.missionText")}
                 </p>
               </div>
@@ -55,10 +62,10 @@ export function AboutPreview({ showCta = true }) {
 
             {showCta ? (
               <div className="mt-8">
-                <Button asChild variant="outline" size="lg">
-                  <Link href="/about">
+                <Button asChild variant="outline" size="lg" className="border-cyan-500/30 bg-white/90 text-cyan-900 hover:bg-cyan-50 hover:text-cyan-950 shadow-md transition-all duration-300">
+                  <Link href="/about" className="inline-flex items-center gap-2 font-medium">
                     {t("about.learnMore")}
-                    <ArrowRight className="h-4 w-4" />
+                    <ArrowRight className="h-4 w-4 text-cyan-600" />
                   </Link>
                 </Button>
               </div>
@@ -69,22 +76,26 @@ export function AboutPreview({ showCta = true }) {
             {displayedPillars.map((pillar, index) => (
               <Card
                 key={pillar.title}
-                className={`card-shine border-slate-200/80 bg-white/90 ${index === 1 ? "lg:translate-x-6" : ""}`}
+                className={`group relative overflow-hidden rounded-2xl border border-cyan-500/20 bg-gradient-to-br from-[#0f172a]/90 via-[#0b132b]/95 to-[#060a17]/90 p-1 text-white shadow-xl backdrop-blur-lg transition-all duration-300 hover:-translate-y-1 hover:border-cyan-400/60 hover:shadow-2xl hover:shadow-cyan-500/15 ${
+                  index === 1 ? "lg:translate-x-4" : ""
+                }`}
               >
-                <CardHeader className="flex-row items-start gap-4">
-                  <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl bg-slate-950 text-white shadow-glow">
+                <CardHeader className="flex-row items-start gap-4 p-5">
+                  <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl border border-cyan-400/30 bg-cyan-500/10 text-cyan-400 shadow-glow transition-all duration-300 group-hover:border-cyan-400 group-hover:bg-cyan-500 group-hover:text-white">
                     {index === 0 ? (
-                      <Building2 className="h-5 w-5" />
+                      <Building2 className="h-6 w-6" />
                     ) : index === 1 ? (
-                      <Lightbulb className="h-5 w-5" />
+                      <Lightbulb className="h-6 w-6" />
                     ) : (
-                      <ShieldCheck className="h-5 w-5" />
+                      <ShieldCheck className="h-6 w-6" />
                     )}
                   </div>
-                  <div>
-                    <CardTitle>{pillar.title}</CardTitle>
-                    <CardContent className="px-0 pb-0 pt-3">
-                      <p className="text-[15px] leading-7 text-brand-slate">
+                  <div className="flex-1">
+                    <CardTitle className="text-lg font-semibold text-white group-hover:text-cyan-300 transition-colors duration-300">
+                      {pillar.title}
+                    </CardTitle>
+                    <CardContent className="px-0 pb-0 pt-2">
+                      <p className="text-sm leading-relaxed text-slate-300">
                         {pillar.description}
                       </p>
                     </CardContent>
