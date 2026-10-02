@@ -9,7 +9,7 @@ export function AboutPrinciples() {
   const content = t("about.principles");
 
   return (
-    <section className="relative overflow-hidden bg-gradient-to-b from-[#0b132b] via-[#070d1e] to-[#040711] py-16 lg:py-24 text-white">
+    <section className="relative overflow-hidden bg-gradient-to-b from-[#E6F2FF] via-[#0b132b] to-[#040711] pt-8 pb-20 text-white">
       {/* Background Soft Glow Orb */}
       <div
         aria-hidden="true"
@@ -17,15 +17,19 @@ export function AboutPrinciples() {
       />
 
       <div className="container relative z-10 mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl">
-        <SectionHeading
-          eyebrow={content?.eyebrow}
-          title={content?.title}
-          description={content?.description}
-          align="center"
-          className="[&_h2]:text-white [&_p]:text-slate-300"
-        />
+        {/* Top Heading on Light background */}
+        <div className="pb-8">
+          <SectionHeading
+            eyebrow={content?.eyebrow}
+            title={content?.title}
+            description={content?.description}
+            align="center"
+            className="[&_h2]:text-slate-900 [&_p]:text-slate-700"
+          />
+        </div>
 
-        <div className="mt-12 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+        {/* Cards Grid inside Dark transition area */}
+        <div className="mt-6 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
           {content?.items?.map((item, index) => (
             <Card
               key={item.title || index}

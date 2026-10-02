@@ -17,8 +17,7 @@ export function AboutPreview({ showCta = true }) {
   );
 
   return (
-    <section className="relative overflow-hidden bg-[#E6F2FF] pt-16 pb-24 text-slate-900">
-      {/* Subtle top ambient light */}
+    <section className="relative overflow-hidden bg-[#E6F2FF] pt-16 pb-12 text-slate-900">
       <div
         aria-hidden="true"
         className="pointer-events-none absolute left-1/2 top-0 -z-10 h-72 w-[min(90vw,1000px)] -translate-x-1/2 rounded-full bg-[radial-gradient(ellipse_at_top,rgba(6,182,212,0.15),transparent_70%)] blur-[100px]"
@@ -106,12 +105,6 @@ export function AboutPreview({ showCta = true }) {
           </div>
         </div>
       </div>
-
-      {/* Bottom Fade Transition Layer - Starts exactly under the section */}
-      <div 
-        aria-hidden="true" 
-        className="absolute bottom-0 left-0 right-0 h-28 bg-gradient-to-b from-transparent via-[#0b132b]/60 to-[#0b132b] pointer-events-none"
-      />
     </section>
   );
 }
