@@ -14,6 +14,7 @@ import {
 import { usePathname } from "next/navigation";
 
 import { Logo } from "@/components/shared/logo";
+import { LanguageSwitcher } from "@/components/layout/language-switcher";
 import { Button } from "@/components/ui/button";
 import { navItems } from "@/lib/site";
 import { cn } from "@/lib/utils";
@@ -233,6 +234,8 @@ export function SiteHeader() {
               </Link>
             </Button>
           </div>
+
+          <LanguageSwitcher />
 
           <button
             type="button"

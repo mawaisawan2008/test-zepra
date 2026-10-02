@@ -233,6 +233,14 @@ body{
   user-select: none;
 }
 
+.goog-te-banner-frame.skiptranslate {
+  display: none !important;
+}
+
+body {
+  top: 0 !important;
+}
+
 @media (min-width: 1536px) {
   .container {
     max-width: 1600px;
