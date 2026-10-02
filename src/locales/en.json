@@ -338,6 +338,41 @@
     ]
   },
   "websitePage": {
+    "portfolio": {
+      "eyebrow": "Website Development",
+      "title": "Live website launches and premium interface work arranged like a real agency showcase.",
+      "description": "This page combines live project links, launch-ready website work, and visual development previews so Zepra Tech can present website delivery in a cleaner and more credible format.",
+      "visitProject": "Visit project",
+      "startProject": "Start a similar project",
+      "livePortfolio": "Live Portfolio",
+      "websitePresentation": "Website Presentation",
+      "openProject": "Open project",
+      "webAppsEyebrow": "Interactive Web Products",
+      "webAppsTitle": "Additional product-style web experiences presented with polished visuals and clean project framing.",
+      "webAppsDescription": "This showcase adds interactive tools, game-style interfaces, and AI-led product concepts to the website development portfolio.",
+      "liveProjects": [
+        { "title": "Raahvo Shop", "category": "Ecommerce Store", "status": "Live Store", "summary": "A live ecommerce storefront focused on polished product presentation, a cleaner shopping flow, and premium retail positioning.", "tags": ["Ecommerce", "Storefront", "Client Launch"] },
+        { "title": "Business Website Deployment", "category": "Website Development", "status": "Live Deployment", "summary": "A deployed business website prepared for client-facing presentation, responsive use, and growth-focused expansion.", "tags": ["Business Site", "Responsive", "Deployment"] },
+        { "title": "Custom Website Deployment", "category": "Website Development", "status": "Live Deployment", "summary": "A live custom website showcasing frontend delivery, clean structure, and production-ready deployment.", "tags": ["Custom Build", "Frontend", "Production"] },
+        { "title": "Web Platform Launch", "category": "Web Platform", "status": "Live Platform", "summary": "A stable web platform deployment with technical implementation and client-ready presentation.", "tags": ["Platform", "Launch", "Technical Delivery"] },
+        { "title": "Admin Dashboard Access", "category": "Admin Panel", "status": "Admin Access", "summary": "An admin environment highlighting backend control, operational visibility, and management workflows.", "tags": ["Dashboard", "Admin Panel", "Operations"] },
+        { "title": "Rehman M Portfolio", "category": "Personal Portfolio", "status": "Live Portfolio", "summary": "A personal portfolio built for professional positioning, clear project presentation, and a stronger online brand.", "tags": ["Portfolio Site", "Personal Brand", "Professional UI"] }
+      ],
+      "developmentShowcases": [
+        { "title": "Custom Frontend Showcase", "badge": "Website Development", "summary": "A detailed UI showcase with premium frontend styling, layered content, and polished responsive presentation.", "buttonLabel": "Visit custom website", "tags": ["Frontend UI", "Responsive Design", "Premium Layout"] },
+        { "title": "Personal Portfolio Website", "badge": "Website Development", "summary": "A clean personal portfolio for professional positioning, clear services, and a confident first impression.", "buttonLabel": "Visit live portfolio", "tags": ["Portfolio Site", "Personal Brand", "Responsive UI"] }
+      ],
+      "webApps": [
+        { "title": "Content Repurposing Platform", "category": "AI Content Tool", "summary": "A creator-focused interface that turns one content input into channel-ready outputs with an AI workflow.", "tags": ["AI Tool", "Creator Workflow", "Web App"] },
+        { "title": "Resume Optimization Platform", "category": "AI Career Product", "summary": "A resume improvement experience structured around scoring, optimization, and job-seeker conversion flows.", "tags": ["AI Product", "SaaS UI", "Lead Conversion"] },
+        { "title": "Interactive Story Experience", "category": "Narrative Web App", "summary": "A cinematic story interface for immersive interaction, choice-driven engagement, and rich presentation.", "tags": ["Story UI", "Interactive Design", "Atmospheric"] },
+        { "title": "Chess Arena Platform", "category": "Online Game Interface", "summary": "A competitive chess interface with multiplayer actions, computer play, and leaderboards.", "tags": ["Game UI", "Leaderboard", "Interactive"] },
+        { "title": "Escape Room Platform", "category": "Puzzle Product", "summary": "A dark puzzle concept centered on room creation, challenge flow, and game discovery.", "tags": ["Puzzle", "Game Design", "Product UI"] },
+        { "title": "Typing Race Experience", "category": "Skill-Based Web App", "summary": "A neon typing challenge focused on reaction, speed, and competitive practice.", "tags": ["Game UI", "Typing App", "Dark Theme"] },
+        { "title": "Word Challenge Arena", "category": "Competitive Web App", "summary": "A multiplayer word and typing competition with score-focused interaction and simple onboarding.", "tags": ["Word Game", "Multiplayer", "Web App"] },
+        { "title": "Maze Puzzle Experience", "category": "Interactive Puzzle Game", "summary": "A grid-based maze challenge built around timing, obstacles, and clear difficulty controls.", "tags": ["Maze Game", "Game UX", "Interactive"] }
+      ]
+    },
     "wiki": {
       "eyebrow": "Featured Website Case Study",
       "title": "Wiki RG arranged as a complete research collaboration platform with clearer product storytelling.",

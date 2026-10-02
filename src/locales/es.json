@@ -1,89 +1,89 @@
 {
   "nav": {
     "home": "Inicio",
-    "about": "Acerca de",
+    "about": "Nosotros",
     "services": "Servicios",
     "projects": "Proyectos",
     "contact": "Contacto",
-    "viewServices": "Ver servicios",
-    "bookConsultation": "Reservar una consulta",
-    "websiteDevelopment": "Desarrollo web",
-    "socialMediaMarketing": "Marketing en redes sociales",
-    "thumbnailDesigning": "Diseño de miniaturas",
-    "websiteDevelopmentDescription": "Despliegues web, desarrollos frontend y entregas listas para clientes.",
-    "socialMediaMarketingDescription": "Ejemplos de campañas, informes y proyectos de marketing de crecimiento.",
-    "thumbnailDesigningDescription": "Conceptos de miniaturas de YouTube, diseños llamativos y narración visual."
+    "viewServices": "Ver Servicios",
+    "bookConsultation": "Reservar Consulta",
+    "websiteDevelopment": "Desarrollo Web",
+    "socialMediaMarketing": "Marketing en Redes Sociales",
+    "thumbnailDesigning": "Diseño de Miniaturas",
+    "websiteDevelopmentDescription": "Despliegues web en vivo, desarrollo frontend y entregas listas para clientes.",
+    "socialMediaMarketingDescription": "Ejemplos de campañas, reportes y estrategias de marketing de crecimiento.",
+    "thumbnailDesigningDescription": "Miniaturas de YouTube, portadas atractivas y diseños de impacto visual."
   },
   "hero": {
-    "eyebrow": "Entrega digital enfocada en resultados",
-    "titleLead": "Crea sistemas digitales que impulsen tu negocio",
-    "titleAccent": "hacia adelante.",
-    "description": "Estrategia, ingeniería, IA y crecimiento en un equipo responsable que ayuda a empresas ambiciosas a convertir la complejidad digital en avances medibles.",
-    "projectCta": "Hablemos de tu proyecto",
+    "eyebrow": "Entrega digital orientada a resultados",
+    "titleLead": "Construye sistemas digitales que impulsen tu negocio hacia",
+    "titleAccent": "adelante.",
+    "description": "Estrategia, ingeniería, IA y crecimiento en un solo equipo responsable, ayudando a empresas ambiciosas a transformar la complejidad en progreso medible.",
+    "projectCta": "Hablar de tu proyecto",
     "capabilitiesCta": "Explorar capacidades",
-    "ownership": "Responsabilidades claras",
-    "scale": "Preparado para crecer",
-    "partner": "Un solo socio de entrega",
-    "systemLabel": "Sistema de entrega de Zepra",
-    "systemTitle": "Del primer brief al crecimiento sostenible",
+    "ownership": "Responsabilidad clara",
+    "scale": "Diseñado para escalar",
+    "partner": "Un solo socio digital",
+    "systemLabel": "Sistema de entrega Zepra",
+    "systemTitle": "Desde el primer brief hasta un crecimiento duradero",
     "plan": "Planificar",
-    "build": "Crear",
+    "build": "Construir",
     "improve": "Mejorar",
-    "connectedTeam": "Un equipo conectado, una entrega responsable",
-    "capabilities": ["Plataformas web", "Automatización con IA", "Comercio electrónico", "Crecimiento en búsquedas", "Publicidad pagada", "Diseño de producto"],
+    "connectedTeam": "Un equipo conectado, entrega responsable",
+    "capabilities": ["Plataformas Web", "Automatización IA", "E-commerce", "Crecimiento SEO", "Publicidad Digital", "Diseño de Producto"],
     "highlights": [
-      { "title": "Plataformas web que convierten", "description": "Sitios premium, tiendas online y sistemas empresariales diseñados para generar confianza y rendir." },
-      { "title": "Flujos de IA con valor empresarial", "description": "Creamos asistentes y automatizaciones prácticas que mejoran las operaciones y el seguimiento de clientes potenciales." },
-      { "title": "Crecimiento después del lanzamiento", "description": "Marketing, SEO, contenido y optimización mantienen activa tu presencia digital tras el lanzamiento." }
+      { "title": "Sitios web que convierten", "description": "Páginas web prémium, tiendas e-commerce y sistemas diseñados para generar confianza y vender." },
+      { "title": "Flujos de IA con valor real", "description": "Desde bots hasta automatización de procesos, creamos IA práctica que mejora la atención al cliente." },
+      { "title": "Soporte de crecimiento continuo", "description": "Marketing, SEO, contenidos y soporte para mantener tu presencia digital activa tras el lanzamiento." }
     ]
   },
   "services": {
     "eyebrow": "Servicios",
-    "title": "Una oferta integral de servicios digitales bajo una marca de confianza.",
-    "cta": "Hablemos de tu proyecto",
+    "title": "Una solución digital completa bajo una marca de confianza.",
+    "cta": "Iniciar discusión del proyecto",
     "agencyService": "Servicio de agencia",
     "items": [
-      { "title": "Desarrollo web", "summary": "Sitios full-stack, proyectos WordPress y Wix, y plataformas empresariales diseñadas para la velocidad, la confianza y la conversión." },
-      { "title": "Agentes IA / Bots", "summary": "Estrategia, creación e implementación integral de asistentes de IA, bots empresariales y flujos de automatización." },
-      { "title": "Marketing digital", "summary": "Campañas de Meta Ads, Google Ads y TikTok Ads centradas en la calidad de los clientes potenciales y el crecimiento sostenible." },
-      { "title": "Google Business Profile", "summary": "Configuración, optimización y gestión continua para mejorar la visibilidad y credibilidad de negocios locales." },
-      { "title": "Google AdSense", "summary": "Configuración y gestión de AdSense con una implementación clara y ubicaciones enfocadas en los ingresos." },
-      { "title": "SEO / GEO / AEO", "summary": "Optimización para buscadores, motores generativos y motores de respuestas para mejorar la visibilidad digital." },
-      { "title": "Redacción y blogs", "summary": "Textos web, páginas de destino, artículos y blogs creados para reforzar autoridad, posicionamiento y conversión." },
-      { "title": "Soluciones de comercio electrónico", "summary": "Soluciones Shopify, Amazon, eBay, Etsy y WooCommerce para gestionar productos y ventas con claridad." },
-      { "title": "Diseño gráfico", "summary": "Sistemas de marca, diseño de logotipos y recursos visuales que fortalecen la presencia y credibilidad del negocio." },
-      { "title": "Edición de video", "summary": "Edición profesional de video para marketing, redes sociales, creadores y comunicación empresarial." },
-      { "title": "Atención al cliente", "summary": "Sistemas de atención ágiles para ofrecer un servicio confiable y mejores experiencias a los clientes." }
+      { "title": "Desarrollo Web", "summary": "Sitios full-stack, desarrollos en WordPress, experiencias Wix y plataformas a medida diseñadas para convertir." },
+      { "title": "Agentes de IA / Bots", "summary": "Estrategia, creación y despliegue integral de asistentes de IA, bots comerciales y flujos de automatización." },
+      { "title": "Marketing Digital", "summary": "Campañas en Meta Ads, Google Ads y TikTok Ads enfocadas en prospectos de calidad y resultados sostenibles." },
+      { "title": "Google My Business", "summary": "Optimización y gestión continua para mejorar la visibilidad y credibilidad de empresas locales." },
+      { "title": "Google AdSense", "summary": "Configuración y gestión de cuentas AdSense con integración limpia y orientación a ingresos." },
+      { "title": "SEO / GEO / AEO", "summary": "Optimización para motores de búsqueda y motores de respuesta para maximizar tu alcance digital." },
+      { "title": "Redacción de Contenidos & Blog", "summary": "Textos web de alta calidad, páginas de aterrizaje y artículos diseñados para posicionar y convertir." },
+      { "title": "Soluciones E-commerce", "summary": "Soluciones en Shopify, Amazon, eBay, Etsy y WooCommerce diseñadas para ventas fluidas." },
+      { "title": "Diseño Gráfico", "summary": "Sistemas de marca, diseño de logotipos y recursos visuales profesionales para tu empresa." },
+      { "title": "Edición de Video", "summary": "Edición de video profesional para marketing, redes sociales, creadores y comunicación corporativa." },
+      { "title": "Atención al Cliente", "summary": "Sistemas de soporte al cliente eficientes para brindar una atención confiable y profesional." }
     ]
   },
   "contact": {
     "eyebrow": "Contacto",
-    "title": "Iniciemos una conversación de negocios con Zepra Tech.",
-    "description": "Usa el formulario para consultas sobre desarrollo web, automatización con IA, marketing digital, comercio electrónico, diseño, SEO o soporte técnico.",
-    "businessInquiry": "Consulta empresarial",
+    "title": "Inicia una conversación comercial con Zepra Tech.",
+    "description": "Utiliza el formulario de contacto para tus necesidades de desarrollo web, IA, marketing, e-commerce o SEO.",
+    "businessInquiry": "Consulta comercial",
     "optionsTitle": "Opciones de contacto claras para clientes locales e internacionales.",
     "email": "Correo electrónico",
     "whatsapp": "WhatsApp",
     "chatWhatsapp": "Chatear por WhatsApp",
     "sendEmail": "Enviar un correo",
     "socialPresence": "Presencia en redes",
-    "scheduleCall": "Programa una llamada directa",
-    "bookCall": "Reserva una llamada de descubrimiento de 15 min",
-    "bookCallDescription": "Elige un horario conveniente con nuestro equipo",
-    "scheduleNow": "Programar ahora",
-    "bookingMessage": "Hola, me gustaría reservar una llamada de descubrimiento de 15 minutos.",
-    "strictNda": "Acuerdo NDA estricto",
-    "dataPrivacy": "Privacidad de datos al 100 %",
-    "responseGuarantee": "Respuesta en 24 h",
-    "globalSupport": "Soporte global",
-    "supportHours": "Horarios de EE. UU. y PK",
+    "scheduleCall": "Agendar una llamada directa",
+    "bookCall": "Reservar llamada de valoración (15 min)",
+    "bookCallDescription": "Elige el horario que mejor te convenga",
+    "scheduleNow": "Agendar Ahora",
+    "bookingMessage": "Hola, me gustaría reservar una llamada de valoración de 15 minutos.",
+    "strictNda": "NDA Estricto",
+    "dataPrivacy": "Privacidad 100% Garantizada",
+    "responseGuarantee": "Respuesta en 24h",
+    "globalSupport": "Soporte Global",
+    "supportHours": "Horarios EE. UU. y PK",
     "requestConsultation": "Solicitar una consulta",
-    "formIntro": "Comparte tus objetivos, plazos y necesidades. El formulario prepara un correo electrónico con los detalles de tu consulta.",
+    "formIntro": "Comparte tus objetivos. El formulario genera un borrador en tu app de correo con los detalles completos.",
     "fullName": "Nombre completo",
     "companyName": "Nombre de la empresa",
-    "workEmail": "Correo de trabajo",
+    "workEmail": "Correo corporativo",
     "phoneWhatsapp": "Teléfono / WhatsApp",
-    "serviceNeeded": "Servicio necesario",
+    "serviceNeeded": "Servicio requerido",
     "estimatedBudget": "Presupuesto estimado",
     "preferredTimeline": "Plazo preferido",
     "projectGoals": "Objetivos del proyecto",
@@ -94,234 +94,295 @@
     "selectService": "Selecciona un servicio",
     "selectBudget": "Selecciona un rango",
     "selectTimeline": "Elige un plazo",
-    "messagePlaceholder": "Cuéntanos qué quieres crear, mejorar o automatizar.",
+    "messagePlaceholder": "Cuéntanos qué quieres construir, mejorar o automatizar.",
     "submit": "Abrir borrador de correo",
-    "validationSummary": "Revisa los campos marcados e inténtalo de nuevo.",
+    "validationSummary": "Por favor revisa los campos señalados e inténtalo de nuevo.",
     "validation": {
-      "name": "Escribe tu nombre completo.",
-      "company": "Escribe el nombre de tu empresa.",
-      "email": "Escribe un correo de trabajo válido.",
-      "phone": "Escribe tu número de teléfono o WhatsApp.",
-      "service": "Elige un servicio.",
-      "budget": "Selecciona un presupuesto estimado.",
-      "timeline": "Elige un plazo preferido.",
-      "messageMin": "Cuéntanos un poco más sobre tu proyecto.",
-      "messageMax": "El mensaje debe tener menos de 2000 caracteres."
+      "name": "Por favor ingresa tu nombre completo.",
+      "company": "Por favor ingresa el nombre de tu empresa.",
+      "email": "Por favor ingresa un correo corporativo válido.",
+      "phone": "Por favor ingresa tu número de teléfono o WhatsApp.",
+      "service": "Por favor elige un servicio.",
+      "budget": "Por favor selecciona un presupuesto estimado.",
+      "timeline": "Por favor elige un plazo preferido.",
+      "messageMin": "Por favor cuéntanos un poco más sobre tu proyecto.",
+      "messageMax": "Por favor mantén el mensaje por debajo de 2000 caracteres."
     },
-    "emailOpening": "Tu aplicación de correo se abrirá con los detalles de la consulta. También puedes usar WhatsApp para recibir una respuesta más rápida.",
-    "budgetOptions": ["Menos de $1,000", "$1,000 - $3,000", "$3,000 - $8,000", "$8,000 - $20,000", "Más de $20,000"],
-    "timelineOptions": ["Lo antes posible", "En 2 semanas", "En 1 mes", "En 2-3 meses", "Flexible / explorando"]
+    "emailOpening": "Tu aplicación de correo se abrirá con los detalles. También puedes usar WhatsApp para una respuesta más rápida.",
+    "budgetOptions": ["Menos de $1,000", "$1,000 - $3,000", "$3,000 - $8,000", "$8,000 - $20,000", "$20,000+"],
+    "timelineOptions": ["Lo antes posible", "En 2 semanas", "En 1 mes", "En 2-3 meses", "Flexible / Explorando"]
   },
   "pages": {
     "contactHero": {
-      "eyebrow": "Contacta con Zepra Tech",
-      "title": "Hablemos del sitio web, sistema de IA o solución de crecimiento que necesita tu negocio.",
-      "description": "Esta página facilita las consultas empresariales, tanto desde Pakistán como desde otros mercados. Usa el formulario para iniciar una conversación seria sobre tu proyecto.",
-      "primaryAction": "Enviar una consulta",
-      "secondaryAction": "Ver servicios"
+      "eyebrow": "Contactar a Zepra Tech",
+      "title": "Hablemos del sitio web, sistema de IA o solución de crecimiento que tu empresa necesita.",
+      "description": "Esta página está diseñada para gestionar consultas comerciales de manera fluida y profesional.",
+      "primaryAction": "Enviar una Consulta",
+      "secondaryAction": "Ver Servicios"
     }
   },
   "about": {
-    "eyebrow": "Acerca de Zepra Tech",
-    "title": "Una agencia digital innovadora enfocada en resultados empresariales.",
-    "description": "Zepra Tech ayuda a las empresas a crecer mediante tecnología, automatización, presencia online y ejecución digital creativa.",
-    "brandStory": "Nuestra historia",
-    "brandStoryText": "Estamos construyendo Zepra Tech como un socio de crecimiento confiable para empresas que necesitan mejores sistemas digitales y una ejecución en la que puedan confiar.",
-    "missionDriven": "Guiados por nuestra misión",
-    "missionText": "Cada proyecto equilibra profesionalidad, innovación, fiabilidad y atención al cliente desde la planificación hasta el soporte posterior al lanzamiento.",
-    "learnMore": "Más información sobre Zepra Tech",
+    "eyebrow": "Sobre Zepra Tech",
+    "title": "Una agencia digital orientada al futuro e impulsada por resultados.",
+    "description": "Zepra Tech ayuda a las empresas a crecer mediante tecnología, automatización, presencia en línea y diseño estratégico.",
+    "brandStory": "Historia de la marca",
+    "brandStoryText": "Construimos Zepra Tech como un socio estratégico para empresas que buscan sistemas digitales más sólidos.",
+    "missionDriven": "Enfoque en la misión",
+    "missionText": "Cada proyecto equilibra profesionalismo, innovación y confiabilidad desde la planificación hasta el soporte.",
+    "learnMore": "Saber más sobre Zepra Tech",
     "pillars": [
-      { "title": "Ejecución guiada por una misión", "description": "Alineamos el trabajo creativo, la entrega técnica y los resultados empresariales para impulsar un crecimiento medible." },
-      { "title": "Cultura de entrega profesional", "description": "La comunicación clara, los flujos de trabajo disciplinados y el liderazgo responsable mantienen los proyectos en marcha." },
-      { "title": "Preparados para crecer continuamente", "description": "Zepra Tech impulsa el crecimiento después del lanzamiento con optimización, campañas, contenido y sistemas escalables." }
+      { "title": "Ejecución enfocada en la misión", "description": "Alineamos el trabajo creativo y técnico con resultados comerciales medibles." },
+      { "title": "Cultura de entrega profesional", "description": "Comunicación clara y procesos estructurados para hacer avanzar tus proyectos con seguridad." },
+      { "title": "Stack de habilidades moderno", "description": "Desarrollo web, IA, marketing, e-commerce y soporte trabajando como un solo sistema." }
     ],
     "principles": {
-      "eyebrow": "Principios operativos",
-      "title": "Cómo abordamos la ejecución de una agencia moderna.",
-      "description": "Ayudamos a los clientes a avanzar con confianza mediante liderazgo sólido, ejecución cuidada y visión a largo plazo.",
+      "eyebrow": "Principios Operativos",
+      "title": "Cómo aborda Zepra Tech la entrega digital moderna.",
+      "description": "Ayudamos a nuestros clientes a avanzar con confianza combinando buen liderazgo y ejecución impecable.",
       "items": [
-        { "title": "Profesionalidad desde el diseño", "description": "Cada detalle, desde el mensaje hasta el acabado frontend, ayuda a los clientes a transmitir autoridad y confianza." },
-        { "title": "Ejecución estructurada", "description": "Las etapas claras ofrecen visibilidad, alineación y decisiones más fiables." },
-        { "title": "Diseñado para el crecimiento continuo", "description": "Tras el lanzamiento, apoyamos el crecimiento con optimización, campañas, contenido y sistemas digitales escalables." }
+        { "title": "Profesional por diseño", "description": "Cada detalle está pensado para proyectar autoridad, solidez y confianza en el mercado." },
+        { "title": "Ejecución estructurada", "description": "Los proyectos avanzan por etapas claras ofreciendo visibilidad y control al cliente." },
+        { "title": "Diseñado para el crecimiento", "description": "Apoyamos tu crecimiento tras el lanzamiento con optimización constante y campañas." }
       ]
     }
   },
   "servicePage": {
-    "eyebrow": "Áreas de servicio",
-    "title": "Estructurados según las necesidades reales de cada negocio.",
-    "description": "Nuestros servicios abarcan varias áreas, organizadas en torno a objetivos prácticos y no a entregables aislados.",
+    "eyebrow": "Líneas de servicio",
+    "title": "Estructuradas según las necesidades reales de tu empresa.",
+    "description": "Nuestros servicios están organizados en torno a objetivos comerciales prácticos y entregables de calidad.",
     "lanes": [
-      { "title": "Crear", "description": "Desarrollo web, comercio electrónico, diseño gráfico y edición de video para una presencia digital cuidada." },
-      { "title": "Automatizar", "description": "Agentes de IA, bots y sistemas prácticos que reducen el trabajo manual y agilizan las respuestas." },
-      { "title": "Crecer", "description": "Marketing, SEO, GEO, AEO, redacción y herramientas de Google para mejorar el alcance y la visibilidad." },
-      { "title": "Dar soporte", "description": "Estructuras de atención al cliente que mantienen la capacidad de respuesta después del lanzamiento." }
+      { "title": "Construir", "description": "Desarrollo web, e-commerce, diseño gráfico y edición de video para una presencia sólida." },
+      { "title": "Automatizar", "description": "Agentes de IA, bots y sistemas prácticos para reducir tareas manuales." },
+      { "title": "Crecer", "description": "Marketing, SEO, GEO, AEO, redacción y herramientas de Google para aumentar tu alcance." },
+      { "title": "Soportar", "description": "Estructuras de atención al cliente para mantener la operatividad y respuesta inmediata." }
     ]
   },
   "contactPage": {
-    "stepsEyebrow": "Qué ocurre después",
-    "stepsTitle": "Un proceso sencillo para conversaciones profesionales.",
-    "stepsDescription": "El proceso de contacto ayuda a ambas partes a pasar rápidamente del interés inicial a una consulta más concreta.",
+    "stepsEyebrow": "Qué sucede después",
+    "stepsTitle": "Un proceso sencillo diseñado para conversaciones profesionales.",
+    "stepsDescription": "El flujo de contacto está diseñado para pasar rápidamente de la consulta inicial a una propuesta de valor.",
     "steps": [
-      { "title": "Comparte tus requisitos", "description": "Cuéntanos qué quieres crear, mejorar o automatizar para entender bien el proyecto." },
-      { "title": "Recibe una respuesta concreta", "description": "Revisamos el alcance, la dirección y la adecuación antes de proponer el siguiente paso." },
-      { "title": "Pasa a una consulta", "description": "Una vez alineados, hablamos del enfoque, los plazos y la solución adecuada para tu negocio." }
+      { "title": "Comparte tus requerimientos", "description": "Cuéntanos qué necesitas construir o automatizar para comprender bien el alcance." },
+      { "title": "Recibe una respuesta enfocada", "description": "Evaluamos tu consulta para proponerte el paso más adecuado." },
+      { "title": "Avanza hacia la consulta", "description": "Una vez alineados, definimos los tiempos, costos y el camino a seguir." }
     ]
   },
   "footer": {
     "tagline": "Donde las ideas se convierten en impacto.",
     "services": "Servicios",
     "solutions": "Soluciones",
-    "products": "Productos / Tecnología",
+    "products": "Productos / Stack Tecnológico",
     "resources": "Recursos",
     "company": "Empresa",
     "technology": "Ecosistema tecnológico",
     "globalPresence": "Presencia global",
     "allRightsReserved": "Todos los derechos reservados.",
-    "privacy": "Política de privacidad",
-    "terms": "Términos del servicio",
+    "privacy": "Política de Privacidad",
+    "terms": "Términos del Servicio",
     "security": "Seguridad",
     "social": "Redes sociales",
     "links": {
-      "webDevelopment": "Desarrollo web", "aiAutomation": "Automatización con IA", "mobileApps": "Aplicaciones móviles", "cloud": "Nube", "uiux": "UI/UX", "ecommerce": "Comercio electrónico", "customSoftware": "Software a medida", "workflowAutomation": "Automatización de flujos", "aiOps": "Operaciones de IA", "enterpriseSystems": "Sistemas empresariales", "webPlatforms": "Plataformas web", "mobilePlatforms": "Plataformas móviles", "apis": "API", "cloudInfrastructure": "Infraestructura en la nube", "blogs": "Blogs", "caseStudies": "Casos de estudio", "portfolio": "Portafolio", "guides": "Guías", "news": "Noticias", "aboutUs": "Acerca de", "careers": "Empleo", "contactUs": "Contacto", "partnerProgram": "Programa de socios"
+      "webDevelopment": "Desarrollo Web", "aiAutomation": "Automatización IA", "mobileApps": "Apps Móviles", "cloud": "Nube", "uiux": "UI/UX", "ecommerce": "E-commerce", "customSoftware": "Software a Medida", "workflowAutomation": "Flujos de Trabajo", "aiOps": "Operaciones IA", "enterpriseSystems": "Sistemas Empresariales", "webPlatforms": "Plataformas Web", "mobilePlatforms": "Plataformas Móviles", "apis": "APIs", "cloudInfrastructure": "Infraestructura Nube", "blogs": "Blogs", "caseStudies": "Casos de Estudio", "portfolio": "Portafolio", "guides": "Guías", "news": "Noticias", "aboutUs": "Nosotros", "careers": "Carreras", "contactUs": "Contacto", "partnerProgram": "Programa de Socios"
     },
     "locations": [
-      { "name": "Estados Unidos", "detail": "San José, California / Delaware", "note": "Agencia tecnológica reconocida en EE. UU." },
-      { "name": "Pakistán (sede)", "detail": "D Tower, Plot B, 281 Ghazi Rd, Khuda Buksh Colony KB Society, Lahore, Punjab" },
-      { "name": "EAU / Servicios globales", "detail": "Atendemos clientes de EE. UU., Reino Unido, Oriente Medio y Asia-Pacífico." },
-      { "name": "Alcance global", "detail": "Un equipo distribuido en varias zonas horarias." }
+      { "name": "EE. UU.", "detail": "San José, CA / Delaware", "note": "Agencia Tech Reconocida en EE. UU." },
+      { "name": "Pakistán (Sede)", "detail": "D Tower, Plot B, 281 Ghazi Rd, Khuda Buksh Colony KB Society, Lahore, Punjab" },
+      { "name": "EAU / Servicios Globales", "detail": "Atendiendo a clientes en EE. UU., Reino Unido, Medio Oriente y Asia-Pacífico." },
+      { "name": "Alcance Global", "detail": "Entrega distribuida para clientes en múltiples zonas horarias." }
     ]
   },
   "legal": {
-    "lastUpdated": "Última actualización: [añadir fecha]",
+    "lastUpdated": "Última actualización: [agregar fecha]",
     "pages": {
-      "PrivacyPolicy": { "title": "Política de privacidad", "intro": "[Borrador: sustituye esta página por la política de privacidad aprobada de Zepra Tech antes de publicarla.]", "sections": [{ "heading": "Información que recopilamos", "body": "[Añade qué datos recopilan el formulario y el sitio.]" }, { "heading": "Cómo la usamos", "body": "[Añade por qué se recopila y utiliza la información.]" }, { "heading": "Compartir y almacenar", "body": "[Añade quién recibe los datos y cuánto tiempo se conservan.]" }, { "heading": "Tus opciones", "body": "[Añade cómo solicitar acceso o eliminación de los datos.]" }] },
-      "TermsOfUse": { "title": "Términos de uso", "intro": "[Borrador: sustituye esta página por los términos aprobados de Zepra Tech antes de publicarla.]", "sections": [{ "heading": "Uso de este sitio", "body": "[Añade las reglas para usar el sitio.]" }, { "heading": "Servicios y pagos", "body": "[Añade cómo funcionan los proyectos, presupuestos y pagos.]" }, { "heading": "Propiedad intelectual", "body": "[Añade quién es propietario del trabajo entregado y del contenido del sitio.]" }, { "heading": "Contacto", "body": "[Añade a quién contactar si hay preguntas sobre estos términos.]" }] },
-      "HumanRightsPolicy": { "title": "Política de derechos humanos", "intro": "[Borrador: sustituye esta página por la política de derechos humanos aprobada de Zepra Tech antes de publicarla.]", "sections": [{ "heading": "Nuestro compromiso", "body": "[Añade el compromiso declarado de la empresa.]" }, { "heading": "Nuestro equipo y socios", "body": "[Añade cómo se aplica al personal, colaboradores y proveedores.]" }, { "heading": "Comunicar una preocupación", "body": "[Añade cómo comunicar una preocupación.]" }] },
-      "ModernSlaveryAct": { "title": "Ley contra la esclavitud moderna", "intro": "[Borrador: sustituye esta página por la declaración aprobada de Zepra Tech antes de publicarla.]", "sections": [{ "heading": "Nuestra declaración", "body": "[Añade la declaración de la empresa.]" }, { "heading": "Nuestra cadena de suministro", "body": "[Añade cómo se verifican los proveedores y socios.]" }, { "heading": "Comunicar una preocupación", "body": "[Añade cómo comunicar una preocupación.]" }] }
+      "PrivacyPolicy": {
+        "title": "Política de Privacidad",
+        "intro": "[Borrador: reemplazar esta página con la política aprobada antes de publicar.]",
+        "sections": [
+          { "heading": "Información que recopilamos", "body": "[Agregar lo que recopilan el formulario y el sitio.]" },
+          { "heading": "Cómo la usamos", "body": "[Agregar por qué se recopila la información.]" },
+          { "heading": "Uso y almacenamiento", "body": "[Agregar quién recibe los datos y cuánto tiempo se guardan.]" },
+          { "heading": "Sus opciones", "body": "[Agregar cómo solicitar la eliminación de datos.]" }
+        ]
+      },
+      "TermsOfUse": {
+        "title": "Términos de Uso",
+        "intro": "[Borrador: reemplazar esta página con los términos aprobados antes de publicar.]",
+        "sections": [
+          { "heading": "Uso de este sitio web", "body": "[Agregar las reglas para usar el sitio.]" },
+          { "heading": "Servicios y pagos", "body": "[Agregar cómo funcionan las cotizaciones y pagos.]" },
+          { "heading": "Propiedad intelectual", "body": "[Agregar a quién pertenece el trabajo entregado.]" },
+          { "heading": "Contacto", "body": "[Agregar a quién contactar para dudas sobre estos términos.]" }
+        ]
+      },
+      "HumanRightsPolicy": {
+        "title": "Política de Derechos Humanos",
+        "intro": "[Borrador: reemplazar esta página con la política aprobada antes de publicar.]",
+        "sections": [
+          { "heading": "Nuestro compromiso", "body": "[Agregar el compromiso oficial de la empresa.]" },
+          { "heading": "Equipo y socios", "body": "[Agregar cómo aplica a personal y proveedores.]" },
+          { "heading": "Reportar una inquietud", "body": "[Agregar cómo reportar una incidencia.]" }
+        ]
+      },
+      "ModernSlaveryAct": {
+        "title": "Ley sobre la Esclavitud Moderna",
+        "intro": "[Borrador: reemplazar esta página con la declaración aprobada antes de publicar.]",
+        "sections": [
+          { "heading": "Nuestra declaración", "body": "[Agregar la declaración oficial de la empresa.]" },
+          { "heading": "Cadena de suministro", "body": "[Agregar cómo se evalúa a los proveedores.]" },
+          { "heading": "Reportar una inquietud", "body": "[Agregar cómo reportar una incidencia.]" }
+        ]
+      }
     }
   },
   "cta": {
     "eyebrow": "Inicia tu próximo proyecto",
-    "title": "¿Listo para crear un sitio mejor, un flujo de IA más inteligente o un motor de crecimiento digital más eficaz?",
-    "description": "Habla con Zepra Tech sobre desarrollo web, automatización con IA, comercio electrónico, SEO, marketing, diseño y soporte a largo plazo. Estructuramos proyectos para generar confianza, rendimiento y crecimiento escalable."
+    "title": "¿Listo para construir un sitio web más sólido, un flujo de IA o un motor de crecimiento?",
+    "description": "Habla con Zepra Tech sobre desarrollo web, IA, e-commerce, SEO, marketing y diseño. Estructuramos proyectos para el éxito."
   },
   "home": {
     "operations": {
-      "eyebrow": "La revolución de la IA en las operaciones",
-      "title": "Transformando las operaciones empresariales con IA y ciencia de datos.",
-      "description": "Las operaciones nativas de IA sustituyen los procesos manuales y lentos. Creamos automatización con IA, flujos inteligentes de datos y seguridad de nivel bancario para que tu negocio funcione mejor y pueda crecer.",
-      "legacyTag": "Modelo tradicional",
-      "legacyStatus": "Lento y costoso",
-      "legacyTitle": "Operaciones empresariales manuales tradicionales",
-      "legacyDescription": "Configuraciones operativas que dependen de horas de trabajo y herramientas fragmentadas.",
+      "eyebrow": "La Revolución de la IA en Operaciones",
+      "title": "Transformando Operaciones Empresariales con IA + Data Science.",
+      "description": "El cambio a operaciones con IA elimina los procesos manuales lentos. Construimos automatizaciones e integraciones seguras para tu empresa.",
+      "legacyTag": "Modelo Tradicional",
+      "legacyStatus": "Lento y Costoso",
+      "legacyTitle": "Operaciones Manuales Tradicionales",
+      "legacyDescription": "Procesos basados en horas de trabajo manual y herramientas fragmentadas.",
       "legacyPoints": [
-        { "label": "Tareas manuales y repetitivas", "description": "Horas perdidas cada día en entrada de datos, informes y tareas rutinarias." },
-        { "label": "Respuestas lentas", "description": "Las consultas de clientes y el seguimiento de prospectos tardan horas o días." },
-        { "label": "Errores humanos y riesgos de seguridad", "description": "Datos de clientes dispersos sin cifrado automatizado ni cumplimiento estricto." },
-        { "label": "Altos costos operativos", "description": "Crecer suele exigir más contrataciones y ampliar la nómina." }
+        { "label": "Tareas Manuales Repetitivas", "description": "Horas perdidas a diario ingresando datos y elaborando reportes manuales." },
+        { "label": "Tiempos de Respuesta Lentos", "description": "Las consultas de clientes y prospectos tardan horas o días en procesarse." },
+        { "label": "Errores Humanos y Riesgos", "description": "Datos dispersos sin cifrado ni cumplimiento de estándares de seguridad." },
+        { "label": "Altos Costos Fijos", "description": "Escalar operaciones requiere contratar más personal constantemente." }
       ],
-      "aiTag": "Revolución nativa de IA",
-      "aiStatus": "Rápida, escalable y segura",
-      "aiTitle": "Operaciones inteligentes con IA y ciencia de datos",
-      "aiDescription": "Una arquitectura automatizada moderna para gestionar flujos complejos con fiabilidad permanente.",
+      "aiTag": "Revolución Nativa en IA",
+      "aiStatus": "Rápido, Escalable y Seguro",
+      "aiTitle": "Operaciones Inteligentes de IA + Data Science",
+      "aiDescription": "Arquitectura automatizada moderna para gestionar flujos complejos 24/7.",
       "aiPoints": [
-        { "label": "Automatización con IA 24/7", "description": "Flujos de IA personalizados ejecutan al instante tareas repetitivas, documentos y gestión de prospectos." },
-        { "label": "Inteligencia de datos", "description": "Paneles en tiempo real analizan tendencias y ofrecen información predictiva para crecer." },
-        { "label": "Seguridad de datos empresariales", "description": "Cifrado de nivel bancario y cumplimiento adecuado para proteger los datos de clientes." },
-        { "label": "10x de capacidad operativa", "description": "Aumenta la producción y los ingresos sin elevar los costos generales." }
+        { "label": "Automatización IA 24/7", "description": "Los flujos de trabajo de IA ejecutan tareas repetitivas y atención de prospectos al instante." },
+        { "label": "Inteligencia de Datos", "description": "Paneles en tiempo real analizan tendencias y ofrecen métricas predictivas para crecer." },
+        { "label": "Seguridad de Grado Bancario", "description": "Cifrado bancario que mantiene los datos de tus clientes 100% protegidos." },
+        { "label": "Apalancamiento Operativo 10x", "description": "Multiplica el rendimiento de tu empresa sin subir tus costos fijos." }
       ],
       "pillars": [
-        { "category": "Automatización", "title": "Transformación de flujos con IA", "description": "Sustituimos tareas manuales que consumen tiempo por flujos inteligentes que trabajan continuamente." },
-        { "category": "Ciencia de datos", "title": "Perspectivas predictivas de crecimiento", "description": "Convertimos datos empresariales en análisis claros y en tiempo real para orientar decisiones." },
-        { "category": "Seguridad de datos", "title": "Cumplimiento de nivel bancario", "description": "Tus datos permanecen aislados y protegidos mediante flujos cifrados y normas regulatorias." }
+        { "category": "Automatización", "title": "Transformación de Flujos con IA", "description": "Reemplazamos el trabajo manual por pipelines de IA eficientes que operan sin pausas." },
+        { "category": "Data Science", "title": "Análisis Predictivo de Crecimiento", "description": "Estructuramos tus datos en métricas claras para tomar decisiones basadas en información real." },
+        { "category": "Seguridad", "title": "Cumplimiento de Grado Bancario", "description": "Tus datos comerciales permanecen aislados y protegidos con estándares de alta seguridad." }
       ]
     },
     "whyUs": {
       "eyebrow": "POR QUÉ ELEGIRNOS",
-      "title": "Diseñados para generar confianza, velocidad y resultados empresariales reales.",
-      "description": "Ingeniería probada y ejecución digital preparadas para impulsar tus ingresos en todo el mundo.",
-      "accreditations": ["Certificación ISO (calidad)", "Aprobado por FBR (Pakistán)", "LLC registrada (Estados Unidos)"],
-      "chat": "Hablemos",
-      "metrics": ["Proyectos entregados", "Sitios web lanzados", "Tiendas de comercio electrónico impulsadas", "En Pakistán y mercados globales"],
+      "title": "Diseñado para generar confianza, rapidez y resultados reales.",
+      "description": "Ingeniería probada y ejecución digital diseñada para escalar tus ingresos globales.",
+      "accreditations": ["Certificación ISO (Calidad)", "Aprobado por FBR (Pakistán)", "LLC Registrada (EE. UU.)"],
+      "chat": "Hablemos hoy",
+      "metrics": ["Proyectos Entregados", "Sitios Web Lanzados", "Tiendas E-Commerce Escaladas", "Diseñado para Clientes Locales e Internacionales"],
       "pillars": [
-        { "title": "Entrega unificada", "description": "Sitios web, comercio electrónico Shopify, automatización con IA y diseño gráfico en un solo equipo." },
-        { "title": "Infraestructura segura y escalable", "description": "Seguridad alineada con ISO, alto rendimiento y disponibilidad continua para apoyar el crecimiento." },
-        { "title": "Ejecución enfocada en el crecimiento", "description": "Marketing digital, optimización de conversiones y rendimiento orientado a avances medibles." },
-        { "title": "Colaboración dedicada", "description": "Comunicación directa con desarrolladores, ciclos ágiles y soporte 24/7 para que tu equipo avance." }
+        { "title": "Stack de Entrega Unificado", "description": "Sitios web, e-commerce en Shopify, automatización de IA y diseño gráfico en un solo lugar." },
+        { "title": "Infraestructura Segura", "description": "Seguridad bajo normas ISO, rendimiento óptimo y disponibilidad garantizada mientras creces." },
+        { "title": "Ejecución Enfocada en Crecimiento", "description": "Marketing digital y optimización de conversión orientados al aumento de ingresos." },
+        { "title": "Aliados Estratégicos", "description": "Comunicación directa con desarrolladores, entregas rápidas y soporte 24/7." }
       ]
     },
     "testimonials": {
-      "eyebrow": "Confianza y opiniones de clientes",
-      "title": "Lo que dicen nuestros clientes de todo el mundo.",
-      "description": "Testimonios reales de empresas, startups y marcas de web, IA, comercio electrónico y marketing.",
+      "eyebrow": "Confianza de clientes y opiniones",
+      "title": "Lo que dicen nuestros clientes internacionales.",
+      "description": "Testimonios reales de empresas y marcas en desarrollo web, IA, e-commerce y marketing.",
       "items": [
-        { "quote": "Zepra Tech creó nuestra plataforma rápidamente. La gestión de perfiles y el intercambio de documentos ahora funcionan sin retrasos.", "role": "Testimonio de proyecto MERN", "service": "Stack MERN" },
-        { "quote": "Nuestra tienda Shopify creció sin problemas. Las personalizaciones aceleraron el pago móvil y aumentaron las conversiones un 35 %.", "role": "Proyecto de comercio electrónico", "service": "Shopify Plus" },
-        { "quote": "Un asistente de IA personalizado automatizó el 70 % de las consultas de soporte y nos ahorra cientos de horas al mes.", "role": "Operaciones de clientes", "service": "Automatización con IA" },
-        { "quote": "Nuestro complejo panel se convirtió en un producto SaaS intuitivo y la retención de usuarios activos aumentó.", "role": "Equipo de producto SaaS", "service": "Rediseño UI/UX" },
-        { "quote": "El posicionamiento orgánico y los clientes potenciales crecieron en 90 días. El equipo fue estratégico y transparente.", "role": "Cliente de marketing de crecimiento", "service": "SEO y crecimiento" },
-        { "quote": "Nuestra aplicación web empresarial llegó antes de lo previsto, con una arquitectura sólida, seguridad y escalabilidad.", "role": "Equipo de producto empresarial", "service": "Aplicación web a medida" },
-        { "quote": "Nuestra app multiplataforma es rápida e intuitiva, con navegación fluida y comunicación clara en cada sprint.", "role": "Equipo de producto móvil", "service": "Aplicación móvil" },
-        { "quote": "El nuevo flujo de nube y despliegue es más rápido, con una disponibilidad del sistema del 99,9 %.", "role": "Equipo de plataforma cloud", "service": "DevOps y nube" },
-        { "quote": "Zepra gestionó el diseño y el lanzamiento de la plataforma en un solo equipo, con responsabilidades claras.", "role": "Equipo de marca y digital", "service": "Estrategia de marca" }
+        { "quote": "Zepra Tech construyó nuestra plataforma muy rápido. La gestión de perfiles funciona sin demoras.", "role": "Testimonio proyecto MERN", "service": "MERN Stack" },
+        { "quote": "Nuestra tienda Shopify escaló perfectamente. Las personalizaciones aumentaron las conversiones un 35%.", "role": "Proyecto E-Commerce", "service": "Shopify Plus" },
+        { "quote": "Un asistente de IA personalizado automatizó el 70% de las consultas, ahorrándonos cientos de horas.", "role": "Operaciones con clientes", "service": "Automatización IA" },
+        { "quote": "Nuestro panel de control se convirtió en un producto SaaS intuitivo y mejoró la retención.", "role": "Equipo de producto SaaS", "service": "Rediseño UI/UX" },
+        { "quote": "El posicionamiento SEO y los prospectos aumentaron en 90 días. El equipo fue muy estratégico.", "role": "Cliente de marketing", "service": "SEO y Crecimiento" },
+        { "quote": "Nuestra aplicación web empresarial se entregó antes de tiempo, con gran arquitectura y seguridad.", "role": "Equipo de producto empresarial", "service": "App Web a Medida" },
+        { "quote": "Nuestra app multiplataforma es rápida e intuitiva, con navegación fluida.", "role": "Equipo de producto móvil", "service": "App Móvil" },
+        { "quote": "El despliegue en la nube es más rápido y la disponibilidad del sistema se mantiene en 99.9%.", "role": "Equipo de plataforma nube", "service": "DevOps y Nube" },
+        { "quote": "Zepra gestionó desde el diseño hasta el lanzamiento con total responsabilidad.", "role": "Equipo de marca y digital", "service": "Estrategia de Marca" }
       ]
     }
   },
   "marketingPage": {
-    "eyebrow": "Marketing en redes sociales",
-    "title": "Pruebas de marketing en redes presentadas en una galería clara y profesional.",
-    "description": "Estos recursos muestran campañas, informes y resultados de crecimiento en un formato cuidado.",
+    "eyebrow": "Marketing en Redes Sociales",
+    "title": "Muestra de trabajo en redes sociales organizada en una galería profesional de revisión.",
+    "description": "Visuales que presentan campañas, reportes y métricas de crecimiento con formato de agencia.",
     "highlights": [
-      { "title": "Visibilidad de campañas", "description": "Capturas de cuentas que muestran seguimiento e informes de campañas reales." },
-      { "title": "Seguimiento del rendimiento", "description": "La galería cubre gastos, clics, prospectos, analítica, optimización e informes." },
-      { "title": "Ejecución enfocada en el crecimiento", "description": "Una muestra de marketing social, campañas pagadas y apoyo al crecimiento." }
+      { "title": "Visibilidad de campañas", "description": "Capturas que muestran el monitoreo y gestión de campañas en vivo." },
+      { "title": "Seguimiento de rendimiento", "description": "Cobertura de gastos, clics, prospectos, analítica y reportes." },
+      { "title": "Ejecución enfocada en resultados", "description": "Visión práctica de marketing social y campañas pagadas." }
     ],
     "proofs": [
-      { "title": "Resumen del gasto de campaña", "summary": "Informe con gasto, clics, CTR y rendimiento general de la cuenta publicitaria.", "label": "Informes Meta Ads" },
-      { "title": "Panel de analítica de crecimiento", "summary": "Panel con tendencias de actividad, retención y métricas de crecimiento.", "label": "Analítica de crecimiento" },
-      { "title": "Prueba de rendimiento de campaña", "summary": "Vista del administrador de anuncios con resultados, eficiencia del gasto y evolución de la cuenta.", "label": "Resultados de anuncios" },
-      { "title": "Revisión de tendencias de costos", "summary": "Gráfico de clics, variación de costos y CPC promedio durante un periodo.", "label": "Seguimiento de costos" },
-      { "title": "Informe de campaña de prospectos 01", "summary": "Informe de generación de prospectos con resultados, alcance, impresiones y gasto.", "label": "Generación de prospectos" },
-      { "title": "Informe de campaña de prospectos 02", "summary": "Informe de seguimiento con continuidad, cambios de rendimiento y monitoreo operativo.", "label": "Continuidad de campaña" },
-      { "title": "Recomendación de optimización", "summary": "Orientación sobre costo por resultado, datos recientes y tendencias de campaña.", "label": "Revisión de optimización" },
-      { "title": "Resumen de resultados recientes", "summary": "Resultados recientes de campañas, niveles de gasto y dirección del rendimiento.", "label": "Resumen de resultados" }
+      { "title": "Resumen de Inversión de Campaña", "summary": "Reporte mostrando inversión, clics, CTR y rendimiento general de anuncios.", "label": "Reportes Meta Ads" },
+      { "title": "Panel de Analítica de Crecimiento", "summary": "Métricas que destacan la actividad del usuario, retención y crecimiento continuo.", "label": "Crecimiento Analítico" },
+      { "title": "Prueba de Rendimiento de Campaña", "summary": "Captura del administrador de anuncios mostrando eficiencia del presupuesto.", "label": "Resultados de Anuncios" },
+      { "title": "Tendencia de Costos", "summary": "Gráfico que muestra volumen de clics, variaciones de costo y CPC promedio.", "label": "Control de Costos" },
+      { "title": "Reporte de Generación de Leads 01", "summary": "Reporte de captación de prospectos cubriendo alcance, impresiones e inversión.", "label": "Generación de Leads" },
+      { "title": "Reporte de Generación de Leads 02", "summary": "Informe de seguimiento mostrando la continuidad de campaña y rendimiento.", "label": "Continuidad de Campaña" },
+      { "title": "Recomendación de Optimización", "summary": "Métricas de costo por resultado y tendencias recientes de campaña.", "label": "Revisión de Optimización" },
+      { "title": "Resumen de Resultados Recientes", "summary": "Rendimiento reciente de campañas, inversión y dirección del proyecto.", "label": "Vista General" }
     ]
   },
   "thumbnailPage": {
-    "eyebrow": "Diseño de miniaturas",
-    "title": "Una selección de miniaturas llamativas diseñadas para captar atención.",
-    "description": "Una selección de conceptos muestra calidad visual, mayor contraste y diseño enfocado en YouTube.",
+    "eyebrow": "Diseño de Miniaturas",
+    "title": "Una muestra dedicada al diseño de miniaturas llamativas y de alto impacto.",
+    "description": "Selección de conceptos con excelente contraste y enfoque optimizado para YouTube.",
     "highlights": [
-      { "title": "Jerarquía enfocada en clics", "description": "Tipografía grande, puntos focales claros y contraste atraen la atención." },
-      { "title": "Selección principal", "description": "Una selección de conceptos presenta el trabajo con claridad." },
-      { "title": "Tratamiento visual audaz", "description": "Iluminación dramática, recortes expresivos y narración visual refuerzan el atractivo." }
+      { "title": "Jerarquía optimizada para CTR", "description": "Textos grandes y contrastes marcados para captar la atención de inmediato." },
+      { "title": "Muestra seleccionada", "description": "Una selección ordenada que exhibe la calidad del diseño." },
+      { "title": "Tratamiento visual impactante", "description": "Iluminación dramática y recortes dinámicos para impulsar los clics." }
     ],
     "items": [
-      { "title": "Portada de tutorial de IA", "label": "Tutorial de IA" },
-      { "title": "Historia de progreso de dropshipping", "label": "Comercio electrónico" },
-      { "title": "Variante de diseño de ingreso extra", "label": "Antes / Después" },
-      { "title": "Muestra de marca de creador", "label": "Marca de creador" }
+      { "title": "Portada de Tutorial de IA", "label": "Tutorial IA" },
+      { "title": "Caso de Éxito en Dropshipping", "label": "E-commerce" },
+      { "title": "Diseño para Negocios Digitales", "label": "Antes / Después" },
+      { "title": "Muestra de Marca para Creadores", "label": "Branding Creadores" }
     ]
   },
   "websitePage": {
+    "portfolio": {
+      "eyebrow": "Desarrollo Web",
+      "title": "Lanzamientos web en vivo e interfaces prémium presentadas como portafolio de agencia.",
+      "description": "Esta página combina enlaces de proyectos activos y vistas previas de desarrollo.",
+      "visitProject": "Visitar proyecto",
+      "startProject": "Iniciar proyecto similar",
+      "livePortfolio": "Portafolio en vivo",
+      "websitePresentation": "Presentación del sitio",
+      "openProject": "Abrir proyecto",
+      "webAppsEyebrow": "Productos Web Interactivos",
+      "webAppsTitle": "Experiencias web interactivas adicionales con diseños pulidos.",
+      "webAppsDescription": "Herramientas interactivas e interfaces impulsadas por IA en el portafolio.",
+      "liveProjects": [
+        { "title": "Tienda Raahvo Shop", "category": "Tienda E-commerce", "status": "Tienda en Vivo", "summary": "Una tienda e-commerce enfocada en exhibir productos con una experiencia de compra fluida.", "tags": ["E-commerce", "Tienda", "Lanzamiento Cliente"] },
+        { "title": "Sitio Web Empresarial", "category": "Desarrollo Web", "status": "Despliegue en Vivo", "summary": "Un sitio corporativo listo para la presentación a clientes y expansión comercial.", "tags": ["Sitio Empresarial", "Responsive", "Despliegue"] },
+        { "title": "Desarrollo Web a Medida", "category": "Desarrollo Web", "status": "Despliegue en Vivo", "summary": "Un sitio personalizado que muestra un desarrollo frontend limpio y optimizado.", "tags": ["Desarrollo a Medida", "Frontend", "Producción"] },
+        { "title": "Lanzamiento de Plataforma Web", "category": "Plataforma Web", "status": "Plataforma en Vivo", "summary": "Una plataforma estable desplegada con una implementación técnica sólida.", "tags": ["Plataforma", "Lanzamiento", "Entrega Técnica"] },
+        { "title": "Acceso a Panel de Administración", "category": "Panel de Control", "status": "Acceso Admin", "summary": "Un entorno de administración diseñado para el control operativo de tu negocio.", "tags": ["Dashboard", "Panel Admin", "Operaciones"] },
+        { "title": "Portafolio Rehman M", "category": "Portafolio Personal", "status": "Portafolio en Vivo", "summary": "Un portafolio personal construido para posicionamiento profesional y marca sólida.", "tags": ["Sitio Portafolio", "Marca Personal", "UI Profesional"] }
+      ],
+      "developmentShowcases": [
+        { "title": "Muestra Frontend a Medida", "badge": "Desarrollo Web", "summary": "Muestra detallada de UI con acabados prémium y diseño adaptable a cualquier pantalla.", "buttonLabel": "Visitar sitio personalizado", "tags": ["UI Frontend", "Diseño Adaptable", "Diseño Prémium"] },
+        { "title": "Sitio de Portafolio Personal", "badge": "Desarrollo Web", "summary": "Un portafolio profesional limpio para presentar servicios con total seguridad.", "buttonLabel": "Visitar portafolio en vivo", "tags": ["Sitio Portafolio", "Marca Personal", "UI Responsive"] }
+      ],
+      "webApps": [
+        { "title": "Plataforma de Reutilización de Contenido", "category": "Herramienta IA de Contenido", "summary": "Interfaz para creadores que convierte un contenido inicial en múltiples formatos.", "tags": ["Herramienta IA", "Flujo Creadores", "App Web"] },
+        { "title": "Optimizador de CV con IA", "category": "Producto de Carrera IA", "summary": "Plataforma de mejora de currículums estructurada en puntuación y optimización.", "tags": ["Producto IA", "UI SaaS", "Captación de Leads"] },
+        { "title": "Experiencia Narrativa Interactiva", "category": "App Web Narrativa", "summary": "Interfaz narrativa envolvente basada en la interacción y toma de decisiones.", "tags": ["UI Narrativa", "Diseño Interactivo", "Atmósferico"] },
+        { "title": "Plataforma de Ajedrez en Línea", "category": "Interfaz de Juego", "summary": "Interfaz competitiva de ajedrez con modo multijugador y tabla de posiciones.", "tags": ["UI Juego", "Tabla Posiciones", "Interactivo"] },
+        { "title": "Plataforma Escape Room", "category": "Juego de Acertijos", "summary": "Concepto de juego enfocado en la creación de salas de escape y desafíos.", "tags": ["Acertijos", "Diseño Juegos", "UI Producto"] },
+        { "title": "Desafío de Mecanografía", "category": "App Web de Habilidad", "summary": "Juego de velocidad de escritura estilo neón centrado en agilidad y reacción.", "tags": ["UI Juego", "App Escritura", "Tema Oscuro"] },
+        { "title": "Arena de Juegos de Palabras", "category": "App Web Competitiva", "summary": "Competencia multijoueur de palabras con interacción dinámica y registro rápido.", "tags": ["Juego Palabras", "Multijugador", "App Web"] },
+        { "title": "Experiencia de Laberinto", "category": "Juego de Acertijo", "summary": "Desafío de laberinto basado en tiempos, obstáculos y niveles de dificultad.", "tags": ["Juego Laberinto", "UX Juego", "Interactivo"] }
+      ]
+    },
     "wiki": {
-      "eyebrow": "Caso de estudio de sitio web destacado",
-      "title": "Wiki RG como plataforma integral de colaboración en investigación.",
+      "eyebrow": "Caso de Estudio Destacado",
+      "title": "Wiki RG estructurado como una plataforma completa de investigación y colaboración.",
       "screens": [
-        { "title": "Perfil del grupo de investigación", "label": "Configuración institucional", "summary": "Vista de perfil que reúne detalles institucionales, gestión de galería e información pública del grupo." },
-        { "title": "Panel de analítica", "label": "Analítica de plataforma", "summary": "Panel con inicios de sesión, miembros, visibilidad de proyectos y actividad de la plataforma." },
-        { "title": "Espacio de publicaciones", "label": "Publicación de investigación", "summary": "Pantalla para gestionar entradas de investigación, metadatos y flujos de edición." },
-        { "title": "Módulo de creación de eventos", "label": "Gestión de eventos", "summary": "Formulario para programar eventos, gestionar inscripciones, organizadores y recursos." },
-        { "title": "Panel de seguimiento de proyectos", "label": "Gestión de proyectos", "summary": "Tarjetas para organizar asignaciones, estados de proyectos y seguimiento interno." }
+        { "title": "Perfil de Grupo de Investigación", "label": "Configuración Institucional", "summary": "Vista de perfil que combina detalles institucionales y gestión de contenido." },
+        { "title": "Panel de Analítica", "label": "Analítica de Plataforma", "summary": "Panel de control con métricas de inicio de sesión, miembros y actividad." },
+        { "title": "Espacio de Publicaciones", "label": "Publicación de Investigaciones", "summary": "Entorno de trabajo para gestionar publicaciones, detalles y metadatos." },
+        { "title": "Módulo de Creación de Eventos", "label": "Gestión de Eventos", "summary": "Formulario para programación de eventos, enlaces y detalles del organizador." },
+        { "title": "Panel de Seguimiento de Proyectos", "label": "Gestión de Proyectos", "summary": "Tarjetas de proyectos que muestran asignaciones, estado y monitoreo interno." }
       ]
     }
-  },
-  "footer": {
-    "locations": [
-      { "name": "Estados Unidos", "detail": "San José, California / Delaware", "note": "Agencia tecnológica reconocida en EE. UU." },
-      { "name": "Pakistán (sede)", "detail": "D Tower, Plot B, 281 Ghazi Rd, Khuda Buksh Colony KB Society, Lahore, Punjab" },
-      { "name": "EAU / Servicios globales", "detail": "Atendemos clientes de EE. UU., Reino Unido, Oriente Medio y Asia-Pacífico." },
-      { "name": "Alcance global", "detail": "Un equipo distribuido en varias zonas horarias." }
-    ]
   }
 }

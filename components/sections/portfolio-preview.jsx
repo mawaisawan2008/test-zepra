@@ -1,3 +1,5 @@
+"use client";
+
 import Link from "next/link";
 import { ArrowRight, ExternalLink, MonitorSmartphone, ShoppingBag } from "lucide-react";
 
@@ -10,26 +12,32 @@ import {
   livePortfolioLinks,
   webAppShowcases,
 } from "@/lib/site";
+import { useLanguage } from "@/components/providers/language-provider";
 
 export function PortfolioPreview({
   showCta = true,
-  eyebrow = "Website Development",
-  title = "Live website launches and premium interface work arranged like a real agency showcase.",
-  description = "This page combines live project links, launch-ready website work, and visual development previews so Zepra Tech can present website delivery in a cleaner and more credible format.",
+  eyebrow,
+  title,
+  description,
 }) {
+  const { t } = useLanguage();
+  const content = t("websitePage.portfolio");
+
   return (
     <section id="website-development" className="section-shell scroll-mt-32">
       <div className="container">
         <div className="grid gap-6 xl:grid-cols-[1.15fr_0.85fr] xl:items-start">
           <div>
             <SectionHeading
-              eyebrow={eyebrow}
-              title={title}
-              description={description}
+              eyebrow={eyebrow ?? content.eyebrow}
+              title={title ?? content.title}
+              description={description ?? content.description}
             />
 
             <div className="mt-8 grid gap-5 md:grid-cols-2">
-              {livePortfolioLinks.map((project, index) => (
+              {livePortfolioLinks.map((project, index) => {
+                const translatedProject = content.liveProjects?.[index] ?? project;
+                return (
                 <Card
                   key={project.href}
                   className={`card-shine h-full border-slate-200/80 bg-white/90 transition-all duration-300 hover:-translate-y-1 hover:shadow-premium ${
@@ -39,9 +47,9 @@ export function PortfolioPreview({
                   <CardHeader className="gap-4">
                     <div className="flex items-start justify-between gap-4">
                       <div className="space-y-2">
-                        <Badge variant="secondary">{project.category}</Badge>
+                        <Badge variant="secondary">{translatedProject.category}</Badge>
                         <div className="text-sm font-medium text-primary">
-                          {project.status}
+                          {translatedProject.status}
                         </div>
                       </div>
                       <div className="flex h-11 w-11 items-center justify-center rounded-2xl bg-slate-950 text-white shadow-glow">
@@ -53,7 +61,7 @@ export function PortfolioPreview({
                       </div>
                     </div>
                     <div>
-                      <CardTitle className="text-2xl">{project.title}</CardTitle>
+                      <CardTitle className="text-2xl">{translatedProject.title}</CardTitle>
                       <div className="mt-2 text-sm font-medium text-brand-slate">
                         {project.domain}
                       </div>
@@ -61,10 +69,10 @@ export function PortfolioPreview({
                   </CardHeader>
                   <CardContent className="space-y-5">
                     <p className="text-sm leading-7 text-brand-slate">
-                      {project.summary}
+                      {translatedProject.summary}
                     </p>
                     <div className="flex flex-wrap gap-2">
-                      {project.tags.map((tag) => (
+                      {translatedProject.tags.map((tag) => (
                         <Badge key={tag} variant="secondary" className="bg-slate-100">
                           {tag}
                         </Badge>
@@ -72,20 +80,21 @@ export function PortfolioPreview({
                     </div>
                     <Button asChild variant="outline" className="w-full justify-between">
                       <Link href={project.href} target="_blank" rel="noreferrer">
-                        Visit project
+                        {content.visitProject}
                         <ExternalLink className="h-4 w-4" />
                       </Link>
                     </Button>
                   </CardContent>
                 </Card>
-              ))}
+                );
+              })}
             </div>
 
             {showCta ? (
               <div className="mt-8">
                 <Button asChild variant="outline" size="lg">
                   <Link href="/contact">
-                    Start a similar project
+                    {content.startProject}
                     <ArrowRight className="h-4 w-4" />
                   </Link>
                 </Button>
@@ -94,7 +103,9 @@ export function PortfolioPreview({
           </div>
 
           <div className="grid gap-6">
-            {developmentShowcases.map((showcase, index) => (
+            {developmentShowcases.map((showcase, index) => {
+              const translatedShowcase = content.developmentShowcases?.[index] ?? showcase;
+              return (
               <Card
                 key={showcase.title}
                 className={`card-shine overflow-hidden border-slate-200/80 bg-white/92 ${
@@ -102,10 +113,10 @@ export function PortfolioPreview({
                 }`}
               >
                 <div className="border-b border-slate-200/70 p-5">
-                  <Badge>{showcase.badge ?? "Website Development"}</Badge>
-                  <CardTitle className="mt-4 text-2xl">{showcase.title}</CardTitle>
+                  <Badge>{translatedShowcase.badge}</Badge>
+                  <CardTitle className="mt-4 text-2xl">{translatedShowcase.title}</CardTitle>
                   <p className="mt-3 text-sm leading-7 text-brand-slate">
-                    {showcase.summary}
+                    {translatedShowcase.summary}
                   </p>
                 </div>
                 <div className="p-5">
@@ -118,7 +129,7 @@ export function PortfolioPreview({
                     {showcase.image ? (
                       <img
                         src={showcase.image}
-                        alt={showcase.title}
+                        alt={translatedShowcase.title}
                         decoding="async"
                         className="h-[440px] w-full object-cover object-top transition-transform duration-500 group-hover:scale-[1.02]"
                       />
@@ -133,7 +144,7 @@ export function PortfolioPreview({
 
                         <div className="relative flex items-center justify-between gap-4">
                           <div className="rounded-full border border-white/15 bg-white/8 px-4 py-2 text-[11px] font-semibold uppercase tracking-[0.24em] text-sky-100">
-                            Live Portfolio
+                            {content.livePortfolio}
                           </div>
                           <div className="rounded-full border border-white/15 bg-white/10 px-3 py-1 text-xs text-slate-200">
                             {showcase.domain}
@@ -142,18 +153,18 @@ export function PortfolioPreview({
 
                         <div className="relative max-w-md">
                           <p className="text-xs font-medium uppercase tracking-[0.32em] text-sky-200/80">
-                            Website Presentation
+                            {content.websitePresentation}
                           </p>
                           <div className="mt-4 text-4xl font-semibold leading-tight">
-                            {showcase.title}
+                            {translatedShowcase.title}
                           </div>
                           <p className="mt-4 text-sm leading-7 text-slate-200/88">
-                            {showcase.previewCopy ?? showcase.summary}
+                            {translatedShowcase.summary}
                           </p>
                         </div>
 
                         <div className="relative grid gap-3 sm:grid-cols-2">
-                          {(showcase.previewPoints ?? []).map((point) => (
+                          {(translatedShowcase.previewPoints ?? []).map((point) => (
                             <div
                               key={point}
                               className="rounded-2xl border border-white/10 bg-white/8 px-4 py-3 text-sm text-slate-100 backdrop-blur-sm"
@@ -166,7 +177,7 @@ export function PortfolioPreview({
                     )}
                   </Link>
                   <div className="mt-4 flex flex-wrap gap-2">
-                    {showcase.tags.map((tag) => (
+                    {translatedShowcase.tags.map((tag) => (
                       <Badge key={tag} variant="secondary" className="bg-slate-100">
                         {tag}
                       </Badge>
@@ -179,27 +190,30 @@ export function PortfolioPreview({
                         target="_blank"
                         rel="noreferrer"
                       >
-                        {showcase.buttonLabel ?? "Visit project"}
+                        {translatedShowcase.buttonLabel ?? content.visitProject}
                         <ExternalLink className="h-4 w-4" />
                       </Link>
                     </Button>
                   ) : null}
                 </div>
               </Card>
-            ))}
+              );
+            })}
           </div>
         </div>
 
         <div className="mt-8">
           <SectionHeading
-            eyebrow="Interactive Web Products"
-            title="Additional product-style web experiences presented with polished visuals and clean project framing."
-            description="This showcase adds interactive tools, game-style interfaces, and AI-led product concepts to the website development portfolio so Zepra Tech can present a wider frontend and product execution range."
+            eyebrow={content.webAppsEyebrow}
+            title={content.webAppsTitle}
+            description={content.webAppsDescription}
             align="center"
           />
 
           <div className="mt-8 grid gap-6 md:grid-cols-2 xl:grid-cols-4">
-            {webAppShowcases.map((project) => (
+            {webAppShowcases.map((project, index) => {
+              const translatedProject = content.webApps?.[index] ?? project;
+              return (
               <Card
                 key={project.href}
                 className="card-shine overflow-hidden border-slate-200/80 bg-white/92 transition-all duration-300 hover:-translate-y-1 hover:shadow-premium"
@@ -223,17 +237,17 @@ export function PortfolioPreview({
 
                   <div className="space-y-5 p-5">
                     <div className="space-y-3">
-                      <Badge variant="secondary">{project.category}</Badge>
+                      <Badge variant="secondary">{translatedProject.category}</Badge>
                       <CardTitle className="text-2xl leading-tight">
-                        {project.title}
+                        {translatedProject.title}
                       </CardTitle>
                       <p className="text-sm leading-7 text-brand-slate">
-                        {project.summary}
+                        {translatedProject.summary}
                       </p>
                     </div>
 
                     <div className="flex flex-wrap gap-2">
-                      {project.tags.map((tag) => (
+                      {translatedProject.tags.map((tag) => (
                         <Badge key={tag} variant="secondary" className="bg-slate-100">
                           {tag}
                         </Badge>
@@ -242,14 +256,15 @@ export function PortfolioPreview({
 
                     <Button asChild variant="outline" className="w-full justify-between">
                       <Link href={project.href} target="_blank" rel="noreferrer">
-                        Open project
+                        {content.openProject}
                         <ExternalLink className="h-4 w-4" />
                       </Link>
                     </Button>
                   </div>
                 </CardContent>
               </Card>
-            ))}
+              );
+            })}
           </div>
         </div>
       </div>
