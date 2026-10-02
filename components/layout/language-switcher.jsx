@@ -10,6 +10,27 @@ const languages = [
 ];
 
 let translateWidgetPromise;
+let bodyStyleObserver;
+
+function preventTranslateOffset() {
+  const resetBodyPosition = () => {
+    if (document.body.style.getPropertyValue("top") !== "0px") {
+      document.body.style.setProperty("top", "0px", "important");
+    }
+    if (document.body.style.getPropertyValue("position") !== "static") {
+      document.body.style.setProperty("position", "static", "important");
+    }
+  };
+
+  resetBodyPosition();
+  if (bodyStyleObserver) return;
+
+  bodyStyleObserver = new MutationObserver(resetBodyPosition);
+  bodyStyleObserver.observe(document.body, {
+    attributes: true,
+    attributeFilter: ["style"],
+  });
+}
 
 function loadTranslateWidget() {
   if (window.google?.translate?.TranslateElement) {
@@ -28,6 +49,7 @@ function loadTranslateWidget() {
         },
         "google_translate_element",
       );
+      preventTranslateOffset();
       resolve();
     };
 
