@@ -4,11 +4,13 @@ import { useLanguage } from "@/components/providers/language-provider";
 
 export function TestimonialCard({ testimonial, index }) {
   const { t } = useLanguage();
-  const translated = t("home.testimonials.items")?.[index];
+  const testimonialsContent = t("home.testimonials");
+  const translatedItems = Array.isArray(testimonialsContent?.items) ? testimonialsContent.items : [];
+  const translated = translatedItems[index];
 
   return (
     <div className="group relative flex flex-col justify-between overflow-hidden rounded-2xl border border-cyan-500/20 bg-gradient-to-b from-[#0e1f38] via-[#0b132b] to-[#060a17] p-6 shadow-xl backdrop-blur-md transition-all duration-300 hover:-translate-y-2 hover:border-cyan-400/50 hover:shadow-2xl hover:shadow-cyan-500/15">
-      {/* Top Left Subtle Ambient Glow Effect (Matches Hero Card Lighting) */}
+      {/* Top Left Subtle Ambient Glow Effect */}
       <div 
         aria-hidden="true" 
         className="pointer-events-none absolute -left-10 -top-10 h-32 w-32 rounded-full bg-cyan-500/10 blur-2xl transition-all duration-300 group-hover:bg-cyan-400/20" 
@@ -38,7 +40,7 @@ export function TestimonialCard({ testimonial, index }) {
         </div>
         <div>
           <h4 className="text-xs font-semibold text-white">
-            {testimonial?.name || "Confidential client"}
+            {translated?.name || testimonial?.name || "Confidential client"}
           </h4>
           <p className="text-[11px] text-slate-400">
             {translated?.role || testimonial?.role || testimonial?.project || testimonial?.service}
@@ -51,6 +53,7 @@ export function TestimonialCard({ testimonial, index }) {
 
 export function TestimonialsSection() {
   const { t } = useLanguage();
+  const testimonialsContent = t("home.testimonials");
 
   return (
     <section className="relative isolate overflow-hidden bg-[#E6F2FF] py-8 text-slate-900 sm:py-12">
@@ -66,13 +69,13 @@ export function TestimonialsSection() {
               <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-emerald-400 opacity-70 motion-reduce:animate-none" />
               <span className="relative inline-flex h-2 w-2 rounded-full bg-emerald-400" />
             </span>
-            {t("home.testimonials.eyebrow")}
+            {testimonialsContent?.eyebrow || "CLIENT TRUST & REVIEWS"}
           </div>
           <h2 className="mt-4 font-display text-3xl font-semibold leading-tight text-slate-900 sm:text-4xl lg:text-5xl">
-            {t("home.testimonials.title")}
+            {testimonialsContent?.title || "What our global clients say about us."}
           </h2>
           <p className="mx-auto mt-4 max-w-2xl text-sm leading-7 text-slate-700 sm:text-base">
-            {t("home.testimonials.description")}
+            {testimonialsContent?.description || "Real testimonials from enterprises, startups, and brands across web, AI, e-commerce, and growth marketing."}
           </p>
         </header>
 
@@ -90,3 +93,5 @@ export function TestimonialsSection() {
     </section>
   );
 }
+
+export default TestimonialsSection;

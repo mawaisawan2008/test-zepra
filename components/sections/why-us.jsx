@@ -15,49 +15,56 @@ import {
 } from "lucide-react";
 import { useLanguage } from "@/components/providers/language-provider";
 
-const accreditations = [
-  { label: "ISO Certified (Quality Standards)", icon: Award },
-  { label: "FBR Approved (Pakistan)", icon: Landmark },
-  { label: "Registered LLC (United States)", icon: Building2 },
-];
-
-const metrics = [
-  { value: "50+", label: "Projects Delivered", icon: Layers3 },
-  { value: "30+", label: "Websites Launched", icon: Globe2 },
-  { value: "20+", label: "E-Commerce Stores Scaled", icon: ShoppingBag },
-  { value: "PK + Global", label: "Built for Pakistan & International Clients", icon: Globe2 },
-];
-
-const pillars = [
-  {
-    title: "Unified Delivery Stack",
-    description:
-      "Websites, Shopify e-commerce, AI automation, and graphic design under one roof.",
-    icon: Layers3,
-  },
-  {
-    title: "Secure & Scalable Infrastructure",
-    description:
-      "ISO-compliant security, robust performance, and zero downtime, built to support your business as it grows.",
-    icon: LockKeyhole,
-  },
-  {
-    title: "Growth-Focused Execution",
-    description:
-      "Digital marketing, conversion rate optimization, and revenue-driven performance focused on measurable progress.",
-    icon: TrendingUp,
-  },
-  {
-    title: "Dedicated Client Partnership",
-    description:
-      "Direct developer communication, fast sprint cycles, and 24/7 support keep your team moving with confidence.",
-    icon: MessagesSquare,
-  },
-];
+const accreditationsIcons = [Award, Landmark, Building2];
+const metricsIcons = [Layers3, Globe2, ShoppingBag, Globe2];
+const pillarsIcons = [Layers3, LockKeyhole, TrendingUp, MessagesSquare];
 
 export function WhyUs() {
   const { t } = useLanguage();
   const content = t("home.whyUs");
+
+  // Fallback Arrays agar translation na mile
+  const accreditationsList = Array.isArray(content?.accreditations)
+    ? content.accreditations
+    : [
+        "ISO Certified (Quality Standards)",
+        "FBR Approved (Pakistan)",
+        "Registered LLC (United States)",
+      ];
+
+  const metricsList = Array.isArray(content?.metrics)
+    ? content.metrics
+    : [
+        { value: "50+", label: "Projects Delivered" },
+        { value: "30+", label: "Websites Launched" },
+        { value: "20+", label: "E-Commerce Stores Scaled" },
+        { value: "PK + Global", label: "Built for Pakistan & International Clients" },
+      ];
+
+  const pillarsList = Array.isArray(content?.pillars)
+    ? content.pillars
+    : [
+        {
+          title: "Unified Delivery Stack",
+          description:
+            "Websites, Shopify e-commerce, AI automation, and graphic design under one roof.",
+        },
+        {
+          title: "Secure & Scalable Infrastructure",
+          description:
+            "ISO-compliant security, robust performance, and zero downtime, built to support your business as it grows.",
+        },
+        {
+          title: "Growth-Focused Execution",
+          description:
+            "Digital marketing, conversion rate optimization, and revenue-driven performance focused on measurable progress.",
+        },
+        {
+          title: "Dedicated Client Partnership",
+          description:
+            "Direct developer communication, fast sprint cycles, and 24/7 support keep your team moving with confidence.",
+        },
+      ];
 
   return (
     <section className="relative isolate overflow-hidden bg-slate-950 py-8 text-white sm:py-12">
@@ -68,26 +75,26 @@ export function WhyUs() {
         <header className="flex flex-col gap-6 border-b border-white/10 pb-6 lg:flex-row lg:items-end lg:justify-between">
           <div className="max-w-3xl">
             <div className="inline-flex items-center rounded-full border border-cyan-400/20 bg-cyan-400/[0.08] px-3 py-1.5 text-[10px] font-semibold uppercase tracking-[0.2em] text-cyan-300">
-              {content.eyebrow}
+              {content?.eyebrow || "WHY CHOOSE US"}
             </div>
             <h2 className="mt-4 font-display text-3xl font-semibold leading-tight text-white sm:text-4xl lg:text-5xl">
-              {content.title}
+              {content?.title || "Built for trust, speed, and real business outcomes."}
             </h2>
             <p className="mt-4 max-w-2xl text-sm leading-7 text-slate-300 sm:text-base">
-              {content.description}
+              {content?.description || "Proven engineering and digital execution designed to scale your revenue worldwide."}
             </p>
 
             <div className="mt-6 flex flex-wrap gap-2.5">
-              {accreditations.map((accreditation, index) => {
-                const Icon = accreditation.icon;
+              {accreditationsList.map((label, index) => {
+                const Icon = accreditationsIcons[index] || Award;
 
                 return (
                   <span
-                    key={accreditation.label}
+                    key={index}
                     className="inline-flex items-center gap-2 rounded-full border border-slate-800 bg-slate-900/80 px-3 py-1.5 text-xs font-medium text-slate-300 backdrop-blur-md"
                   >
                     <Icon className="h-3.5 w-3.5 text-cyan-300" />
-                    {content.accreditations[index] ?? accreditation.label}
+                    {label}
                   </span>
                 );
               })}
@@ -102,18 +109,18 @@ export function WhyUs() {
               <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-emerald-400 opacity-60 motion-reduce:animate-none" />
               <span className="relative inline-flex h-2 w-2 rounded-full bg-emerald-400" />
             </span>
-            {content.chat}
+            {content?.chat || "Let's chat"}
             <ArrowRight className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-0.5 motion-reduce:transition-none" />
           </Link>
         </header>
 
         <div className="grid grid-cols-2 gap-x-5 gap-y-6 border-b border-white/10 py-6 md:grid-cols-4 md:gap-0 md:py-6">
-          {metrics.map((metric, index) => {
-            const Icon = metric.icon;
+          {metricsList.map((metric, index) => {
+            const Icon = metricsIcons[index] || Globe2;
 
             return (
               <div
-                key={metric.label}
+                key={index}
                 className={`flex items-start gap-3 md:px-5 ${index > 0 ? "md:border-l md:border-white/10" : "md:pl-0"}`}
               >
                 <Icon className="mt-1 h-4 w-4 shrink-0 text-cyan-300" />
@@ -122,7 +129,7 @@ export function WhyUs() {
                     {metric.value}
                   </div>
                   <p className="mt-2 max-w-[14rem] text-xs leading-5 text-slate-400 sm:text-sm">
-                    {content.metrics[index] ?? metric.label}
+                    {metric.label}
                   </p>
                 </div>
               </div>
@@ -131,13 +138,12 @@ export function WhyUs() {
         </div>
 
         <div className="grid gap-4 pt-6 sm:grid-cols-2 xl:grid-cols-4">
-          {pillars.map((pillar, index) => {
-            const Icon = pillar.icon;
-            const translatedPillar = content.pillars[index] ?? pillar;
+          {pillarsList.map((pillar, index) => {
+            const Icon = pillarsIcons[index] || Layers3;
 
             return (
               <article
-                key={pillar.title}
+                key={index}
                 className="group min-h-[230px] rounded-3xl border border-slate-800/90 bg-slate-900/65 p-6 shadow-[0_18px_45px_rgba(0,0,0,0.2)] backdrop-blur-xl transition-all duration-300 hover:-translate-y-1 hover:border-cyan-500/50 hover:bg-slate-900/90 hover:shadow-[0_20px_50px_rgba(6,182,212,0.1)] motion-reduce:transition-none"
               >
                 <div className="flex items-center justify-between">
@@ -150,10 +156,10 @@ export function WhyUs() {
                 </div>
 
                 <h3 className="mt-5 font-display text-lg font-semibold leading-snug text-white">
-                  {translatedPillar.title}
+                  {pillar.title}
                 </h3>
                 <p className="mt-3 text-sm leading-6 text-slate-400">
-                  {translatedPillar.description}
+                  {pillar.description}
                 </p>
               </article>
             );
