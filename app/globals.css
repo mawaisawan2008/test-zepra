@@ -302,3 +302,8 @@ body {
 .goog-te-gadget {
   display: none !important;
 }
+
+#google_translate_element,
+.google-translate-engine {
+  display: none !important;
+}

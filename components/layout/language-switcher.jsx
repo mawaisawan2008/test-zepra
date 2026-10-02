@@ -9,77 +9,10 @@ const languages = [
   { code: "ES", value: "es", label: "Español" },
 ];
 
-let translateWidgetPromise;
-
-function loadTranslateWidget() {
-  if (window.google?.translate?.TranslateElement) {
-    return Promise.resolve();
-  }
-
-  if (translateWidgetPromise) return translateWidgetPromise;
-
-  translateWidgetPromise = new Promise((resolve, reject) => {
-    window.googleTranslateElementInit = () => {
-      new window.google.translate.TranslateElement(
-        {
-          pageLanguage: "en",
-          includedLanguages: "en,fr,es",
-          autoDisplay: false,
-        },
-        "google_translate_element",
-      );
-      resolve();
-    };
-
-    const script = document.createElement("script");
-    script.src =
-      "https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit";
-    script.async = true;
-    script.onerror = () => {
-      translateWidgetPromise = undefined;
-      reject(new Error("Translation service could not be loaded."));
-    };
-    document.head.appendChild(script);
-  });
-
-  return translateWidgetPromise;
-}
-
-function getTranslateSelect() {
-  const existing = document.querySelector(".goog-te-combo");
-  if (existing) return Promise.resolve(existing);
-
-  return new Promise((resolve, reject) => {
-    const timeoutId = window.setTimeout(() => {
-      observer.disconnect();
-      reject(new Error("Translation options are not available."));
-    }, 8000);
-
-    const observer = new MutationObserver(() => {
-      const select = document.querySelector(".goog-te-combo");
-      if (select) {
-        window.clearTimeout(timeoutId);
-        observer.disconnect();
-        resolve(select);
-      }
-    });
-
-    observer.observe(document.body, { childList: true, subtree: true });
-  });
-}
-
-async function applyLanguage(language) {
-  await loadTranslateWidget();
-  const select = await getTranslateSelect();
-  select.value = language;
-  select.dispatchEvent(new Event("change", { bubbles: true }));
-}
-
 export function LanguageSwitcher() {
   const rootRef = useRef(null);
   const [isOpen, setIsOpen] = useState(false);
   const [activeLanguage, setActiveLanguage] = useState(languages[0]);
-  const [error, setError] = useState("");
 
   useEffect(() => {
     const savedCode = window.localStorage.getItem("zepra-language");
@@ -88,11 +21,6 @@ export function LanguageSwitcher() {
     if (!savedLanguage) return;
     setActiveLanguage(savedLanguage);
 
-    if (savedLanguage.value !== "en") {
-      applyLanguage(savedLanguage.value).catch(() => {
-        setError("Translation is temporarily unavailable.");
-      });
-    }
   }, []);
 
   useEffect(() => {
@@ -133,17 +61,16 @@ export function LanguageSwitcher() {
     };
   }, []);
 
-  async function handleLanguageChange(language) {
+  function handleLanguageChange(language) {
     setIsOpen(false);
-    setError("");
+    setActiveLanguage(language);
+    window.localStorage.setItem("zepra-language", language.code);
 
-    try {
-      await applyLanguage(language.value);
-      setActiveLanguage(language);
-      window.localStorage.setItem("zepra-language", language.code);
-    } catch {
-      setError("Translation is temporarily unavailable.");
-    }
+    const translateCookie = `/en/${language.value}`;
+    const domain = window.location.hostname;
+    document.cookie = `googtrans=${translateCookie}; path=/; domain=${domain}`;
+    document.cookie = `googtrans=${translateCookie}; path=/;`;
+    window.location.reload();
   }
 
   return (
@@ -183,14 +110,6 @@ export function LanguageSwitcher() {
         </div>
       ) : null}
 
-      <div
-        id="google_translate_element"
-        className="pointer-events-none fixed -left-[10000px] top-0 h-px w-px overflow-hidden opacity-0"
-        aria-hidden="true"
-      />
-      <span className="sr-only" role="status" aria-live="polite">
-        {error}
-      </span>
     </div>
   );
 }
