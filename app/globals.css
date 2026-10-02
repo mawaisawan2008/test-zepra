@@ -274,3 +274,31 @@ body {
     display: none;
   }
 }
+
+/* Aggressively hide Google Translate Top Bar & Tooltips */
+iframe[class*="goog-te-banner-frame"],
+.goog-te-banner-frame,
+#goog-gt-tt,
+.goog-te-balloon-frame,
+.goog-tooltip,
+.goog-tooltip:hover,
+.goog-text-highlight {
+  display: none !important;
+  visibility: hidden !important;
+  opacity: 0 !important;
+  pointer-events: none !important;
+  height: 0 !important;
+  width: 0 !important;
+}
+
+/* Prevent Google from shifting the page down */
+body {
+  top: 0 !important;
+  position: static !important;
+  min-height: 100vh !important;
+}
+
+/* Hide Google Translate gadget wrapper completely */
+.goog-te-gadget {
+  display: none !important;
+}
