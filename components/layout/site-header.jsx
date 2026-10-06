@@ -194,8 +194,8 @@ export function SiteHeader() {
                         isActive ? "text-white" : "text-slate-500",
                       )}
                     />
-                    <div className="invisible absolute left-0 top-full z-30 w-[340px] translate-y-2 pt-3 opacity-0 transition-all duration-200 group-hover:visible group-hover:translate-y-0 group-hover:opacity-100 group-focus-within:visible group-focus-within:translate-y-0 group-focus-within:opacity-100">
-                      <div className="rounded-[28px] border border-slate-200 bg-white p-3 shadow-premium">
+                    <div className="invisible absolute left-0 top-full z-50 w-80 max-w-xs translate-y-2 pt-3 opacity-0 transition-all duration-200 group-hover:visible group-hover:translate-y-0 group-hover:opacity-100 group-focus-within:visible group-focus-within:translate-y-0 group-focus-within:opacity-100">
+                      <div className="overflow-hidden rounded-[28px] border border-slate-200 bg-white p-3 shadow-premium break-words">
                         <div className="space-y-1">
                           {item.children.map((child) => (
                             <Link
@@ -204,11 +204,11 @@ export function SiteHeader() {
                               className="group/item flex items-start gap-3 rounded-[22px] border border-transparent bg-white px-4 py-3 transition-colors duration-200 hover:border-primary/10 hover:bg-sky-50"
                             >
                               <ProjectIconBadge href={child.href} />
-                              <span className="block">
-                                <span className="block text-sm font-semibold text-slate-950">
+                              <span className="block flex-1 min-w-0">
+                                <span className="block truncate text-sm font-semibold text-slate-950">
                                   {t(projectTranslationKeys[child.href] ?? "nav.projects")}
                                 </span>
-                                <span className="mt-1 block text-xs leading-5 text-brand-slate">
+                                <span className="mt-1 block text-xs leading-5 text-brand-slate break-words line-clamp-2">
                                   {t(`${projectTranslationKeys[child.href]}Description`)}
                                 </span>
                               </span>
@@ -306,12 +306,12 @@ export function SiteHeader() {
                             className="group/item flex items-start gap-3 rounded-2xl border border-slate-200/70 bg-white/80 px-4 py-3 transition-colors duration-200 hover:border-primary/20 hover:bg-slate-50"
                           >
                             <ProjectIconBadge href={child.href} />
-                            <span className="block">
-                                <span className="block text-sm font-semibold text-slate-950">
-                                  {t(projectTranslationKeys[child.href] ?? "nav.projects")}
+                            <span className="block flex-1 min-w-0">
+                              <span className="block truncate text-sm font-semibold text-slate-950">
+                                {t(projectTranslationKeys[child.href] ?? "nav.projects")}
                               </span>
-                              <span className="mt-1 block text-xs leading-5 text-brand-slate">
-                                  {t(`${projectTranslationKeys[child.href]}Description`)}
+                              <span className="mt-1 block text-xs leading-5 text-brand-slate break-words line-clamp-2">
+                                {t(`${projectTranslationKeys[child.href]}Description`)}
                               </span>
                             </span>
                           </Link>
