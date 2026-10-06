@@ -8,7 +8,7 @@ import { teamMembers } from "@/lib/site";
 
 export function TeamSection({ showHeader = true, showCta = false }) {
   return (
-    <section className="section-shell">
+    <section className="section-shell w-full overflow-x-hidden">
       <div className="container">
         {showHeader ? (
           <div className="flex flex-col gap-6 lg:flex-row lg:items-end lg:justify-between">
@@ -28,7 +28,7 @@ export function TeamSection({ showHeader = true, showCta = false }) {
           </div>
         ) : null}
 
-        <div className="mt-8 grid gap-6 md:grid-cols-2 xl:grid-cols-3">
+        <div className="mt-8 grid gap-6 md:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-3 3xl:grid-cols-4">
           {teamMembers.map((member) => (
             <TeamCard key={`${member.role}-${member.name}`} member={member} />
           ))}

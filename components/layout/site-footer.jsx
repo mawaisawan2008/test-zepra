@@ -169,10 +169,10 @@ export function SiteFooter() {
   };
 
   return (
-    <footer className="section-shell-tight relative border-t border-white/60 bg-slate-950 text-white">
+    <footer className="section-shell-tight relative border-t border-white/60 bg-slate-950 text-white w-full overflow-x-hidden">
       <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-brand-cyan/60 to-transparent" />
 
-      <div className="w-full px-6 lg:px-12">
+      <div className="mx-auto w-full max-w-[92vw] 2xl:max-w-[1800px] px-6 lg:px-12">
         <div className="flex flex-col gap-6 border-b border-slate-800 pb-8 md:flex-row md:items-center md:justify-between">
           <div className="max-w-sm">
             <Logo
@@ -268,7 +268,7 @@ export function SiteFooter() {
           >
             {getTranslation("footer.globalPresence", "Global Presence")}
           </h3>
-          <div className="mt-5 grid gap-6 sm:grid-cols-2 xl:grid-cols-4">
+          <div className="mt-5 grid gap-6 sm:grid-cols-2 xl:grid-cols-4 2xl:grid-cols-4">
             {defaultLocations.map((location, index) => {
               const translatedLocation = translatedLocations?.[index] ?? location;
               return (

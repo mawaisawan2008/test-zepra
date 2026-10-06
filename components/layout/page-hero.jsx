@@ -28,16 +28,16 @@ export function PageHero({
     : null;
 
   return (
-    <section className="section-shell relative overflow-hidden pt-16">
+    <section className="section-shell relative overflow-hidden pt-16 w-full overflow-x-hidden">
       <div className="container">
         <div className="surface-panel relative overflow-hidden bg-white/[0.88] px-6 py-12 sm:px-8 lg:px-12 lg:py-16">
           <div className="absolute inset-y-0 right-0 hidden w-2/5 bg-brand-radial opacity-90 lg:block" />
-          <div className="relative max-w-4xl">
+          <div className="relative max-w-4xl 2xl:max-w-6xl 3xl:max-w-7xl">
             {resolvedEyebrow ? <div className="eyebrow">{resolvedEyebrow}</div> : null}
-            <h1 className="mt-6 max-w-3xl text-balance font-display text-4xl font-semibold leading-tight text-slate-950 sm:text-5xl lg:text-6xl">
+            <h1 className="mt-6 max-w-3xl 2xl:max-w-5xl text-balance font-display text-4xl font-semibold leading-tight text-slate-950 sm:text-5xl lg:text-6xl">
               {resolvedTitle}
             </h1>
-            <p className="muted-copy mt-6 max-w-3xl text-base md:text-lg">{resolvedDescription}</p>
+            <p className="muted-copy mt-6 max-w-3xl 2xl:max-w-5xl text-base md:text-lg">{resolvedDescription}</p>
 
             <div className="mt-8 flex flex-col gap-3 sm:flex-row">
               {resolvedPrimaryAction ? (

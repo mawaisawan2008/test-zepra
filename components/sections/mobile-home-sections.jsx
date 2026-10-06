@@ -29,7 +29,7 @@ export function MobileAISection() {
   const content = t("home.operations");
 
   return (
-    <section className="bg-[#E6F2FF] py-8 text-slate-900">
+    <section className="bg-[#E6F2FF] py-8 text-slate-900 w-full overflow-x-hidden">
       <div className="container px-4">
         <header className="text-center">
           <span className="inline-flex items-center gap-2 rounded-full border border-cyan-700/20 bg-white/80 px-3.5 py-1.5 text-[10px] font-semibold uppercase tracking-[0.2em] text-cyan-800 shadow-sm">
@@ -91,7 +91,7 @@ export function MobileTestimonials() {
   const { t } = useLanguage();
 
   return (
-    <section className="bg-[#E6F2FF] py-8 text-slate-900">
+    <section className="bg-[#E6F2FF] py-8 text-slate-900 w-full overflow-x-hidden">
       <div className="container px-4">
         <header className="mx-auto max-w-xl text-center">
           <span className="inline-flex items-center gap-2 rounded-full border border-cyan-700/20 bg-white/75 px-3.5 py-1.5 text-[10px] font-semibold uppercase tracking-[0.2em] text-cyan-800 shadow-sm">

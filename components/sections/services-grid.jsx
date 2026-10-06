@@ -20,7 +20,7 @@ export function ServicesGrid({
   const translatedServices = t("services.items");
 
   return (
-    <section className="section-shell bg-white/50">
+    <section className="section-shell bg-white/50 w-full overflow-x-hidden">
       <div className="container">
         {showHeader ? (
           <div className="flex flex-col gap-6 lg:flex-row lg:items-end lg:justify-between">
@@ -40,7 +40,7 @@ export function ServicesGrid({
           </div>
         ) : null}
 
-        <div className="mt-8 grid gap-6 md:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-4">
+        <div className="mt-8 grid gap-6 md:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-4 3xl:grid-cols-4">
           {services.map((service, index) => (
             <div key={service.title} id={slugify(service.title)}>
               <ServiceCard

@@ -17,15 +17,15 @@ export function AboutPreview({ showCta = true }) {
   );
 
   return (
-    <section className="relative overflow-hidden bg-[#E6F2FF] py-16 lg:py-24 text-slate-900 transition-all duration-500">
+    <section className="relative overflow-hidden bg-[#E6F2FF] py-16 lg:py-24 text-slate-900 transition-all duration-500 w-full overflow-x-hidden">
       {/* Background Soft Glow */}
       <div
         aria-hidden="true"
         className="pointer-events-none absolute left-1/2 top-0 -z-10 h-72 w-[min(90vw,1000px)] -translate-x-1/2 rounded-full bg-[radial-gradient(ellipse_at_top,rgba(6,182,212,0.15),transparent_70%)] blur-[100px]"
       />
 
-      <div className="container relative z-10 mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl">
-        <div className="grid gap-10 lg:grid-cols-[0.95fr_1.05fr] lg:items-center">
+      <div className="relative z-10 mx-auto w-full max-w-7xl 2xl:max-w-[92vw] 3xl:max-w-[1800px] px-4 sm:px-6 lg:px-8">
+        <div className="grid gap-10 lg:grid-cols-[0.95fr_1.05fr] 2xl:gap-16 lg:items-center">
           <div>
             <SectionHeading
               eyebrow={t("about.eyebrow")}

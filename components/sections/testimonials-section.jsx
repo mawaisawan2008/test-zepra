@@ -54,13 +54,13 @@ export function TestimonialsSection() {
   const testimonialsContent = t("home.testimonials");
 
   return (
-    <section className="relative isolate overflow-hidden bg-[#E6F2FF] py-8 text-slate-900 sm:py-12">
+    <section className="relative isolate overflow-hidden bg-[#E6F2FF] py-8 text-slate-900 sm:py-12 w-full overflow-x-hidden">
       <div
         aria-hidden="true"
         className="pointer-events-none absolute left-1/2 top-16 -z-10 h-80 w-[min(80vw,900px)] -translate-x-1/2 rounded-full bg-[radial-gradient(ellipse_at_center,rgba(6,182,212,0.18),transparent_68%)] blur-[120px] animate-pulse motion-reduce:animate-none"
       />
       <div className="container relative mx-auto px-4">
-        <header className="mx-auto max-w-3xl text-center">
+        <header className="mx-auto max-w-3xl 2xl:max-w-4xl 3xl:max-w-5xl text-center">
           <div className="inline-flex items-center gap-2 rounded-full border border-cyan-700/20 bg-white/75 px-3.5 py-1.5 text-[10px] font-semibold uppercase tracking-[0.2em] text-cyan-800 shadow-sm">
             <span className="relative flex h-2 w-2">
               <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-emerald-400 opacity-70 motion-reduce:animate-none" />
@@ -76,7 +76,7 @@ export function TestimonialsSection() {
           </p>
         </header>
 
-        <div className="mt-8 grid gap-5 sm:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-4">
+        <div className="mt-8 grid gap-5 sm:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-4 3xl:grid-cols-5">
           {testimonials && testimonials.map((testimonial, index) => (
             <TestimonialCard
               key={testimonial.service || index}

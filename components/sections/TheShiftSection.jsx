@@ -71,7 +71,7 @@ export function TheShiftSection() {
       ];
 
   return (
-    <section className="relative isolate overflow-hidden bg-[#E6F2FF] py-8 text-slate-900 sm:py-12">
+    <section className="relative isolate overflow-hidden bg-[#E6F2FF] py-8 text-slate-900 sm:py-12 w-full overflow-x-hidden">
       {/* Background Ambient Glow */}
       <div
         aria-hidden="true"
@@ -80,7 +80,7 @@ export function TheShiftSection() {
 
       <div className="container relative mx-auto px-4">
         {/* Section Header */}
-        <header className="mx-auto max-w-3xl text-center">
+        <header className="mx-auto max-w-3xl 2xl:max-w-4xl 3xl:max-w-5xl text-center">
           <div className="inline-flex items-center gap-2 rounded-full border border-cyan-700/20 bg-white/80 px-3.5 py-1.5 text-[10px] font-semibold uppercase tracking-[0.2em] text-cyan-800 shadow-sm">
             <span className="relative flex h-2 w-2">
               <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-emerald-400 opacity-70 motion-reduce:animate-none" />

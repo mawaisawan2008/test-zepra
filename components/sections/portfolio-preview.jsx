@@ -24,7 +24,7 @@ export function PortfolioPreview({
   const content = t("websitePage.portfolio");
 
   return (
-    <section id="website-development" className="section-shell scroll-mt-32">
+    <section id="website-development" className="section-shell scroll-mt-32 w-full overflow-x-hidden">
       <div className="container">
         <div className="grid gap-6 xl:grid-cols-[1.15fr_0.85fr] xl:items-start">
           <div>
@@ -210,7 +210,7 @@ export function PortfolioPreview({
             align="center"
           />
 
-          <div className="mt-8 grid gap-6 md:grid-cols-2 xl:grid-cols-4">
+          <div className="mt-8 grid gap-6 md:grid-cols-2 xl:grid-cols-4 2xl:grid-cols-4">
             {webAppShowcases.map((project, index) => {
               const translatedProject = content.webApps?.[index] ?? project;
               return (

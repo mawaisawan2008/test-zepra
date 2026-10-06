@@ -18,12 +18,19 @@ module.exports = {
         "2xl": "2.5rem",
       },
       screens: {
-        "2xl": "1320px",
+        sm: "640px",
+        md: "768px",
+        lg: "1024px",
+        xl: "1280px",
+        "2xl": "1536px",
+        "3xl": "1920px",
+        "4xl": "2560px",
       },
     },
     extend: {
       screens: {
         "3xl": "1920px",
+        "4xl": "2560px",
       },
       colors: {
         border: "hsl(var(--border))",

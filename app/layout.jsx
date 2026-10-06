@@ -54,9 +54,9 @@ export default function RootLayout({ children }) {
     <html lang="en" className="scroll-smooth">
       <body className={`${bodyFont.variable} ${displayFont.variable} font-sans`}>
         <LanguageProvider>
-          <div className="relative min-h-screen overflow-x-clip">
+          <div className="relative min-h-screen w-full overflow-x-hidden">
             <SiteHeader />
-            <main>{children}</main>
+            <main className="w-full overflow-x-hidden">{children}</main>
             <SiteFooter />
           </div>
         </LanguageProvider>

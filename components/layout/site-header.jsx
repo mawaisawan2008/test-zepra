@@ -134,11 +134,11 @@ export function SiteHeader() {
   const hidePill = () => setPill((current) => ({ ...current, visible: false }));
 
   return (
-    <header className="sticky top-0 z-50 bg-transparent px-3 pt-4 pointer-events-none">
+    <header className="sticky top-0 z-50 w-full bg-transparent px-3 pt-4 pointer-events-none">
       <div className="container pointer-events-none">
         <div
           className={cn(
-            "pointer-events-auto relative mx-auto flex max-w-6xl items-center justify-between gap-4 rounded-full border border-slate-200/50 bg-white/90 px-5 shadow-lg backdrop-blur-md [backface-visibility:hidden] transition-all duration-300 lg:px-7",
+            "pointer-events-auto relative mx-auto flex max-w-6xl 2xl:max-w-7xl 3xl:max-w-[1500px] items-center justify-between gap-4 rounded-full border border-slate-200/50 bg-white/90 px-5 shadow-lg backdrop-blur-md [backface-visibility:hidden] transition-all duration-300 lg:px-7",
             scrolled ? "py-2.5 shadow-premium" : "py-4",
           )}
         >

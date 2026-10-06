@@ -34,7 +34,7 @@ export function ThumbnailDesignShowcase() {
   const content = t("thumbnailPage");
 
   return (
-    <section className="section-shell bg-white/50">
+    <section className="section-shell bg-white/50 w-full overflow-x-hidden">
       <div className="container">
         <SectionHeading
           eyebrow={content.eyebrow}
@@ -69,7 +69,7 @@ export function ThumbnailDesignShowcase() {
           })}
         </div>
 
-        <div className="mt-8 columns-1 gap-6 md:columns-2 xl:columns-3 2xl:columns-4">
+        <div className="mt-8 columns-1 gap-6 md:columns-2 xl:columns-3 2xl:columns-4 3xl:columns-4">
           {thumbnailDesignShowcases.map((item, index) => {
             const translatedItem = content.items?.[index] ?? item;
             return (

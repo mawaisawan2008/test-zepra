@@ -67,13 +67,13 @@ export function WhyUs() {
       ];
 
   return (
-    <section className="relative isolate overflow-hidden bg-slate-950 py-8 text-white sm:py-12">
+    <section className="relative isolate overflow-hidden bg-slate-950 py-8 text-white sm:py-12 w-full overflow-x-hidden">
       <div className="pointer-events-none absolute -left-32 top-0 -z-10 h-96 w-96 rounded-full bg-cyan-500/10 blur-3xl" />
       <div className="pointer-events-none absolute -right-32 top-36 -z-10 h-96 w-96 rounded-full bg-blue-600/10 blur-3xl" />
 
       <div className="container relative">
         <header className="flex flex-col gap-6 border-b border-white/10 pb-6 lg:flex-row lg:items-end lg:justify-between">
-          <div className="max-w-3xl">
+          <div className="max-w-3xl 2xl:max-w-4xl 3xl:max-w-5xl">
             <div className="inline-flex items-center rounded-full border border-cyan-400/20 bg-cyan-400/[0.08] px-3 py-1.5 text-[10px] font-semibold uppercase tracking-[0.2em] text-cyan-300">
               {content?.eyebrow || "WHY CHOOSE US"}
             </div>
@@ -137,7 +137,7 @@ export function WhyUs() {
           })}
         </div>
 
-        <div className="grid gap-4 pt-6 sm:grid-cols-2 xl:grid-cols-4">
+        <div className="grid gap-4 pt-6 sm:grid-cols-2 xl:grid-cols-4 2xl:grid-cols-4">
           {pillarsList.map((pillar, index) => {
             const Icon = pillarsIcons[index] || Layers3;
 

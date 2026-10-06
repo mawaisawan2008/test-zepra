@@ -9,8 +9,8 @@ export function AboutPrinciples() {
   const content = t("about.principles");
 
   return (
-    <section className="relative overflow-hidden bg-[#E6F2FF] py-16 lg:py-24 text-slate-900">
-      <div className="container relative z-10 mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl">
+    <section className="relative overflow-hidden bg-[#E6F2FF] py-16 lg:py-24 text-slate-900 w-full overflow-x-hidden">
+      <div className="relative z-10 mx-auto w-full max-w-7xl 2xl:max-w-[92vw] 3xl:max-w-[1800px] px-4 sm:px-6 lg:px-8">
         <SectionHeading
           eyebrow={content?.eyebrow}
           title={content?.title}
@@ -19,7 +19,7 @@ export function AboutPrinciples() {
           className="[&_h2]:text-slate-900 [&_p]:text-slate-700"
         />
 
-        <div className="mt-12 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+        <div className="mt-12 grid gap-6 md:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-3 3xl:grid-cols-4">
           {content?.items?.map((item, index) => (
             <Card
               key={item.title || index}
@@ -51,8 +51,8 @@ export function ServiceLanes() {
   const content = t("servicePage");
 
   return (
-    <section className="relative overflow-hidden bg-[#E6F2FF] py-16 lg:py-24 text-slate-900">
-      <div className="container relative z-10 mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl">
+    <section className="relative overflow-hidden bg-[#E6F2FF] py-16 lg:py-24 text-slate-900 w-full overflow-x-hidden">
+      <div className="relative z-10 mx-auto w-full max-w-7xl 2xl:max-w-[92vw] 3xl:max-w-[1800px] px-4 sm:px-6 lg:px-8">
         <SectionHeading
           eyebrow={content?.eyebrow}
           title={content?.title}
@@ -60,7 +60,7 @@ export function ServiceLanes() {
           align="center"
           className="[&_h2]:text-slate-900 [&_p]:text-slate-700"
         />
-        <div className="mt-12 grid gap-6 md:grid-cols-2 xl:grid-cols-4">
+        <div className="mt-12 grid gap-6 md:grid-cols-2 xl:grid-cols-4 2xl:grid-cols-4">
           {content?.lanes?.map((lane, index) => (
             <Card
               key={lane.title || index}
@@ -89,8 +89,8 @@ export function ContactNextSteps() {
   const content = t("contactPage");
 
   return (
-    <section className="relative overflow-hidden bg-[#E6F2FF] py-16 lg:py-24 text-slate-900">
-      <div className="container relative z-10 mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl">
+    <section className="relative overflow-hidden bg-[#E6F2FF] py-16 lg:py-24 text-slate-900 w-full overflow-x-hidden">
+      <div className="relative z-10 mx-auto w-full max-w-7xl 2xl:max-w-[92vw] 3xl:max-w-[1800px] px-4 sm:px-6 lg:px-8">
         <SectionHeading
           eyebrow={content?.stepsEyebrow}
           title={content?.stepsTitle}
@@ -98,7 +98,7 @@ export function ContactNextSteps() {
           align="center"
           className="[&_h2]:text-slate-900 [&_p]:text-slate-700"
         />
-        <div className="mt-12 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+        <div className="mt-12 grid gap-6 md:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-3">
           {content?.steps?.map((step, index) => (
             <Card
               key={step.title || index}

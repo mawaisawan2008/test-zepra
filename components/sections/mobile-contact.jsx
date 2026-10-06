@@ -10,7 +10,7 @@ export function MobileContact() {
   const { t } = useLanguage();
 
   return (
-    <section id="contact" className="bg-[#E6F2FF] py-8">
+    <section id="contact" className="bg-[#E6F2FF] py-8 w-full overflow-x-hidden">
       <div className="container px-4">
         <div className="rounded-2xl border border-slate-200/80 bg-white p-5 shadow-lg">
           <div className="mb-5">

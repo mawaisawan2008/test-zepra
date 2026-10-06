@@ -40,7 +40,7 @@ export function ResultsProofSection({
   const translatedProofs = content.proofs;
 
   return (
-    <section id="social-media-marketing" className="section-shell scroll-mt-32 bg-white/50">
+    <section id="social-media-marketing" className="section-shell scroll-mt-32 bg-white/50 w-full overflow-x-hidden">
       <div className="container">
         <SectionHeading
           eyebrow={eyebrow ?? content.eyebrow}
@@ -75,7 +75,7 @@ export function ResultsProofSection({
           })}
         </div>
 
-        <div className="mt-8 columns-1 gap-6 md:columns-2 xl:columns-3 2xl:columns-4">
+        <div className="mt-8 columns-1 gap-6 md:columns-2 xl:columns-3 2xl:columns-4 3xl:columns-4">
           {marketingProofs.map((proof, index) => {
             const translatedProof = translatedProofs?.[index] ?? proof;
             return (

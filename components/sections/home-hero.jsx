@@ -33,12 +33,12 @@ export function HomeHero() {
   const translatedCapabilities = t("hero.capabilities");
 
   return (
-    <section className="relative isolate overflow-hidden pb-8 pt-8 sm:pb-12 sm:pt-12 lg:pb-12 lg:pt-12">
+    <section className="relative isolate overflow-hidden pb-8 pt-8 sm:pb-12 sm:pt-12 lg:pb-12 lg:pt-12 w-full overflow-x-hidden">
       <div className="pointer-events-none absolute inset-0 -z-10 bg-[radial-gradient(ellipse_at_12%_8%,rgba(56,198,255,0.18),transparent_28%),radial-gradient(ellipse_at_88%_20%,rgba(18,119,255,0.14),transparent_30%),linear-gradient(180deg,rgba(239,247,255,0.7),rgba(248,251,255,0)_75%)]" />
 
       <div className="container">
-        <div className="grid items-center gap-6 lg:grid-cols-[1.02fr_0.98fr] lg:gap-6">
-          <div className="max-w-2xl">
+        <div className="grid items-center gap-6 lg:grid-cols-[1.02fr_0.98fr] 2xl:gap-12">
+          <div className="max-w-2xl 2xl:max-w-3xl 3xl:max-w-4xl">
             <div className="eyebrow animate-slide-up">
               <span className="h-1.5 w-1.5 rounded-full bg-brand-cyan" />
               {t("hero.eyebrow")}
@@ -48,7 +48,7 @@ export function HomeHero() {
               {t("hero.titleLead")} {" "}
               <span className="headline-gradient">{t("hero.titleAccent")}</span>
             </h1>
-            <p className="muted-copy mt-4 max-w-xl text-base sm:text-lg">
+            <p className="muted-copy mt-4 max-w-xl 2xl:max-w-2xl text-base sm:text-lg">
               {t("hero.description")}
             </p>
 
@@ -83,7 +83,7 @@ export function HomeHero() {
             </div>
           </div>
 
-          <div className="relative mx-auto w-full max-w-[620px] lg:ml-auto">
+          <div className="relative mx-auto w-full max-w-[620px] 2xl:max-w-[700px] 3xl:max-w-[760px] lg:ml-auto">
             <div className="absolute -inset-8 -z-10 rounded-full bg-sky-300/25 blur-3xl" />
             <div className="relative overflow-hidden rounded-[28px] border border-slate-700/70 bg-[#0B1220] p-5 text-white shadow-[0_32px_90px_rgba(15,35,65,0.28)] sm:p-7">
               <div className="absolute inset-0 -z-0 bg-[radial-gradient(circle_at_86%_0%,rgba(18,119,255,0.28),transparent_38%),radial-gradient(circle_at_0%_100%,rgba(56,198,255,0.12),transparent_42%)]" />

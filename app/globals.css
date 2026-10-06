@@ -75,12 +75,14 @@
 
   section,
   header,
-  footer {
+  footer,
+  main {
     width: 100%;
   }
 
   section,
-  footer {
+  footer,
+  main {
     overflow-x: clip;
   }
 
@@ -260,15 +262,25 @@ body{
   user-select: none;
 }
 
+.container {
+  width: 100%;
+}
+
 @media (min-width: 1536px) {
   .container {
-    max-width: 1600px;
+    max-width: min(92vw, 1600px);
   }
 }
 
 @media (min-width: 1920px) {
   .container {
-    max-width: 1800px;
+    max-width: min(92vw, 1800px);
+  }
+}
+
+@media (min-width: 2560px) {
+  .container {
+    max-width: min(90vw, 2200px);
   }
 }
 

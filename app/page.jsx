@@ -30,7 +30,7 @@ export default function HomePage() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
       />
-      <div className="hidden md:block">
+      <div className="hidden md:block w-full overflow-x-hidden">
         <DesktopHome />
       </div>
       <MobileHomePage />
